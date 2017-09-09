@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	public float base_speed;
-	public float run_speed;
+	public float baseSpeed;
+	public float runSpeed;
 	public bool defeatable;
 	public float health;
-	public float point_value;
+	public float pointValue;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +17,6 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += new Vector3 (-1,0,0) * Time.deltaTime * (base_speed + run_speed);
+		transform.position += new Vector3 (-1,0,0) * Time.deltaTime * (baseSpeed + runSpeed);
 	}
 }
