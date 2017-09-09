@@ -23,6 +23,7 @@ public class GameManager {
 	}
 
 	public static GameState gameState;
+	public static List<float> laneLocations = new List<float> {-4, -2, 0, 2};
 
 	public static void Pause(){
 		Time.timeScale = 0;
