@@ -17,6 +17,14 @@ public class PlayerClass : MonoBehaviour {
 		Timer ();
 	}
 
+	public virtual void Attack () {
+		// To be overridden in subclasses
+	}
+
+	public virtual void Ability () {
+		// To be overridden in subclasses
+	}
+
 	protected IEnumerator Timer () {
 		yield return new WaitForSeconds (duration);
 		Destroy (gameObject);

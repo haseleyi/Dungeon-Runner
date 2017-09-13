@@ -8,7 +8,7 @@ public class Warrior : PlayerClass {
 
 	}
 
-	void Attack () {
+	override public void Attack () {
 		// Do attack stuff
 		if (canAttack) {
 			
@@ -19,7 +19,7 @@ public class Warrior : PlayerClass {
 		WaitForAttack ();
 	}
 
-	void Ability () {
+	override public void Ability () {
 		// Do ability stuff
 		if (canAbility) {
 
