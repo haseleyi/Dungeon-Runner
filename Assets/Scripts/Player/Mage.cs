@@ -20,7 +20,9 @@ public class Mage : PlayerClass {
 		// Do attack stuff
 		if (canAttack && Time.time > nextFire) {
 			nextFire = Time.time + fireDelay;
-			Instantiate(fireballPrefab, PlayerController.instance.transform.position, Quaternion.identity);
+			Vector3 firePosition = PlayerController.instance.transform.position;
+			firePosition.y += .5f;
+			Instantiate(fireballPrefab, firePosition, Quaternion.identity);
 		}
 
 		// Disallow attacking for the duration of the cooldown

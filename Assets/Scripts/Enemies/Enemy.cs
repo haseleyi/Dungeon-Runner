@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+		print ("Collided with enemy!");
 		if (other.CompareTag("Arrow")) {
 			health -= 1;
 		} else if (other.CompareTag("Fireball")) {
