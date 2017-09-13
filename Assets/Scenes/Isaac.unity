@@ -165,6 +165,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1843576750}
   m_Script: {fileID: 11500000, guid: b1b3d49a96d11814b96960fb776dfe31, type: 3}
+--- !u!1001 &817984786
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4640327207417822, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 9.136406
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640327207417822, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.2411
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640327207417822, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640327207417822, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640327207417822, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640327207417822, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640327207417822, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640327207417822, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &818874071
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,17 +480,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 303476026}
-        m_MethodName: UnPause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1038141491
@@ -619,7 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstSpawn: 1
-  spawnEvery: 0.5
+  spawnEvery: 2
   chanceOfEnemy: 0
   gruntPrefab: {fileID: 1838446811938436, guid: 6f361baaa06534ac0983a511cc01c920,
     type: 2}

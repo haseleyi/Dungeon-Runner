@@ -3,38 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+
 	public float speed = 3;
-	public float classDuration = 15;
+	public float classDuration = 3;
 	public int startLane = 2;
 	public float xInitial = -10;
 
 	int lane;
 	Rigidbody2D body;
 	PlayerClass currentClass;
+	public static PlayerController instance;
 
 	void Start () {
+		instance = this;
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
-//		this.gameObject.AddComponent (Mage);
+		gameObject.AddComponent<Warrior>();
+		gameObject.AddComponent<Mage>();
+		gameObject.AddComponent<Ranger>();
+		gameObject.AddComponent<Cleric>();
+		gameObject.AddComponent<Thief>();
+		gameObject.AddComponent<PlayerClass>();
+
+		// For testing purposes (in the actual code, Mage should be PlayerClass)
+		currentClass = GetComponent<Mage> ();
 	}
 
+	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
 	void Update () {
-		Move (Input.GetAxisRaw ("Horizontal"));
+		MoveLeftRight ();
 		SwitchLanes ();
-
 		if (Input.GetKeyDown("j")) {
 			currentClass.Attack();
 		}
-
 		if (Input.GetKeyDown ("k")) {
 			currentClass.Ability ();
 		}
+//		print (currentClass.title);
 	}
 
-	public void Move (float horizontalInput) {
+	public void MoveLeftRight () {
 		Vector2 moveVel = body.velocity;
-		moveVel.x = horizontalInput * speed * Time.deltaTime;
+		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
 		body.velocity = moveVel;
 	}
 
@@ -55,40 +66,39 @@ public class PlayerController : MonoBehaviour {
 			// Do whatever coins do
 		} else if (other.gameObject.tag == "Warrior") {
 			Destroy (other.gameObject);
-			currentClass = new Warrior ();
-			ClassTimer ();
+			currentClass = gameObject.GetComponent<Warrior> ();
+			StartCoroutine(ClassTimer ());
 			// Update sprite
 		} else if (other.gameObject.tag == "Ranger") {
 			Destroy (other.gameObject);
-			currentClass = new Ranger ();
-			ClassTimer ();
+			currentClass = gameObject.GetComponent<Ranger> ();
+			StartCoroutine(ClassTimer ());
 			// Update sprite
 		} else if (other.gameObject.tag == "Mage") {
 			Destroy (other.gameObject);
-			currentClass = new Mage ();
-			ClassTimer ();
+			currentClass = gameObject.GetComponent<Mage> ();
+			StartCoroutine(ClassTimer ());
 			// Update sprite
 		} else if (other.gameObject.tag == "Thief") {
 			Destroy (other.gameObject);
-			currentClass = new Thief ();
-			ClassTimer ();
+			currentClass = gameObject.GetComponent<Thief> ();
+			StartCoroutine(ClassTimer ());
 			// Update sprite
 		} else if (other.gameObject.tag == "Cleric") {
 			Destroy(other.gameObject);
-			currentClass = new Cleric ();
-			ClassTimer ();
+			currentClass = gameObject.GetComponent<Cleric> ();
+			StartCoroutine(ClassTimer ());
 			// Update sprite
 		}
 	}
 
 	IEnumerator ClassTimer () {
 		yield return new WaitForSeconds (classDuration);
-		currentClass = new PlayerClass ();
+		currentClass = gameObject.GetComponent<PlayerClass> ();
 	}
 
 	void Die () {
 		// Display death screen
-
 		Destroy (gameObject);
 	}
 }

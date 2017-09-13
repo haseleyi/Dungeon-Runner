@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Powerup : MonoBehaviour {
+
 	public float speed = 3;
 
 	Rigidbody2D body;

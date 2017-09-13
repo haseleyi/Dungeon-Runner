@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerClass : MonoBehaviour {
 
-	public float attackCooldown = 0.5f;
-	public float abilityCooldown = 5;
-	public float duration = 15;
+	public float attackCooldown = 1;
+	public float abilityCooldown = 2;
+	public float duration = 3;
+	public virtual string title {get; protected set;}
 
 	protected bool canAttack;
 	protected bool canAbility;
@@ -14,6 +15,7 @@ public class PlayerClass : MonoBehaviour {
 	void Start () {
 		canAttack = true;
 		canAbility = true;
+		title = "No class";
 	}
 
 	public virtual void Attack () {
@@ -25,12 +27,12 @@ public class PlayerClass : MonoBehaviour {
 	}
 
 
-	protected IEnumerator WaitForAttack () {
+	protected IEnumerator WaitForAttackCoroutine () {
 		yield return new WaitForSeconds (attackCooldown);
 		canAttack = true;
 	}
 
-	protected IEnumerator WaitForAbility () {
+	protected IEnumerator WaitForAbilityCoroutine () {
 		yield return new WaitForSeconds (abilityCooldown);
 		canAbility = true;
 	}

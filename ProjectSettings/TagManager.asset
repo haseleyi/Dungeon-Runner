@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Enemy
   - Coin
+  - PauseButton
+  - Thief
+  - Ranger
+  - Mage
+  - Warrior
+  - Cleric
+  - Fireball
   layers:
   - Default
   - TransparentFX

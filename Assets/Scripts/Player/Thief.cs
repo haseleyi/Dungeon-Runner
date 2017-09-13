@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Thief : PlayerClass {
 
-	void FixedUpdate () {
+	public override string title {get; protected set;}
 
+	void Start() {
+		title = "Thief";
+		canAttack = true;
+		canAbility = true;
 	}
 
 	override public void Attack () {
@@ -16,7 +20,7 @@ public class Thief : PlayerClass {
 
 		// Disallow attacking for the duration of the cooldown
 		canAttack = false;
-		WaitForAttack ();
+		WaitForAttackCoroutine ();
 	}
 
 	override public void Ability () {
@@ -27,6 +31,6 @@ public class Thief : PlayerClass {
 
 		// Disallow attacking for the duration of the cooldown
 		canAbility = false;
-		WaitForAbility ();
+		WaitForAbilityCoroutine ();
 	}
 }
