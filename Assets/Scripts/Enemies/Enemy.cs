@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	public float baseSpeed = 2;
+	public float baseSpeed = -2;
 	public float runSpeed;
 	public bool defeatable;
 	public float health;
 	public float pointValue;
+	protected Rigidbody2D body;
 
 	public void Start () {
-		
+		body = GetComponent<Rigidbody2D> ();
+		body.velocity = new Vector2 (baseSpeed + runSpeed, 0);
 	}
 	
 	public virtual void FixedUpdate () {
-		transform.position += new Vector3 (-1,0,0) * (baseSpeed + runSpeed);
+		if (transform.position.x < -10) {
+			Destroy (gameObject);
+		}
 		if (health <= 0) {
 			Destroy (gameObject);
 		}
