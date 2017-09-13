@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 	public float speed = 3;
 	public float classDuration = 15;
 	public int startLane = 2;
+	public float xInitial = -10;
 
 	int lane;
 	Rigidbody2D body;
@@ -14,11 +15,12 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
-		transform.position = new Vector2 (-10, LaneManager.instance.laneLocations [lane]);
+		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
 		currentClass = new PlayerClass ();
 		foreach (float x in LaneManager.instance.laneLocations) {
 			print (x);
 		}
+
 	}
 
 	void FixedUpdate () {

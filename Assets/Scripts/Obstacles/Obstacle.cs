@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour {
 
-	public float baseSpeed = 2;
+	public float baseSpeed = -2;
 	public bool defeatable;
 	public float pointValue;
 	protected Rigidbody2D body;
@@ -17,7 +17,7 @@ public class Obstacle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (transform.position.x < -10) {
+		if (transform.position.x < LaneManager.instance.xThreshold) {
 			Destroy (gameObject);
 		}
 	}
