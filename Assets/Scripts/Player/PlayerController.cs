@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+
 	public float speed = 250;
 	public int startLane = 2;
+	public float xInitial = -10;
 
 	int lane;
 	Transform trans;
@@ -15,7 +17,7 @@ public class PlayerController : MonoBehaviour {
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
 		trans = transform;
-		trans.position = new Vector2 (-10, LaneManager.instance.laneLocations [lane]);
+		trans.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
 		currentClass = null;
 	}
 
