@@ -10,13 +10,11 @@ public class Enemy : MonoBehaviour {
 	public float health;
 	public float pointValue;
 
-	// Use this for initialization
 	public void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	public virtual void Update () {
-		transform.position += new Vector3 (-1,0,0) * Time.deltaTime * (baseSpeed + runSpeed);
+		transform.position += new Vector3 (-1, 0, 0) * Time.deltaTime * (baseSpeed + runSpeed);
 	}
 }

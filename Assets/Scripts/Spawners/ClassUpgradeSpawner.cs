@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ClassUpgradeSpawner : Spawner {
 
-	public int firstSpawn;
-	public int spawnEvery;
+	public float firstSpawn;
+	public float spawnEvery;
 
-	public GameObject WarriorUpgradePrefab;
-	public GameObject MageUpgradePrefab;
-	public GameObject RangerUpgradePrefab;
-	public GameObject ThiefUpgradePrefab;
-	public GameObject ClericUpgradePrefab;
+	public GameObject warriorUpgradePrefab;
+	public GameObject mageUpgradePrefab;
+	public GameObject rangerUpgradePrefab;
+	public GameObject thiefUpgradePrefab;
+	public GameObject clericUpgradePrefab;
 	
 	void Start () {
 		StartCoroutine (SpawnCoroutine ());
@@ -19,10 +19,10 @@ public class ClassUpgradeSpawner : Spawner {
 
 	IEnumerator SpawnCoroutine() {
 		yield return new WaitForSeconds (firstSpawn);
-		SpawnRandomPrefab(WarriorUpgradePrefab, MageUpgradePrefab, RangerUpgradePrefab, ThiefUpgradePrefab, ClericUpgradePrefab);
+		SpawnRandomPrefab(warriorUpgradePrefab, mageUpgradePrefab, rangerUpgradePrefab, thiefUpgradePrefab, clericUpgradePrefab);
 		while (true) {
 			yield return new WaitForSeconds (spawnEvery);
-			SpawnRandomPrefab(WarriorUpgradePrefab, MageUpgradePrefab, RangerUpgradePrefab, ThiefUpgradePrefab, ClericUpgradePrefab);
+			SpawnRandomPrefab(warriorUpgradePrefab, mageUpgradePrefab, rangerUpgradePrefab, thiefUpgradePrefab, clericUpgradePrefab);
 		}
 	}
 }

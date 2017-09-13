@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ClassSpawner : Spawner {
 
-	public int firstSpawn;
-	public int spawnEvery;
+	public float firstSpawn;
+	public float spawnEvery;
 
-	public GameObject WarriorPrefab;
-	public GameObject MagePrefab;
-	public GameObject RangerPrefab;
-	public GameObject ThiefPrefab;
-	public GameObject ClericPrefab;
+	public GameObject warriorPrefab;
+	public GameObject magePrefab;
+	public GameObject rangerPrefab;
+	public GameObject thiefPrefab;
+	public GameObject clericPrefab;
 
 	void Start() {
 		StartCoroutine (SpawnCoroutine());
@@ -19,10 +19,10 @@ public class ClassSpawner : Spawner {
 
 	IEnumerator SpawnCoroutine() {
 		yield return new WaitForSeconds (firstSpawn);
-		SpawnRandomPrefab(WarriorPrefab, MagePrefab, RangerPrefab, ThiefPrefab, ClericPrefab);
+		SpawnRandomPrefab(warriorPrefab, magePrefab, rangerPrefab, thiefPrefab, clericPrefab);
 		while (true) {
 			yield return new WaitForSeconds (spawnEvery);
-			SpawnRandomPrefab(WarriorPrefab, MagePrefab, RangerPrefab, ThiefPrefab, ClericPrefab);
+			SpawnRandomPrefab(warriorPrefab, magePrefab, rangerPrefab, thiefPrefab, clericPrefab);
 		}
 	}
 }

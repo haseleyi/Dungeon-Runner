@@ -1,1 +1,1 @@
-﻿using System.Collections; using System.Collections.Generic; using UnityEngine;  public class Zombie : Enemy {  	// Update is called once per frame 	public override void Update () { 		print ("zombie"); 		base.Update (); 	} } 
+﻿using System.Collections; using System.Collections.Generic; using UnityEngine;  public class Zombie : Enemy {  	public override void Update () { 		base.Update (); 	} } 

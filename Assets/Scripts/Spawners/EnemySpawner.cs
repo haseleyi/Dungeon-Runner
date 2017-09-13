@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class EnemySpawner : Spawner {
 
-	public int firstSpawn;
-	public int spawnEvery;
+	public float firstSpawn;
+	public float spawnEvery;
 	public float chanceOfEnemy;
 
-	public GameObject GruntPrefab;
-	public GameObject ArcherPrefab;
-	public GameObject TankPrefab;
-	public GameObject SuicidePrefab;
+	public GameObject gruntPrefab;
+	public GameObject archerPrefab;
+	public GameObject tankPrefab;
+	public GameObject suicidePrefab;
 
-	public GameObject FirePrefab;
-	public GameObject TrapPrefab;
+	public GameObject firePrefab;
+	public GameObject trapPrefab;
 
 	void Start () {
 		StartCoroutine(SpawnCoroutine());
@@ -22,19 +22,20 @@ public class EnemySpawner : Spawner {
 
 	IEnumerator SpawnCoroutine() {
 		yield return new WaitForSeconds (firstSpawn);
-		if (random.NextDouble() < .5) {
-			SpawnPrefab(FirePrefab);
-		} else {
-			SpawnPrefab(TrapPrefab);
-		}
+//		if (random.NextDouble() < .5) {
+//			SpawnPrefab(firePrefab);
+//		} else {
+//			SpawnPrefab(trapPrefab);
+//		}
+		SpawnPrefab (gruntPrefab);
 		while (true) {
 			yield return new WaitForSeconds (spawnEvery);
-			if (random.NextDouble () < chanceOfEnemy) {
-				SpawnRandomPrefab (GruntPrefab, ArcherPrefab);
-			}
-			else {
-				SpawnRandomPrefab (FirePrefab, TrapPrefab);
-			}
+//			if (random.NextDouble () < chanceOfEnemy) {
+//				SpawnRandomPrefab (gruntPrefab, archerPrefab);
+//			} else {
+//				SpawnRandomPrefab (firePrefab, trapPrefab);
+//			}
+			SpawnPrefab (gruntPrefab);
 		}
 	}
 }
