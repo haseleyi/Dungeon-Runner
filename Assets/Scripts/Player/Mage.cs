@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Mage : PlayerClass {
 
-	void FixedUpdate () {
+	public GameObject fireballPrefab;
+	public Transform shotSpawn;
 
-	}
+	public float bulletSpeed;
+	public float fireRate;
+	private float nextFire = 0;
 
 	override public void Attack () {
 		// Do attack stuff
-		if (canAttack) {
-
+		if (canAttack && Time.time > nextFire) {
+			nextFire = Time.time + fireRate;
+			Instantiate(fireballPrefab, shotSpawn.position, Quaternion.identity);
 		}
 
 		// Disallow attacking for the duration of the cooldown

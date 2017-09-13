@@ -16,11 +16,7 @@ public class PlayerController : MonoBehaviour {
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
-		currentClass = new PlayerClass ();
-		foreach (float x in LaneManager.instance.laneLocations) {
-			print (x);
-		}
-
+//		this.gameObject.AddComponent (Mage);
 	}
 
 	void Update () {
