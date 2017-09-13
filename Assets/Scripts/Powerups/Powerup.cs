@@ -5,8 +5,8 @@ using UnityEngine;
 public class Powerup : MonoBehaviour {
 	public float speed = 3;
 
-	protected Transform trans;
-	protected Rigidbody2D body;
+	Transform trans;
+	Rigidbody2D body;
 
 	// Use this for initialization
 	void Start () {
