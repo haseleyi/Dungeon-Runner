@@ -14,10 +14,9 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		lane = startLane;
-		body = this.GetComponent<Rigidbody2D> ();
-		trans = this.transform;
-		trans.position.y = LaneManager.laneLocations [lane];
-		trans.position.x = 0;
+		body = GetComponent<Rigidbody2D> ();
+		trans = transform;
+		trans.position = new Vector2 (0, LaneManager.instance.laneLocations [lane]);
 		currentClass = null;
 	}
 
@@ -42,44 +41,24 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Attack () {
-		/* if (waitForAttack <= 0) {
-			if (playerClass == "warrior") {
-				// Do warrior stuff
-			} else if (playerClass == "ranger") {
-				// Do ranger stuff
-			} else if (playerClass == "mage") {
-				// Do mage stuff
-			} else if (playerClass == "thief") {
-				// Do thief stuff
-			}
-		} */
+		
 	}
 
 	void Ability () {
-		/* if (waitForAbility <= 0) {
-			if (playerClass == "warrior") {
-				// Do warrior stuff
-			} else if (playerClass == "ranger") {
-				// Do ranger stuff
-			} else if (playerClass == "mage") {
-				// Do mage stuff
-			} else if (playerClass == "thief") {
-				// Do thief stuff
-			}
-		} */
+		
 	}
 
 	void SwitchLanes (float verticalInput) {
-		if (verticalInput > 0 && lane < LaneManager.laneLocations.Capacity - 1) {
+		if (verticalInput > 0 && lane < LaneManager.instance.laneLocations.Capacity - 1) {
 			lane += 1;
 		} else if (verticalInput < 0 && lane > 0) {
 			lane -= 1;
 		}
 
-		body.position.y = LaneManager.laneLocations [lane];
+		trans.position = new Vector2(trans.position.x, LaneManager.instance.laneLocations [lane]);
 	}
 
-	void OnCollisionEnter2D (Collider2D other) {
+	void OnCollisionEnter2D (Collision2D other) {
 		if (other.gameObject.tag == "enemy") {
 			Die ();
 		} else if (other.gameObject.tag == "warrior") {
@@ -98,6 +77,8 @@ public class PlayerController : MonoBehaviour {
 			Destroy (other.gameObject);
 
 			// Update sprite
+		} else if (other.gameObject.tag == "cleric") {
+		
 		}
 	}
 
