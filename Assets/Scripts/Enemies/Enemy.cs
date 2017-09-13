@@ -14,8 +14,8 @@ public class Enemy : MonoBehaviour {
 		
 	}
 	
-	public virtual void Update () {
-		transform.position += new Vector3 (-1,0,0) * Time.deltaTime * (baseSpeed + runSpeed);
+	public virtual void FixedUpdate () {
+		transform.position += new Vector3 (-1,0,0) * (baseSpeed + runSpeed);
 		if (health <= 0) {
 			Destroy (gameObject);
 		}

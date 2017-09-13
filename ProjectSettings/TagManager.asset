@@ -5,11 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Warrior
-  - Ranger
-  - Mage
-  - Thief
-  - Cleric
+  - Coin
   layers:
   - Default
   - TransparentFX
