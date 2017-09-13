@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
-	public GUIText coinsText;
+	//public Text coinsText;
 	private int coins;
 
 	// Use this for initialization
@@ -18,6 +18,6 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 	void UpdateCoins () {
-		coinsText.text = "Coins: " + coins;
+		//coinsText.text = "Coins: " + coins;
 	}
 }

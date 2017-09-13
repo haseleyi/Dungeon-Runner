@@ -18,12 +18,12 @@ public class PauseMenu : MonoBehaviour {
 	public string mainMenuScene = "MainMenu";
 	public GameObject pauseMenuCanvas;
 
-	void Start(){
+	void Start() {
 		GameManager.gameState = GameManager.GameState.Running;
 		pauseMenuCanvas.SetActive (false);
 	}
 
-	void Update(){
+	void Update() {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			if (GameManager.gameState == GameManager.GameState.Running) {
 				Pause ();
@@ -34,17 +34,17 @@ public class PauseMenu : MonoBehaviour {
 		}
 	}
 
-	public void Pause(){
+	public void Pause() {
 		pauseMenuCanvas.SetActive (true);
 		GameManager.Pause ();
 	}
 
-	public void UnPause(){
+	public void UnPause() {
 		pauseMenuCanvas.SetActive (false);
 		GameManager.Unpause ();
 	}
 
-	public void GoToMainMenu(){
+	public void GoToMainMenu() {
 		GameManager.gameState = GameManager.GameState.MainMenu;
 		GameManager.LoadScene (mainMenuScene);
 	}
