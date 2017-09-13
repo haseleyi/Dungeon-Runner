@@ -15,7 +15,7 @@ public class Powerup : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (transform.position.x < -10) {
+		if (transform.position.x < -17) {
 			Destroy (gameObject);
 		}
 	}
