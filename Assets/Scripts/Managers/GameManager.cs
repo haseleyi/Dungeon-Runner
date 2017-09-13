@@ -24,21 +24,21 @@ public class GameManager {
 
 	public static GameState gameState;
 
-	public static void Pause(){
+	public static void Pause() {
 		Time.timeScale = 0;
 		gameState = GameState.Paused;
 	}
 
-	public static void Unpause(){
+	public static void Unpause() {
 		Time.timeScale = 1;
 		gameState = GameState.Running;
 	}
 
-	public static void Quit(){
+	public static void Quit() {
 		Application.Quit ();	
 	}
 
-	public static void LoadScene(string scene){
+	public static void LoadScene(string scene) {
 		SceneManager.LoadScene (scene);
 	}
 }

@@ -10,7 +10,7 @@ public class LaneManager : MonoBehaviour {
 	public float spawnDelay;
 	public static LaneManager instance;
 	
-	void Start() {
+	void Awake() {
 		instance = this;
 	}
 

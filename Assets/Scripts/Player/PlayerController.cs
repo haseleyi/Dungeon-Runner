@@ -11,25 +11,26 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody2D body;
 	PlayerClass currentClass;
 
-	// Use this for initialization
 	void Start () {
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
 		trans = transform;
-		trans.position = new Vector2 (0, LaneManager.instance.laneLocations [lane]);
+		trans.position = new Vector2 (-10, LaneManager.instance.laneLocations [lane]);
 		currentClass = null;
+		foreach (float x in LaneManager.instance.laneLocations) {
+			print (x);
+		}
 	}
 
-	// Update is called once per frame
 	void FixedUpdate () {
 		Move (Input.GetAxisRaw ("Horizontal"));
-		SwitchLanes (Input.GetAxisRaw ("Vertical"));
+		SwitchLanes ();
 
-		if (Input.GetButtonDown("J")) {
+		if (Input.GetKeyDown("j")) {
 			Attack();
 		}
 
-		if (Input.GetButtonDown ("K")) {
+		if (Input.GetKeyDown ("k")) {
 			Ability ();
 		}
 	}
@@ -48,10 +49,10 @@ public class PlayerController : MonoBehaviour {
 		
 	}
 
-	void SwitchLanes (float verticalInput) {
-		if (verticalInput > 0 && lane < LaneManager.instance.laneLocations.Capacity - 1) {
+	void SwitchLanes () {
+		if ((Input.GetKeyDown("w") || Input.GetKeyDown(KeyCode.UpArrow)) && lane < LaneManager.instance.laneLocations.Count - 1) {
 			lane += 1;
-		} else if (verticalInput < 0 && lane > 0) {
+		} else if ((Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow)) && lane > 0) {
 			lane -= 1;
 		}
 
