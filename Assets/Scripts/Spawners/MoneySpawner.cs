@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MoneySpawner : Spawner {
 
-	public int firstSpawn;
-	public int spawnEvery;
+	public float firstSpawn;
+	public float spawnEvery;
 	public float chanceOfChest;
 
-	public GameObject CoinPrefab;
-	public GameObject ChestPrefab;
+	public GameObject coinPrefab;
+	public GameObject chestPrefab;
 
 	void Start () {
 		StartCoroutine(SpawnCoroutine());
@@ -17,14 +17,14 @@ public class MoneySpawner : Spawner {
 	
 	IEnumerator SpawnCoroutine() {
 		yield return new WaitForSeconds (firstSpawn);
-		SpawnPrefab(CoinPrefab);
+		SpawnPrefab(coinPrefab);
 		while (true) {
 			yield return new WaitForSeconds (spawnEvery);
 			if (random.NextDouble () < chanceOfChest) {
-				SpawnPrefab (ChestPrefab);
+				SpawnPrefab (chestPrefab);
 			}
 			else {
-				SpawnPrefab (CoinPrefab);
+				SpawnPrefab (coinPrefab);
 			}
 		}
 	}
