@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 		currentClass = null;
 	}
 
-	void FixedUpdate () {
+	void Update () {
 		Move (Input.GetAxisRaw ("Horizontal"));
 		SwitchLanes ();
 
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 
 	public void Move (float horizontalInput) {
 		Vector2 moveVel = body.velocity;
-		moveVel.x = horizontalInput * speed;
+		moveVel.x = horizontalInput * speed * Time.deltaTime;
 		body.velocity = moveVel;
 	}
 
