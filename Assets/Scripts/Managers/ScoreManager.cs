@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
-	//public Text coinsText;
+	public Text coinsText;
 	private int coins;
 
 	// Use this for initialization
@@ -18,6 +19,6 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 	void UpdateCoins () {
-		//coinsText.text = "Coins: " + coins;
+		coinsText.text = "Coins: " + coins.ToString();
 	}
 }
