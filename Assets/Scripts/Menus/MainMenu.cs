@@ -13,18 +13,18 @@ using UnityEngine;
 /// </summary>
 public class MainMenu : MonoBehaviour {
 
-	public string startLevelName = "Level1";
+	public string startLevelName;
 
-	void Start(){
+	void Start() {
 		GameManager.gameState = GameManager.GameState.MainMenu;
 	}
 
-	public void StartGame(){
+	public void StartGame() {
 		GameManager.gameState = GameManager.GameState.Running;
 		GameManager.LoadScene (startLevelName);
 	}
 
-	public void Quit(){
+	public void Quit() {
 		GameManager.Quit ();
 	}
 }
