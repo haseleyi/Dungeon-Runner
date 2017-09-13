@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	public float baseSpeed = -2;
+	public float baseSpeed = 2;
 	public float runSpeed;
 	public bool defeatable;
 	public float health;
@@ -13,11 +13,11 @@ public class Enemy : MonoBehaviour {
 
 	public void Start () {
 		body = GetComponent<Rigidbody2D> ();
-		body.velocity = new Vector2 (baseSpeed + runSpeed, 0);
+		body.velocity = new Vector2 (-1 * (baseSpeed + runSpeed), 0);
 	}
 	
 	public virtual void FixedUpdate () {
-		if (transform.position.x < -10) {
+		if (transform.position.x < LaneManager.instance.xThreshold) {
 			Destroy (gameObject);
 		}
 		if (health <= 0) {

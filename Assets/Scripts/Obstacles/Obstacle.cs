@@ -17,7 +17,7 @@ public class Obstacle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (transform.position.x < -10) {
+		if (transform.position.x < LaneManager.instance.xThreshold) {
 			Destroy (gameObject);
 		}
 	}
