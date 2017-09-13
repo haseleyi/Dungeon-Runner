@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-	public float speed = 250;
+	public float speed = 3;
+	public float classDuration = 15;
 	public int startLane = 2;
 
 	int lane;
-	Transform trans;
 	Rigidbody2D body;
 	PlayerClass currentClass;
 
 	void Start () {
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
-		trans = transform;
-		trans.position = new Vector2 (-10, LaneManager.instance.laneLocations [lane]);
-		currentClass = null;
+		transform.position = new Vector2 (-10, LaneManager.instance.laneLocations [lane]);
+		currentClass = new PlayerClass ();
 		foreach (float x in LaneManager.instance.laneLocations) {
 			print (x);
 		}
@@ -27,11 +26,11 @@ public class PlayerController : MonoBehaviour {
 		SwitchLanes ();
 
 		if (Input.GetKeyDown("j")) {
-			Attack();
+			currentClass.Attack();
 		}
 
 		if (Input.GetKeyDown ("k")) {
-			Ability ();
+			currentClass.Ability ();
 		}
 	}
 
@@ -41,14 +40,6 @@ public class PlayerController : MonoBehaviour {
 		body.velocity = moveVel;
 	}
 
-	void Attack () {
-		
-	}
-
-	void Ability () {
-		
-	}
-
 	void SwitchLanes () {
 		if ((Input.GetKeyDown("w") || Input.GetKeyDown(KeyCode.UpArrow)) && lane < LaneManager.instance.laneLocations.Count - 1) {
 			lane += 1;
@@ -56,33 +47,50 @@ public class PlayerController : MonoBehaviour {
 			lane -= 1;
 		}
 
-		trans.position = new Vector2(trans.position.x, LaneManager.instance.laneLocations [lane]);
+		transform.position = new Vector2(transform.position.x, LaneManager.instance.laneLocations [lane]);
 	}
 
 	void OnCollisionEnter2D (Collision2D other) {
-		if (other.gameObject.tag == "enemy") {
+		if (other.gameObject.tag == "Enemy") {
 			Die ();
-		} else if (other.gameObject.tag == "warrior") {
+		} else if (other.gameObject.tag == "Coin") {
+			// Do whatever coins do
+		} else if (other.gameObject.tag == "Warrior") {
 			Destroy (other.gameObject);
-
+			currentClass = new Warrior ();
+			ClassTimer ();
 			// Update sprite
-		} else if (other.gameObject.tag == "ranger") {
+		} else if (other.gameObject.tag == "Ranger") {
 			Destroy (other.gameObject);
-
+			currentClass = new Ranger ();
+			ClassTimer ();
 			// Update sprite
-		} else if (other.gameObject.tag == "mage") {
+		} else if (other.gameObject.tag == "Mage") {
 			Destroy (other.gameObject);
-
+			currentClass = new Mage ();
+			ClassTimer ();
 			// Update sprite
-		} else if (other.gameObject.tag == "thief") {
+		} else if (other.gameObject.tag == "Thief") {
 			Destroy (other.gameObject);
-
+			currentClass = new Thief ();
+			ClassTimer ();
 			// Update sprite
-		} else if (other.gameObject.tag == "cleric") {
-		
+		} else if (other.gameObject.tag == "Cleric") {
+			Destroy(other.gameObject);
+			currentClass = new Cleric ();
+			ClassTimer ();
+			// Update sprite
 		}
 	}
 
+	IEnumerator ClassTimer () {
+		yield return new WaitForSeconds (classDuration);
+		currentClass = new PlayerClass ();
+	}
+
 	void Die () {
+		// Display death screen
+
+		Destroy (gameObject);
 	}
 }

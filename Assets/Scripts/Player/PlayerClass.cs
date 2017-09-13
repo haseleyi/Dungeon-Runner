@@ -14,7 +14,6 @@ public class PlayerClass : MonoBehaviour {
 	void Start () {
 		canAttack = true;
 		canAbility = true;
-		Timer ();
 	}
 
 	public virtual void Attack () {
@@ -25,10 +24,6 @@ public class PlayerClass : MonoBehaviour {
 		// To be overridden in subclasses
 	}
 
-	protected IEnumerator Timer () {
-		yield return new WaitForSeconds (duration);
-		Destroy (gameObject);
-	}
 
 	protected IEnumerator WaitForAttack () {
 		yield return new WaitForSeconds (attackCooldown);
