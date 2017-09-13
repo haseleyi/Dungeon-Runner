@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zombie : Enemy {
+public class Boulder : Obstacle {
 
-	public override void Update () {
-		base.Update ();
-	}
 }
