@@ -2,40 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 	public float speed = 250;
-	public float cooldown = 0.5f;
-	public float abilityCooldown = 5;
-	public string playerClass = "none";
-	public float classDuration = 15;
-	public int damage;
-	public int range;
+	public int startLane = 2;
 
-	float waitForAttack;
-	float waitForAbility;
-	float classTimeRemaining;
+	int lane;
 	Transform trans;
 	Rigidbody2D body;
+	PlayerClass currentClass;
 
 	// Use this for initialization
 	void Start () {
-		waitForAttack = cooldown;
-		waitForAbility = abilityCooldown;
+		lane = startLane;
 		body = this.GetComponent<Rigidbody2D> ();
 		trans = this.transform;
+		trans.position.y = LaneManager.laneLocations [lane];
+		trans.position.x = 0;
+		currentClass = null;
 	}
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
-		waitForAttack -= Time.deltaTime;
-		waitForAbility -= Time.deltaTime;
-		classTimeRemaining -= Time.deltaTime;
 		Move (Input.GetAxisRaw ("Horizontal"));
 		SwitchLanes (Input.GetAxisRaw ("Vertical"));
-
-		if (classTimeRemaining <= 0) {
-			playerClass = "none";
-		}
 
 		if (Input.GetButtonDown("J")) {
 			Attack();
@@ -53,7 +42,7 @@ public class Player : MonoBehaviour {
 	}
 
 	void Attack () {
-		if (waitForAttack <= 0) {
+		/* if (waitForAttack <= 0) {
 			if (playerClass == "warrior") {
 				// Do warrior stuff
 			} else if (playerClass == "ranger") {
@@ -63,11 +52,11 @@ public class Player : MonoBehaviour {
 			} else if (playerClass == "thief") {
 				// Do thief stuff
 			}
-		}
+		} */
 	}
 
 	void Ability () {
-		if (waitForAbility <= 0) {
+		/* if (waitForAbility <= 0) {
 			if (playerClass == "warrior") {
 				// Do warrior stuff
 			} else if (playerClass == "ranger") {
@@ -77,19 +66,17 @@ public class Player : MonoBehaviour {
 			} else if (playerClass == "thief") {
 				// Do thief stuff
 			}
-		}
+		} */
 	}
 
 	void SwitchLanes (float verticalInput) {
-		Vector2 pos = body.position;
-		
-		if (verticalInput > 0 && pos.y < 2) {
-			pos.y += 2;
-		} else if (verticalInput < 0 && pos.y > -4) {
-			pos.y -= 2;
+		if (verticalInput > 0 && lane < LaneManager.laneLocations.Capacity - 1) {
+			lane += 1;
+		} else if (verticalInput < 0 && lane > 0) {
+			lane -= 1;
 		}
-		
-		body.position = pos;
+
+		body.position.y = LaneManager.laneLocations [lane];
 	}
 
 	void OnCollisionEnter2D (Collider2D other) {
@@ -97,23 +84,19 @@ public class Player : MonoBehaviour {
 			Die ();
 		} else if (other.gameObject.tag == "warrior") {
 			Destroy (other.gameObject);
-			playerClass = "warrior";
-			classTimeRemaining = classDuration;
+
 			// Update sprite
 		} else if (other.gameObject.tag == "ranger") {
 			Destroy (other.gameObject);
-			playerClass = "ranger";
-			classTimeRemaining = classDuration;
+
 			// Update sprite
 		} else if (other.gameObject.tag == "mage") {
 			Destroy (other.gameObject);
-			playerClass = "mage";
-			classTimeRemaining = classDuration;
+
 			// Update sprite
 		} else if (other.gameObject.tag == "thief") {
 			Destroy (other.gameObject);
-			playerClass = "thief";
-			classTimeRemaining = classDuration;
+
 			// Update sprite
 		}
 	}
