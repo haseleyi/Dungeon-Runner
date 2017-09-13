@@ -17,9 +17,6 @@ public class PlayerController : MonoBehaviour {
 		trans = transform;
 		trans.position = new Vector2 (-10, LaneManager.instance.laneLocations [lane]);
 		currentClass = null;
-		foreach (float x in LaneManager.instance.laneLocations) {
-			print (x);
-		}
 	}
 
 	void FixedUpdate () {

@@ -8,6 +8,7 @@ public class LaneManager : MonoBehaviour {
 	public List<float> laneLocations = new List<float> {-4, -2, 0, 2};
 	public List<bool> laneIsOpen = new List<bool> {true, true, true, true};
 	public float spawnDelay;
+	public float xThreshold = -17;
 	public static LaneManager instance;
 	
 	void Awake() {
