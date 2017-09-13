@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody2D body;
 	PlayerClass currentClass;
 	public static PlayerController instance;
-	//ScoreManager scoreManager = new ScoreManager();
 
 	void Start () {
 		instance = this;
