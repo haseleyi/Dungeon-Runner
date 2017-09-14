@@ -19,12 +19,6 @@ public class PlayerController : MonoBehaviour {
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
-		gameObject.AddComponent<Warrior>();
-		gameObject.AddComponent<Mage>();
-		gameObject.AddComponent<Ranger>();
-		gameObject.AddComponent<Cleric>();
-		gameObject.AddComponent<Thief>();
-		gameObject.AddComponent<PlayerClass>();
 
 		// For testing purposes (in the actual code, Mage should be PlayerClass)
 		currentClass = GetComponent<Mage> ();

@@ -25,13 +25,14 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		print ("Collided with enemy!");
-		if (other.CompareTag("Arrow")) {
+	void OnCollisionEnter2D(Collision2D other) {
+		if (other.gameObject.tag == "Arrow") {
 			health -= 1;
-		} else if (other.CompareTag("Fireball")) {
+			Destroy (other.gameObject);
+		} else if (other.gameObject.tag == "Fireball") {
 			health -= 2;
-		} else if (other.CompareTag("Sword")) {
+			Destroy (other.gameObject);
+		} else if (other.gameObject.tag == "Sword") {
 			health -= 4;
 		} else {
 			print ("Something else...");
