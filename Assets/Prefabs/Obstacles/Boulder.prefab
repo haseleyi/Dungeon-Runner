@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb12a4f0270dd4418a075695df97b006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: -2
+  baseSpeed: 2
   defeatable: 0
   pointValue: 0
 --- !u!212 &212956977504985828

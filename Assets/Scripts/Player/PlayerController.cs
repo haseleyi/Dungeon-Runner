@@ -63,7 +63,8 @@ public class PlayerController : MonoBehaviour {
 		if (other.gameObject.tag == "Enemy") {
 			Die ();
 		} else if (other.gameObject.tag == "Coin") {
-			// Do whatever coins do
+			Destroy (other.gameObject);
+			ScoreManager.instance.AddCoins (1);
 		} else if (other.gameObject.tag == "Warrior") {
 			Destroy (other.gameObject);
 			currentClass = gameObject.GetComponent<Warrior> ();
