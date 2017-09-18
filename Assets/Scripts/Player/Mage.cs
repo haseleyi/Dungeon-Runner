@@ -28,18 +28,14 @@ public class Mage : PlayerClass {
 			canAttack = false;
 			StartCoroutine(WaitForAttackCoroutine ());
 		}
-
-
 	}
 
 	override public void Ability () {
 		// Do ability stuff
 		if (canAbility) {
-			// Disallow attacking for the duration of the cooldown
+			// Disallow ability for the duration of the cooldown
 			canAbility = false;
 			StartCoroutine(WaitForAbilityCoroutine ());
 		}
-
-
 	}
 }
