@@ -62,32 +62,32 @@ public class PlayerController : MonoBehaviour {
 		} else if (other.gameObject.tag == "Warrior") {
 			Destroy (other.gameObject);
 			currentClass = gameObject.GetComponent<Warrior> ();
-			StartCoroutine(ClassTimer ());
+			StartCoroutine(ClassTimerCoroutine ());
 			// Update sprite
 		} else if (other.gameObject.tag == "Ranger") {
 			Destroy (other.gameObject);
 			currentClass = gameObject.GetComponent<Ranger> ();
-			StartCoroutine(ClassTimer ());
+			StartCoroutine(ClassTimerCoroutine ());
 			// Update sprite
 		} else if (other.gameObject.tag == "Mage") {
 			Destroy (other.gameObject);
 			currentClass = gameObject.GetComponent<Mage> ();
-			StartCoroutine(ClassTimer ());
+			StartCoroutine(ClassTimerCoroutine ());
 			// Update sprite
 		} else if (other.gameObject.tag == "Thief") {
 			Destroy (other.gameObject);
 			currentClass = gameObject.GetComponent<Thief> ();
-			StartCoroutine(ClassTimer ());
+			StartCoroutine(ClassTimerCoroutine ());
 			// Update sprite
 		} else if (other.gameObject.tag == "Cleric") {
 			Destroy(other.gameObject);
 			currentClass = gameObject.GetComponent<Cleric> ();
-			StartCoroutine(ClassTimer ());
+			StartCoroutine(ClassTimerCoroutine ());
 			// Update sprite
 		}
 	}
 
-	IEnumerator ClassTimer () {
+	IEnumerator ClassTimerCoroutine () {
 		yield return new WaitForSeconds (classDuration);
 		currentClass = gameObject.GetComponent<PlayerClass> ();
 	}

@@ -15,8 +15,11 @@ public class Mage : PlayerClass {
 		canAbility = true;
 	}
 
-	override public void Attack () {
+	void Update() {
 		print ("canAttack: " + canAttack);
+	}
+
+	override public void Attack () {
 		// Do attack stuff
 		if (canAttack && Time.time > nextFire) {
 			nextFire = Time.time + fireDelay;
@@ -28,6 +31,7 @@ public class Mage : PlayerClass {
 		// Disallow attacking for the duration of the cooldown
 		canAttack = false;
 		StartCoroutine(WaitForAttackCoroutine ());
+		canAttack = true;
 	}
 
 	override public void Ability () {

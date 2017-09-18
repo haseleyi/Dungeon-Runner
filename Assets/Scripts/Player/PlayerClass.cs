@@ -19,15 +19,14 @@ public class PlayerClass : MonoBehaviour {
 	}
 
 	public virtual void Attack () {
-		// To be overridden in subclasses
 	}
 
 	public virtual void Ability () {
-		// To be overridden in subclasses
 	}
 
 
 	protected IEnumerator WaitForAttackCoroutine () {
+		canAttack = false;
 		yield return new WaitForSeconds (attackCooldown);
 		canAttack = true;
 	}

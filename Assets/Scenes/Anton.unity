@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 251008960}
   - component: {fileID: 251008959}
   m_Layer: 0
-  m_Name: laneManger
+  m_Name: LaneManger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 514427791}
   - component: {fileID: 514427790}
   m_Layer: 0
-  m_Name: scoreManager
+  m_Name: ScoreManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
