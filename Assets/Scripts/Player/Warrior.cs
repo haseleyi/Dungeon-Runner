@@ -20,7 +20,7 @@ public class Warrior : PlayerClass {
 
 		// Disallow attacking for the duration of the cooldown
 		canAttack = false;
-		WaitForAttackCoroutine ();
+		StartCoroutine(WaitForAttackCoroutine ());
 	}
 
 	override public void Ability () {

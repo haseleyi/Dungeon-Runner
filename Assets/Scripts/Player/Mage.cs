@@ -5,8 +5,6 @@ using UnityEngine;
 public class Mage : PlayerClass {
 
 	public GameObject fireballPrefab;
-	public float fireDelay;
-	float nextFire = 0;
 	public override string title {get; protected set;}
 
 	void Start() {
@@ -21,27 +19,27 @@ public class Mage : PlayerClass {
 
 	override public void Attack () {
 		// Do attack stuff
-		if (canAttack && Time.time > nextFire) {
-			nextFire = Time.time + fireDelay;
+		if (canAttack) {
 			Vector3 firePosition = PlayerController.instance.transform.position;
 			firePosition.y += .5f;
 			Instantiate(fireballPrefab, firePosition, Quaternion.identity);
+
+			// Disallow attacking for the duration of the cooldown
+			canAttack = false;
+			StartCoroutine(WaitForAttackCoroutine ());
 		}
 
-		// Disallow attacking for the duration of the cooldown
-		canAttack = false;
-		StartCoroutine(WaitForAttackCoroutine ());
-		canAttack = true;
+
 	}
 
 	override public void Ability () {
 		// Do ability stuff
 		if (canAbility) {
-
+			// Disallow attacking for the duration of the cooldown
+			canAbility = false;
+			StartCoroutine(WaitForAbilityCoroutine ());
 		}
 
-		// Disallow attacking for the duration of the cooldown
-		canAbility = false;
-		StartCoroutine(WaitForAbilityCoroutine ());
+
 	}
 }

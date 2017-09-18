@@ -26,7 +26,6 @@ public class PlayerClass : MonoBehaviour {
 
 
 	protected IEnumerator WaitForAttackCoroutine () {
-		canAttack = false;
 		yield return new WaitForSeconds (attackCooldown);
 		canAttack = true;
 	}
