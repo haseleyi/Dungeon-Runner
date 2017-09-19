@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : MonoBehaviour {
+public class Arrow : MonoBehaviour {
 
 	public float speed;
 
@@ -11,9 +11,11 @@ public class Fireball : MonoBehaviour {
 	void Start() {
 		body = GetComponent<Rigidbody2D> ();
 	}
-	
+
+
+	// Update is called once per frame
 	void FixedUpdate () {
-		GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+		body.velocity = transform.right * speed;
 		if (transform.position.x > -1 * LaneManager.instance.xThreshold) {
 			Destroy (gameObject);
 		}
