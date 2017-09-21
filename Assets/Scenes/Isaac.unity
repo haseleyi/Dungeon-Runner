@@ -860,16 +860,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114914653389021756, guid: 53f37cf0663afd847b1a8cd455a4cd8f,
-        type: 2}
-      propertyPath: duration
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114914653389021756, guid: 53f37cf0663afd847b1a8cd455a4cd8f,
-        type: 2}
-      propertyPath: attackCooldown
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53f37cf0663afd847b1a8cd455a4cd8f, type: 2}
   m_IsPrefabParent: 0

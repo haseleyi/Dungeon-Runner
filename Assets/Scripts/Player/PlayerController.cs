@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public float speed = 3;
 	public float classDuration = 10;
 	public int startLane = 2;
-	public float xInitial = -10;
+	public float xInitial = -8;
 
 	int lane;
 	Rigidbody2D body;
