@@ -15,7 +15,7 @@ public class Arrow : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		body.velocity = transform.right * speed;
+		body.velocity = transform.up * speed;
 		if (transform.position.x > -1 * LaneManager.instance.xThreshold) {
 			Destroy (gameObject);
 		}

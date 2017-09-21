@@ -167,7 +167,6 @@ MonoBehaviour:
   duration: 3
   fireballPrefab: {fileID: 1704647337455410, guid: 3f21c06c9b0326a448b69a60786aed9c,
     type: 2}
-  fireDelay: 0
 --- !u!114 &114814448525541838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,6 +195,8 @@ MonoBehaviour:
   attackCooldown: 0.5
   abilityCooldown: 2
   duration: 3
+  arrowPrefab: {fileID: 1510499517304894, guid: d53dfcdf55eb37542909be85eff81b9e,
+    type: 2}
 --- !u!212 &212994050421850024
 SpriteRenderer:
   m_ObjectHideFlags: 1
