@@ -34,8 +34,6 @@ public class Enemy : MonoBehaviour {
 			Destroy (other.gameObject);
 		} else if (other.gameObject.tag == "Sword") {
 			health -= 4;
-		} else {
-			print ("Something else...");
 		}
 	}
 }

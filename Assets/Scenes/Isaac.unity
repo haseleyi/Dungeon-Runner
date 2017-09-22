@@ -240,8 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2704070350c614145b8b56df0c462da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: 0
-  spawnEvery: 2.3
+  firstSpawn: 5
+  spawnEvery: 10
   warriorPrefab: {fileID: 1766764904526268, guid: 01a9469783829fa49b19c4dc8368680c,
     type: 2}
   magePrefab: {fileID: 1010792503886994, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
@@ -622,8 +622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f9e522aa4461b40b444e752993ed72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: 0
-  spawnEvery: 3
+  firstSpawn: 1
+  spawnEvery: 5
   chanceOfChest: 0
   coinPrefab: {fileID: 1760512160067478, guid: db70bc32a6e9946309dbbc594cff6078, type: 2}
   chestPrefab: {fileID: 0}
@@ -680,8 +680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c2cb310ba168f4da35dd3d1a0f00dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: 1
-  spawnEvery: 2
+  firstSpawn: 0
+  spawnEvery: 1.25
   chanceOfEnemy: 0
   gruntPrefab: {fileID: 1838446811938436, guid: 6f361baaa06534ac0983a511cc01c920,
     type: 2}
@@ -873,7 +873,7 @@ Prefab:
     - target: {fileID: 114225966226012140, guid: 53f37cf0663afd847b1a8cd455a4cd8f,
         type: 2}
       propertyPath: speed
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114225966226012140, guid: 53f37cf0663afd847b1a8cd455a4cd8f,
         type: 2}

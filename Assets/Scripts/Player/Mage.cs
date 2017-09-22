@@ -13,10 +13,6 @@ public class Mage : PlayerClass {
 		canAbility = true;
 	}
 
-	void Update() {
-		print ("canAttack: " + canAttack);
-	}
-
 	override public void Attack () {
 		// Do attack stuff
 		if (canAttack) {
