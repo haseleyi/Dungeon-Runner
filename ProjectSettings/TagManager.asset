@@ -13,6 +13,7 @@ TagManager:
   - Warrior
   - Cleric
   - Fireball
+  - Arrow
   layers:
   - Default
   - TransparentFX

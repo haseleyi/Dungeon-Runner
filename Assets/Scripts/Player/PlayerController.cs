@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed = 3;
-	public float classDuration = 3;
+	public float classDuration = 10;
 	public int startLane = 2;
-	public float xInitial = -10;
+	public float xInitial = -8;
 
 	int lane;
 	Rigidbody2D body;
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
 
 		// For testing purposes (in the actual code, Mage should be PlayerClass)
-		currentClass = GetComponent<Mage> ();
+		currentClass = GetComponent<Ranger> ();
 	}
 
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Die () {
 		// Display death screen
+		GameManager.LoadScene("MainMenu");
 		Destroy (gameObject);
 	}
 }
