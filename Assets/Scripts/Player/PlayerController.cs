@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown ("k")) {
 			currentClass.Ability ();
 		}
-//		print (currentClass.title);
 	}
 
 	public void MoveLeftRight () {

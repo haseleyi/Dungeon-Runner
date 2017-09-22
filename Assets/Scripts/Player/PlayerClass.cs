@@ -6,7 +6,6 @@ public class PlayerClass : MonoBehaviour {
 
 	public float attackCooldown = 1;
 	public float abilityCooldown = 2;
-	public float duration = 3;
 	public virtual string title {get; protected set;}
 
 	protected bool canAttack;
