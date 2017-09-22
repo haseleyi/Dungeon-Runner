@@ -105,10 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3765be52dbb53d4cbaa45a0af562f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
-  classDuration: 3
+  speed: 500
+  classDuration: 20
   startLane: 2
-  xInitial: -5
+  xInitial: -6.5
 --- !u!114 &114586947843267970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,9 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166fbf187cef6d47a8536edb7ec2da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 0.5
+  attackCooldown: 0.2
   abilityCooldown: 2
-  duration: 3
 --- !u!114 &114649512640980636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,9 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8662636113163479e65cda51199797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 0.5
+  attackCooldown: 0.2
   abilityCooldown: 2
-  duration: 3
 --- !u!114 &114652974283381828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,7 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 0.5
   abilityCooldown: 2
-  duration: 3
 --- !u!114 &114766333174623778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,9 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cded660cce72f6f438f8bf6c3b3920b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 0.5
+  attackCooldown: 2
   abilityCooldown: 2
-  duration: 3
   fireballPrefab: {fileID: 1704647337455410, guid: 3f21c06c9b0326a448b69a60786aed9c,
     type: 2}
 --- !u!114 &114814448525541838
@@ -178,9 +174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0cdc08a372e5e479ee1e1a527b38c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 0.5
+  attackCooldown: 0.2
   abilityCooldown: 2
-  duration: 3
 --- !u!114 &114914653389021756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,9 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9959ee5f3f410cc41a71a9f14b01d16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 0.2
+  attackCooldown: 1
   abilityCooldown: 2
-  duration: 10
   arrowPrefab: {fileID: 1510499517304894, guid: d53dfcdf55eb37542909be85eff81b9e,
     type: 2}
 --- !u!212 &212994050421850024

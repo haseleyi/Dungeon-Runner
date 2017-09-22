@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ranger : PlayerClass {
+	
 	public GameObject arrowPrefab;
 	public override string title {get; protected set;}
 
@@ -21,7 +22,7 @@ public class Ranger : PlayerClass {
 
 			// Disallow attacking for the duration of the cooldown
 			canAttack = false;
-			WaitForAttackCoroutine ();
+			StartCoroutine(WaitForAttackCoroutine ());
 		}
 
 
@@ -33,9 +34,7 @@ public class Ranger : PlayerClass {
 
 			// Disallow attacking for the duration of the cooldown
 			canAbility = false;
-			WaitForAbilityCoroutine ();
+			StartCoroutine(WaitForAbilityCoroutine ());
 		}
-
-
 	}
 }
