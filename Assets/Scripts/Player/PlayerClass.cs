@@ -4,33 +4,32 @@ using UnityEngine;
 
 public class PlayerClass : MonoBehaviour {
 
-	public float attackCooldown = 1;
-	public float abilityCooldown = 2;
+	public float cooldown1 = 1;
+	public float cooldown2 = 2;
 	public virtual string title {get; protected set;}
 
-	protected bool canAttack;
-	protected bool canAbility;
+	protected bool canAbility1;
+	protected bool canAbility2;
+	protected bool upgraded;
 
 	void Start () {
-		canAttack = true;
-		canAbility = true;
 		title = "No class";
 	}
 
-	public virtual void Attack () {
+	public virtual void Ability1 () {
 	}
 
-	public virtual void Ability () {
+	public virtual void Ability2 () {
 	}
 
 
-	protected IEnumerator WaitForAttackCoroutine () {
-		yield return new WaitForSeconds (attackCooldown);
-		canAttack = true;
+	protected IEnumerator Cooldown1Coroutine () {
+		yield return new WaitForSeconds (cooldown1);
+		canAbility1 = true;
 	}
 
-	protected IEnumerator WaitForAbilityCoroutine () {
-		yield return new WaitForSeconds (abilityCooldown);
-		canAbility = true;
+	protected IEnumerator Cooldown2Coroutine () {
+		yield return new WaitForSeconds (cooldown2);
+		canAbility2 = true;
 	}
 }

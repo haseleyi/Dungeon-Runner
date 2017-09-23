@@ -7,6 +7,7 @@ public class ScoreManager : MonoBehaviour {
 
 	public Text coinsText, totalScore;
 	public static ScoreManager instance;
+	public int coinScore;
 	int coins;
 	int score;
 
@@ -25,6 +26,7 @@ public class ScoreManager : MonoBehaviour {
 
 	public void AddCoins (int numCoins) {
 		coins += numCoins;
+		score += numCoins * coinScore;
 		UpdateCoins ();
 	}
 
@@ -36,7 +38,6 @@ public class ScoreManager : MonoBehaviour {
 		while (true) {
 			yield return new WaitForSeconds (.1f);
 			score++;
-			print ("Increased score");
 		}
 	}
 }

@@ -13,7 +13,7 @@ using UnityEngine;
 /// Pause menu script. Provides functionality to Pause and Unpause the game and Go Back to the Main Menu. Controlled by buttons from the Unity UI.
 /// Pressing ESC will also open and close the menu.
 /// </summary>
-public class PauseMenu : MonoBehaviour {
+public class Store : MonoBehaviour {
 
 	public string mainMenuScene = "MainMenu";
 	public GameObject pauseMenuCanvas;
@@ -33,6 +33,8 @@ public class PauseMenu : MonoBehaviour {
 			}
 		}
 	}
+
+
 
 	public void Pause() {
 		pauseMenuCanvas.SetActive (true);

@@ -28,11 +28,11 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		MoveLeftRight ();
 		SwitchLanes ();
-		if (Input.GetKeyDown("j")) {
-			currentClass.Attack();
+		if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Space)) {
+			currentClass.Ability1();
 		}
-		if (Input.GetKeyDown ("k")) {
-			currentClass.Ability ();
+		if (Input.GetKeyDown (KeyCode.K)) {
+			currentClass.Ability2 ();
 		}
 	}
 

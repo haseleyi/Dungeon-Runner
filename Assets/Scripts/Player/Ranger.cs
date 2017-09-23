@@ -9,32 +9,33 @@ public class Ranger : PlayerClass {
 
 	void Start() {
 		title = "Ranger";
-		canAttack = true;
-		canAbility = true;
+		canAbility1 = true;
+		canAbility2 = true;
+		upgraded = false;
 	}
 
-	override public void Attack () {
+	override public void Ability1 () {
 		// Do attack stuff
-		if (canAttack) {
+		if (canAbility1) {
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			firePosition.y ++;
 			Instantiate(arrowPrefab, firePosition, Quaternion.AngleAxis(90, Vector3.back));
 
 			// Disallow attacking for the duration of the cooldown
-			canAttack = false;
-			StartCoroutine(WaitForAttackCoroutine ());
+			canAbility1 = false;
+			StartCoroutine(Cooldown1Coroutine ());
 		}
 
 
 	}
 
-	override public void Ability () {
+	override public void Ability2 () {
 		// Do ability stuff
-		if (canAbility) {
+		if (upgraded && canAbility2) {
 
 			// Disallow attacking for the duration of the cooldown
-			canAbility = false;
-			StartCoroutine(WaitForAbilityCoroutine ());
+			canAbility2 = false;
+			StartCoroutine(Cooldown2Coroutine ());
 		}
 	}
 }
