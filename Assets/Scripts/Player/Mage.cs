@@ -20,6 +20,9 @@ public class Mage : PlayerClass {
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			firePosition.y += .5f;
 			Instantiate(fireballPrefab, firePosition, Quaternion.identity);
+			if (upgraded) {
+				StartCoroutine (SecondShotCoroutine ());
+			}
 
 			// Disallow attacking for the duration of the cooldown
 			canAbility1 = false;
@@ -30,9 +33,17 @@ public class Mage : PlayerClass {
 	override public void Ability2 () {
 		// Do ability stuff
 		if (upgraded && canAbility2) {
+
 			// Disallow ability for the duration of the cooldown
 			canAbility2 = false;
 			StartCoroutine(Cooldown2Coroutine ());
 		}
+	}
+
+	IEnumerator SecondShotCoroutine() {
+		yield return new WaitForSeconds (.1f);
+		Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
+		firePosition.y += .5f;
+		Instantiate(fireballPrefab, firePosition, Quaternion.identity);
 	}
 }

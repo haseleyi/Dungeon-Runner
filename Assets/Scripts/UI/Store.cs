@@ -34,7 +34,35 @@ public class Store : MonoBehaviour {
 		}
 	}
 
+	public void UpgradeCleric() {
+		if (!PlayerController.instance.GetComponent<Cleric> ().upgraded && ScoreManager.instance.PurchaseSuccess()) {
+			PlayerController.instance.GetComponent<Cleric> ().upgraded = true;
+		}
+	}
 
+	public void UpgradeMage() {
+		if (!PlayerController.instance.GetComponent<Mage> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
+			PlayerController.instance.GetComponent<Mage> ().upgraded = true;
+		}
+	}
+
+	public void UpgradeRanger() {
+		if (!PlayerController.instance.GetComponent<Ranger> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
+			PlayerController.instance.GetComponent<Ranger> ().upgraded = true;
+		}
+	}
+
+	public void UpgradeThief() {
+		if (!PlayerController.instance.GetComponent<Thief> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
+			PlayerController.instance.GetComponent<Thief> ().upgraded = true;
+		}
+	}
+
+	public void UpgradeWarrior() {
+		if (!PlayerController.instance.GetComponent<Warrior> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
+			PlayerController.instance.GetComponent<Warrior> ().upgraded = true;
+		}
+	}
 
 	public void Pause() {
 		pauseMenuCanvas.SetActive (true);
