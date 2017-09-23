@@ -5,18 +5,28 @@ using UnityEngine;
 public class Arrow : MonoBehaviour {
 
 	public float speed;
+	public float gravity;
 
 	Rigidbody2D body;
+	float startY;
 
 	void Start() {
 		body = GetComponent<Rigidbody2D> ();
+		body.angularVelocity = -20;
+		startY = transform.position.y;
 	}
 
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		body.velocity = transform.up * speed;
-		if (transform.position.x > -1 * LaneManager.instance.xThreshold) {
+		body.velocity = new Vector2 (speed, -gravity);
+		if (transform.position.x > -1 * LaneManager.instance.xThreshold || (startY - transform.position.y) > 0.5f) {
+			Destroy (gameObject);
+		}
+	}
+
+	void OnCollisionEnter2D (Collision2D other) {
+		if (other.gameObject.tag == "Enemy") {
 			Destroy (gameObject);
 		}
 	}
