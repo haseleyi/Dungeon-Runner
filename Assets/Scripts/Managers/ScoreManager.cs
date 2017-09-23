@@ -16,12 +16,12 @@ public class ScoreManager : MonoBehaviour {
 		UpdateCoins ();
 	}
 
-	public void AddCoins (int newCoinValue) {
-		coins += newCoinValue;
+	public void AddCoins (int numCoins) {
+		coins += numCoins;
 		UpdateCoins ();
 	}
 
 	void UpdateCoins () {
-		coinsText.text = "Coins: " + coins.ToString();
+		coinsText.text = coins.ToString();
 	}
 }

@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f99db839d726744b99c17f01d1e004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLevelName: Isaac
+  startLevelName: Game
 --- !u!4 &144302907
 Transform:
   m_ObjectHideFlags: 0
