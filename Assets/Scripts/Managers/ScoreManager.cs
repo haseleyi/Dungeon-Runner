@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
+
 	public Text coinsText;
 	private int coins;
 	public static ScoreManager instance;

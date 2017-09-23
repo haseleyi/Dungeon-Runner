@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour {
 		if (LaneManager.instance.IsFreeLane()) {
 			GameObject prefab = prefabs [random.Next (prefabs.Length)];
 			float location = LaneManager.instance.GetFreeLane();
-			Instantiate (prefab, new Vector3 (17, location, 0), Quaternion.identity);
+			Instantiate (prefab, new Vector2 (17, location), Quaternion.identity);
 			StartCoroutine (LaneManager.instance.DisableSpawningCoroutine(location));
 		}
 	}
@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour {
 	protected void SpawnPrefab(GameObject prefab) {
 		if (LaneManager.instance.IsFreeLane()) {
 			float location = LaneManager.instance.GetFreeLane();
-			Instantiate (prefab, new Vector3 (17, location, 0), Quaternion.identity);
+			Instantiate (prefab, new Vector2 (17, location), Quaternion.identity);
 			StartCoroutine (LaneManager.instance.DisableSpawningCoroutine(location));
 		}
 	}

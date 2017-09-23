@@ -16,7 +16,7 @@ public class Ranger : PlayerClass {
 	override public void Attack () {
 		// Do attack stuff
 		if (canAttack) {
-			Vector2 firePosition = PlayerController.instance.transform.position;
+			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			firePosition.y ++;
 			Instantiate(arrowPrefab, firePosition, Quaternion.AngleAxis(90, Vector3.back));
 

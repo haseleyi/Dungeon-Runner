@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	public Vector2 GetPlayerPosition() {
+		return transform.position;
+	}
+
 	public void MoveLeftRight () {
 		Vector2 moveVel = body.velocity;
 		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;

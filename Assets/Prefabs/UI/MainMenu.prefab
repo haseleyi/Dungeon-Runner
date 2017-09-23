@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f99db839d726744b99c17f01d1e004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLevelName: Level1
+  startLevelName: Isaac
 --- !u!222 &222121394699854936
 CanvasRenderer:
   m_ObjectHideFlags: 1

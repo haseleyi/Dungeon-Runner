@@ -16,7 +16,7 @@ public class Mage : PlayerClass {
 	override public void Attack () {
 		// Do attack stuff
 		if (canAttack) {
-			Vector3 firePosition = PlayerController.instance.transform.position;
+			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			firePosition.y += .5f;
 			Instantiate(fireballPrefab, firePosition, Quaternion.identity);
 
