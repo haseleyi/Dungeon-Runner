@@ -10,7 +10,7 @@ public class PlayerClass : MonoBehaviour {
 
 	protected bool canAbility1;
 	protected bool canAbility2;
-	protected bool upgraded;
+	public bool upgraded;
 
 	void Start () {
 		title = "No class";
