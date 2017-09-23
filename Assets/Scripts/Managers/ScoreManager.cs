@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour {
 	public static ScoreManager instance;
 	public int coinScore;
 	public int upgradePrice;
-	int coins;
+	public int coins;
 	int score;
 
 	// Use this for initialization

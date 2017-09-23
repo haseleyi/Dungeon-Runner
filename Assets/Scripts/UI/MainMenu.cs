@@ -20,11 +20,17 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void StartGame() {
-		GameManager.gameState = GameManager.GameState.Running;
-		GameManager.LoadScene (startLevelName);
+		StartCoroutine (GameStartCoroutine());
 	}
 
 	public void Quit() {
-		GameManager.Quit ();
+		GameManager.instance.Quit ();
+	}
+
+	IEnumerator GameStartCoroutine() {
+		GameManager.instance.startSound.Play ();
+		yield return new WaitForSeconds (1);
+		GameManager.gameState = GameManager.GameState.Running;
+		GameManager.instance.LoadScene (startLevelName);
 	}
 }

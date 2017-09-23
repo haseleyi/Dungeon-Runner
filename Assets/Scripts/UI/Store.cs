@@ -7,6 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 /// <summary>
@@ -17,10 +18,12 @@ public class Store : MonoBehaviour {
 
 	public string mainMenuScene = "MainMenu";
 	public GameObject pauseMenuCanvas;
+	AudioSource upgradeSound;
 
 	void Start() {
 		GameManager.gameState = GameManager.GameState.Running;
 		pauseMenuCanvas.SetActive (false);
+		upgradeSound = GetComponent<AudioSource> ();
 	}
 
 	void Update() {
@@ -37,46 +40,86 @@ public class Store : MonoBehaviour {
 	public void UpgradeCleric() {
 		if (!PlayerController.instance.GetComponent<Cleric> ().upgraded && ScoreManager.instance.PurchaseSuccess()) {
 			PlayerController.instance.GetComponent<Cleric> ().upgraded = true;
+			upgradeSound.Play ();
+			Button[] buttons = GameObject.FindObjectsOfType<Button> ();
+			foreach (Button button in buttons) {
+				if (button.tag == "ClericButton") {
+					button.interactable = false;
+					break;
+				}
+			}
 		}
 	}
 
 	public void UpgradeMage() {
 		if (!PlayerController.instance.GetComponent<Mage> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
 			PlayerController.instance.GetComponent<Mage> ().upgraded = true;
+			upgradeSound.Play ();
+			Button[] buttons = GameObject.FindObjectsOfType<Button> ();
+			foreach (Button button in buttons) {
+				if (button.tag == "MageButton") {
+					button.interactable = false;
+					break;
+				}
+			}
 		}
 	}
 
 	public void UpgradeRanger() {
 		if (!PlayerController.instance.GetComponent<Ranger> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
 			PlayerController.instance.GetComponent<Ranger> ().upgraded = true;
+			upgradeSound.Play ();
+			Button[] buttons = GameObject.FindObjectsOfType<Button> ();
+			foreach (Button button in buttons) {
+				if (button.tag == "RangerButton") {
+					button.interactable = false;
+					break;
+				}
+			}
 		}
 	}
 
 	public void UpgradeThief() {
 		if (!PlayerController.instance.GetComponent<Thief> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
 			PlayerController.instance.GetComponent<Thief> ().upgraded = true;
+			upgradeSound.Play ();
+			Button[] buttons = GameObject.FindObjectsOfType<Button> ();
+			foreach (Button button in buttons) {
+				if (button.tag == "ThiefButton") {
+					button.interactable = false;
+					break;
+				}
+			}
 		}
 	}
 
 	public void UpgradeWarrior() {
 		if (!PlayerController.instance.GetComponent<Warrior> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
 			PlayerController.instance.GetComponent<Warrior> ().upgraded = true;
+			upgradeSound.Play ();
+			Button[] buttons = GameObject.FindObjectsOfType<Button> ();
+			foreach (Button button in buttons) {
+				if (button.tag == "WarriorButton") {
+					button.interactable = false;
+					break;
+				}
+			}
 		}
 	}
 
 	public void Pause() {
 		pauseMenuCanvas.SetActive (true);
-		GameManager.Pause ();
+		GameManager.instance.Pause ();
 	}
 
 	public void UnPause() {
 		pauseMenuCanvas.SetActive (false);
-		GameManager.Unpause ();
+		GameManager.instance.Unpause ();
 	}
 
 	public void GoToMainMenu() {
-		GameManager.Unpause ();
+		GameManager.instance.Unpause ();
 		GameManager.gameState = GameManager.GameState.MainMenu;
-		GameManager.LoadScene (mainMenuScene);
+		GameManager.instance.LoadScene (mainMenuScene);
 	}
 }

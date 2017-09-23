@@ -13,7 +13,10 @@ using UnityEngine.SceneManagement;
 /// In control of the game flow. Uses static fields to store information and static functions for outside communication.
 /// Use this to transition between levels, request the current game state and pause/unpause the game.
 /// </summary>
-public class GameManager {
+public class GameManager : MonoBehaviour {
+
+	public AudioSource uiSound, startSound;
+	public static GameManager instance;
 
 	public enum GameState
 	{
@@ -24,21 +27,32 @@ public class GameManager {
 
 	public static GameState gameState;
 
-	public static void Pause() {
+	void Awake() {
+		instance = this;
+		AudioSource[] sounds = GetComponents<AudioSource> ();
+		uiSound = sounds [0];
+		startSound = sounds [1];
+	}
+
+	public void Pause() {
+		uiSound.Play ();
 		Time.timeScale = 0;
 		gameState = GameState.Paused;
 	}
 
-	public static void Unpause() {
+	public void Unpause() {
+		uiSound.Play ();
 		Time.timeScale = 1;
 		gameState = GameState.Running;
 	}
 
-	public static void Quit() {
+	public void Quit() {
+		uiSound.Play ();
 		Application.Quit ();	
 	}
 
-	public static void LoadScene(string scene) {
+	public void LoadScene(string scene) {
+		uiSound.Play ();
 		SceneManager.LoadScene (scene);
 	}
 }
