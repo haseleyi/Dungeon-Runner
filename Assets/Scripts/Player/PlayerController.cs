@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Die () {
 		// Display death screen
-		GetComponent<AudioSource> ().Play ();
+		// GetComponent<AudioSource> ().Play ();
 		ScoreManager.instance.LoadDeathReport();
 	}
 }
