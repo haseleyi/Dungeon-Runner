@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstSpawn: 1
-  spawnEvery: 1
+  spawnEvery: 10
   warriorPrefab: {fileID: 1766764904526268, guid: 01a9469783829fa49b19c4dc8368680c,
     type: 2}
   magePrefab: {fileID: 1010792503886994, guid: 027c28f0e35bbaf4abb95af981375449, type: 2}
@@ -1065,6 +1065,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathReportCanvas: {fileID: 1875861663}
+  totalScore: {fileID: 817060901}
+  timeSurvived: {fileID: 1748113694}
+  coinsCollected: {fileID: 1427423956}
+  gruntsDefeated: {fileID: 1718730879}
+  archersDefeated: {fileID: 1523601706}
+  tanksDefeated: {fileID: 1255078568}
 --- !u!1 &775895327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,7 +1228,6 @@ MonoBehaviour:
   classDuration: 20
   startLane: 2
   xInitial: -6.5
-  death: {fileID: 8300000, guid: 05a6a14a1d9ce4cae82671a9d29128db, type: 3}
 --- !u!61 &775895336
 BoxCollider2D:
   m_ObjectHideFlags: 0

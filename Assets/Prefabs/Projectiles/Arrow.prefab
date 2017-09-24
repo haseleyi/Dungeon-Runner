@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  gravity: 0.1
+  gravity: 1
 --- !u!212 &212331267981393382
 SpriteRenderer:
   m_ObjectHideFlags: 1
