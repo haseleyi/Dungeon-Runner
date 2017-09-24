@@ -11,18 +11,17 @@ public class Enemy : MonoBehaviour {
 	public int pointValue;
 	protected Rigidbody2D body;
 
-	public void Awake () {
+	void Awake () {
 		body = GetComponent<Rigidbody2D> ();
 		body.velocity = new Vector2 (-1 * (baseSpeed + runSpeed), 0);
 	}
 	
-	public virtual void FixedUpdate () {
+	void FixedUpdate () {
 		if (transform.position.x < LaneManager.instance.xThreshold) {
 			Destroy (gameObject);
 		}
 		if (health <= 0) {
-			ScoreManager.instance.ScoreEnemy (pointValue);
-			Destroy (gameObject);
+			Die ();
 		}
 	}
 
@@ -36,5 +35,10 @@ public class Enemy : MonoBehaviour {
 		} else if (other.gameObject.tag == "Sword") {
 			health -= 4;
 		}
+	}
+
+	protected virtual void Die() {
+		ScoreManager.instance.IncrementScore(pointValue);
+		Destroy (gameObject);
 	}
 }
