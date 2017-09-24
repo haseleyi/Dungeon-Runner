@@ -23,7 +23,7 @@ public class Skeleton : Enemy {
 
 			// Disallow attacking for the duration of the cooldown
 			canFire = false;
-			StartCoroutine(ArrowCooldown ());
+			StartCoroutine(ArrowCooldown (arrowCooldown));
 		}
 	}
 
