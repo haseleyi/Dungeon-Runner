@@ -1195,7 +1195,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 775895327}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -1222,6 +1222,7 @@ MonoBehaviour:
   classDuration: 20
   startLane: 2
   xInitial: -6.5
+  death: {fileID: 8300000, guid: 05a6a14a1d9ce4cae82671a9d29128db, type: 3}
 --- !u!61 &775895336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4442,6 +4443,16 @@ Prefab:
     - target: {fileID: 4440317878731384, guid: 53f37cf0663afd847b1a8cd455a4cd8f, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225966226012140, guid: 53f37cf0663afd847b1a8cd455a4cd8f,
+        type: 2}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 8300000, guid: 05a6a14a1d9ce4cae82671a9d29128db, type: 3}
+    - target: {fileID: 50186324537541346, guid: 53f37cf0663afd847b1a8cd455a4cd8f,
+        type: 2}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53f37cf0663afd847b1a8cd455a4cd8f, type: 2}
