@@ -7,12 +7,11 @@ public class ScoreManager : MonoBehaviour {
 
 	public Text coinsText, totalScore;
 	public static ScoreManager instance;
-	public int coinScore;
+	public int coinValue;
 	public int upgradePrice;
 	public int coins;
 	int score;
 
-	// Use this for initialization
 	void Start () {
 		instance = this;
 		coins = 0;
@@ -27,7 +26,7 @@ public class ScoreManager : MonoBehaviour {
 
 	public void AddCoins (int numCoins) {
 		coins += numCoins;
-		score += numCoins * coinScore;
+		score += numCoins * coinValue;
 		UpdateCoins ();
 	}
 
@@ -49,5 +48,9 @@ public class ScoreManager : MonoBehaviour {
 			return true;
 		}
 		return false;
+	}
+
+	public void ScoreEnemy(int enemyValue) {
+		score += enemyValue;
 	}
 }

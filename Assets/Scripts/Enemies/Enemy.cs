@@ -7,11 +7,11 @@ public class Enemy : MonoBehaviour {
 	public float baseSpeed = 2;
 	public float runSpeed;
 	public bool defeatable;
-	public float health;
-	public float pointValue;
+	public int health;
+	public int pointValue;
 	protected Rigidbody2D body;
 
-	public void Start () {
+	public void Awake () {
 		body = GetComponent<Rigidbody2D> ();
 		body.velocity = new Vector2 (-1 * (baseSpeed + runSpeed), 0);
 	}
@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour {
 			Destroy (gameObject);
 		}
 		if (health <= 0) {
+			ScoreManager.instance.ScoreEnemy (pointValue);
 			Destroy (gameObject);
 		}
 	}

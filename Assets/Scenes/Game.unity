@@ -175,7 +175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Class Upgrade: 5'
+  m_Text: 'Class Upgrade: 10'
 --- !u!222 &12446556
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2527,7 +2527,8 @@ MonoBehaviour:
   coinsText: {fileID: 913583596}
   totalScore: {fileID: 2122660018}
   coinScore: 100
-  upgradePrice: 5
+  upgradePrice: 10
+  coins: 0
 --- !u!4 &1438053391
 Transform:
   m_ObjectHideFlags: 0
@@ -2785,7 +2786,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1669652421}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95c2cb310ba168f4da35dd3d1a0f00dd, type: 3}
   m_Name: 

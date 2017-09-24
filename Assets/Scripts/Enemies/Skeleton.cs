@@ -17,6 +17,6 @@ public class Skeleton : Enemy {
 	}
 
 	IEnumerator ArrowCooldown () {
-		
+		yield return new WaitForSeconds (0);
 	}
 }
