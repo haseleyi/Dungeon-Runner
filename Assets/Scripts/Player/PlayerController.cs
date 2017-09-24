@@ -13,12 +13,15 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody2D body;
 	PlayerClass currentClass;
 	public static PlayerController instance;
+	public AudioClip death;
 
 	void Start () {
 		instance = this;
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
+		GetComponent<AudioSource> ().playOnAwake = false;
+		GetComponent<AudioSource> ().clip = death;
 
 		// For testing purposes (in the actual code, this should be PlayerClass)
 		currentClass = GetComponent<Ranger> ();
@@ -102,6 +105,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Die () {
 		// Display death screen
+		GetComponent<AudioSource> ().Play ();
 		ScoreManager.instance.LoadDeathReport();
 	}
 }
