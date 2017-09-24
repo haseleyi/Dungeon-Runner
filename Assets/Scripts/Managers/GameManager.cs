@@ -46,13 +46,12 @@ public class GameManager : MonoBehaviour {
 		gameState = GameState.Running;
 	}
 
-	public void Quit() {
-		uiSound.Play ();
-		Application.Quit ();	
+	public void EndRun() {
+		Time.timeScale = 0;
+		gameState = GameState.Paused;
 	}
 
 	public void LoadScene(string scene) {
-		uiSound.Play ();
 		SceneManager.LoadScene (scene);
 	}
 }

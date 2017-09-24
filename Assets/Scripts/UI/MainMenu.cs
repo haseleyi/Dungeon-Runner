@@ -23,10 +23,6 @@ public class MainMenu : MonoBehaviour {
 		StartCoroutine (GameStartCoroutine());
 	}
 
-	public void Quit() {
-		GameManager.instance.Quit ();
-	}
-
 	IEnumerator GameStartCoroutine() {
 		GameManager.instance.startSound.Play ();
 		yield return new WaitForSeconds (1);
