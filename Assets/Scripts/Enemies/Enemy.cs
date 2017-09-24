@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour {
 		body.velocity = new Vector2 (-1 * (baseSpeed + runSpeed), 0);
 	}
 	
-	void FixedUpdate () {
+	protected virtual void FixedUpdate () {
 		if (transform.position.x < LaneManager.instance.xThreshold) {
 			Destroy (gameObject);
 		}
@@ -40,5 +40,9 @@ public class Enemy : MonoBehaviour {
 	protected virtual void Die() {
 		ScoreManager.instance.IncrementScore(pointValue);
 		Destroy (gameObject);
+	}
+
+	public void Damage (int dam) {
+		health -= dam;
 	}
 }
