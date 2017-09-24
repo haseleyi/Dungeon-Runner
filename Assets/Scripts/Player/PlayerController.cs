@@ -62,7 +62,11 @@ public class PlayerController : MonoBehaviour {
 		} else if (other.gameObject.tag == "Coin") {
 			Destroy (other.gameObject);
 			if (currentClass.title == "Thief") {
-				ScoreManager.instance.AddCoins (2);
+				if (currentClass.upgraded) {
+					ScoreManager.instance.AddCoins (4);
+				} else {
+					ScoreManager.instance.AddCoins (2);
+				}
 			} else {
 				ScoreManager.instance.AddCoins (1);
 			}
