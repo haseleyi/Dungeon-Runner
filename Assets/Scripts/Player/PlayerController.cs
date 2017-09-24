@@ -102,6 +102,6 @@ public class PlayerController : MonoBehaviour {
 
 	void Die () {
 		// Display death screen
-		ScoreManager.instance.LoadDeathReport();
+		DeathReport.instance.LoadDeathReport();
 	}
 }

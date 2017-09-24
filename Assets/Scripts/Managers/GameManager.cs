@@ -34,14 +34,18 @@ public class GameManager : MonoBehaviour {
 		startSound = sounds [1];
 	}
 
-	public void Pause() {
+	public void PlayUISound() {
 		uiSound.Play ();
+	}
+
+	public void Pause() {
+		PlayUISound ();
 		Time.timeScale = 0;
 		gameState = GameState.Paused;
 	}
 
 	public void Unpause() {
-		uiSound.Play ();
+		PlayUISound ();
 		Time.timeScale = 1;
 		gameState = GameState.Running;
 	}
@@ -53,5 +57,13 @@ public class GameManager : MonoBehaviour {
 
 	public void LoadScene(string scene) {
 		SceneManager.LoadScene (scene);
+		Time.timeScale = 1;
+		gameState = GameState.Running;
+	}
+
+	public void MainMenu() {
+		Unpause ();
+		gameState = GameState.MainMenu;
+		SceneManager.LoadScene ("MainMenu");
 	}
 }
