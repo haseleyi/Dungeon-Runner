@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 2
-  runSpeed: 1
+  runSpeed: 0
   defeatable: 0
   health: 0
   pointValue: 0
-  arrowCooldown: 0
+  arrowCooldown: 1
   arrowPrefab: {fileID: 1510499517304894, guid: d53dfcdf55eb37542909be85eff81b9e,
     type: 2}
 --- !u!212 &212997962253049752

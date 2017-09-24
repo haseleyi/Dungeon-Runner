@@ -7,10 +7,12 @@ public class Skeleton : Enemy {
 	public float arrowCooldown;
 	public GameObject arrowPrefab;
 
-	bool canFire = true;
+	bool canFire = false;
 
 	void Start() {
 		arrowPrefab.gameObject.GetComponent<Arrow> ().speed = -10;
+		StartCoroutine (ArrowCooldown (Random.Range (0, 3)));
+
 	}
 
 	protected override void FixedUpdate () {
@@ -31,8 +33,8 @@ public class Skeleton : Enemy {
 		ScoreManager.instance.archersDefeated++;
 	}
 
-	IEnumerator ArrowCooldown () {
-		yield return new WaitForSeconds (arrowCooldown);
+	IEnumerator ArrowCooldown (float cooldown) {
+		yield return new WaitForSeconds (cooldown);
 		canFire = true;
 	}
 }
