@@ -204,7 +204,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 106837595}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2704070350c614145b8b56df0c462da3, type: 3}
   m_Name: 
@@ -1616,7 +1616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Again!
+  m_Text: Again
 --- !u!222 &881061200
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4475,7 +4475,7 @@ GameObject:
   - component: {fileID: 2073868094}
   - component: {fileID: 2073868093}
   m_Layer: 5
-  m_Name: PlayAgainButton
+  m_Name: AgainButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -26,8 +26,10 @@ public class PlayerController : MonoBehaviour {
 
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
 	void Update () {
-		MoveLeftRight ();
-		SwitchLanes ();
+		if (GameManager.gameState != GameManager.GameState.Paused) {
+			MoveLeftRight ();
+			SwitchLanes ();
+		}
 		if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Space)) {
 			currentClass.Ability1();
 		}
@@ -40,19 +42,20 @@ public class PlayerController : MonoBehaviour {
 		return transform.position;
 	}
 
-	public void MoveLeftRight () {
+	void MoveLeftRight () {
 		Vector2 moveVel = body.velocity;
 		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
 		body.velocity = moveVel;
 	}
 
 	void SwitchLanes () {
-		if ((Input.GetKeyDown("w") || Input.GetKeyDown(KeyCode.UpArrow)) && lane < LaneManager.instance.laneLocations.Count - 1) {
-			lane += 1;
-		} else if ((Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow)) && lane > 0) {
-			lane -= 1;
+		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) 
+			&& lane < LaneManager.instance.laneLocations.Count - 1) {
+			lane++;
+		} else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) 
+			&& lane > 0) {
+			lane--;
 		}
-
 		transform.position = new Vector2(transform.position.x, LaneManager.instance.laneLocations [lane]);
 	}
 
