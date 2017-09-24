@@ -12,7 +12,6 @@ public class Arrow : MonoBehaviour {
 
 	void Start() {
 		body = GetComponent<Rigidbody2D> ();
-		body.angularVelocity = -20;
 		startY = transform.position.y;
 	}
 

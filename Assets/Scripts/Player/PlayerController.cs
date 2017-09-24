@@ -61,7 +61,11 @@ public class PlayerController : MonoBehaviour {
 			Die ();
 		} else if (other.gameObject.tag == "Coin") {
 			Destroy (other.gameObject);
-			ScoreManager.instance.AddCoins (1);
+			if (currentClass.title == "Thief") {
+				ScoreManager.instance.AddCoins (2);
+			} else {
+				ScoreManager.instance.AddCoins (1);
+			}
 		} else if (other.gameObject.tag == "Warrior") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");

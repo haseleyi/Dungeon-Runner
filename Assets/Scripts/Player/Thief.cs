@@ -16,7 +16,11 @@ public class Thief : PlayerClass {
 	override public void Ability1 () {
 		// Do attack stuff
 		if (canAbility1) {
-
+			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
+			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector2.right, 1);
+			if (hit != null && hit.collider.gameObject.tag == "Enemy") {
+				hit.collider.gameObject.GetComponent<Enemy> ().Damage (4);
+			}
 		}
 
 		// Disallow attacking for the duration of the cooldown
