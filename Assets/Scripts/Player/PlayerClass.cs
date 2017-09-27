@@ -11,6 +11,7 @@ public class PlayerClass : MonoBehaviour {
 	protected bool canAbility1;
 	protected bool canAbility2;
 	public bool upgraded;
+	public bool isInvulnerable = false;
 
 	void Start () {
 		title = "No class";

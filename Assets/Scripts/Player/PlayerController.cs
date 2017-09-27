@@ -23,12 +23,13 @@ public class PlayerController : MonoBehaviour {
 		animController = AnimatorController.instance;
 
 		// For testing purposes (in the actual code, this should be PlayerClass)
-		currentClass = GetComponent<Ranger> ();
+		currentClass = GetComponent<Warrior> ();
+
 	}
 
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
 	void Update () {
-		animController.UpdateSpeed (body.velocity.x);
+		// animController.UpdateSpeed (body.velocity.x);
 		if (GameManager.gameState != GameManager.GameState.Paused) {
 			MoveLeftRight ();
 			SwitchLanes ();
@@ -63,8 +64,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D (Collision2D other) {
-		if (other.gameObject.tag == "Enemy") {
-			Die ();
+		if ((other.gameObject.tag == "Enemy" || other.gameObject.tag == "Arrow" && other.gameObject.GetComponent<Arrow> ().speed < 0) && !currentClass.isInvulnerable) {
+				Die ();
 		} else if (other.gameObject.tag == "Coin") {
 			Destroy (other.gameObject);
 			if (currentClass.title == "Thief") {
@@ -106,10 +107,6 @@ public class PlayerController : MonoBehaviour {
 			currentClass = gameObject.GetComponent<Cleric> ();
 			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
-		} else if (other.gameObject.tag == "Arrow") {
-			if (other.gameObject.GetComponent<Arrow> ().speed < 0) {
-				Die ();
-			}
 		}
 	}
 
