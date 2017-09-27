@@ -2720,6 +2720,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: tankPrefab
+      value: 
+      objectReference: {fileID: 1358626537413162, guid: ba59a5725421f294c8c66586ee017e76,
+        type: 2}
+    - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: archerPrefab
+      value: 
+      objectReference: {fileID: 1860139235684168, guid: 3398bdc5888f03345bd76fa163c6098a,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6572a4422b88fd438712f78090137d0, type: 2}
   m_IsPrefabParent: 0
