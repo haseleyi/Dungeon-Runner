@@ -20,5 +20,6 @@ public class AnimatorController : MonoBehaviour {
 
 	public void UpdateSpeed (float currentSpeed) {
 		anim.SetFloat ("Speed", currentSpeed);
+		//Debug.Log (currentSpeed);
 	}
 }

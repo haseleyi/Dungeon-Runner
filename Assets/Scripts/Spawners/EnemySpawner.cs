@@ -6,12 +6,12 @@ public class EnemySpawner : Spawner {
 
 	public float firstSpawn;
 	public float spawnEvery;
-	public float chanceOfEnemy;
+	public float chanceOfTank;
+	public float chanceOfArcher;
 
 	public GameObject gruntPrefab;
 	public GameObject archerPrefab;
 	public GameObject tankPrefab;
-	public GameObject suicidePrefab;
 
 	public GameObject firePrefab;
 	public GameObject trapPrefab;
@@ -30,12 +30,14 @@ public class EnemySpawner : Spawner {
 		SpawnPrefab (gruntPrefab);
 		while (true) {
 			yield return new WaitForSeconds (spawnEvery);
-//			if (random.NextDouble () < chanceOfEnemy) {
-//				SpawnRandomPrefab (gruntPrefab, archerPrefab);
-//			} else {
-//				SpawnRandomPrefab (firePrefab, trapPrefab);
-//			}
-			SpawnPrefab (gruntPrefab);
+			double rand = random.NextDouble ();
+			if (rand < chanceOfTank) {
+				SpawnTank (tankPrefab);
+			} else if (rand < chanceOfArcher) {
+				SpawnPrefab (archerPrefab);
+			} else {
+				SpawnPrefab (gruntPrefab);
+			}
 		}
 	}
 }

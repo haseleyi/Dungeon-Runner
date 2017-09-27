@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour {
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
-		animController = AnimatorController.instance;
 
 		// For testing purposes (in the actual code, this should be PlayerClass)
 		currentClass = GetComponent<Warrior> ();
@@ -29,10 +28,15 @@ public class PlayerController : MonoBehaviour {
 
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
 	void Update () {
+<<<<<<< HEAD
 		// animController.UpdateSpeed (body.velocity.x);
+=======
+		AnimatorController.instance.UpdateSpeed (body.velocity.x);
+>>>>>>> 50a5cd75656d04533c05387fc8b9da9656aa70fa
 		if (GameManager.gameState != GameManager.GameState.Paused) {
 			MoveLeftRight ();
 			SwitchLanes ();
+
 		}
 		if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Space)) {
 			currentClass.Ability1();
@@ -50,6 +54,7 @@ public class PlayerController : MonoBehaviour {
 		Vector2 moveVel = body.velocity;
 		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
 		body.velocity = moveVel;
+		//Debug.Log (body.velocity.x);
 	}
 
 	void SwitchLanes () {
