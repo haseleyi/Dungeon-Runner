@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 		if (GameManager.gameState != GameManager.GameState.Paused) {
 			MoveLeftRight ();
 			SwitchLanes ();
+
 		}
 		if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Space)) {
 			currentClass.Ability1();
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour {
 		Vector2 moveVel = body.velocity;
 		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
 		body.velocity = moveVel;
+		//Debug.Log (body.velocity.x);
 	}
 
 	void SwitchLanes () {
