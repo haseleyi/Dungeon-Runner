@@ -22,4 +22,8 @@ public class AnimatorController : MonoBehaviour {
 		anim.SetFloat ("Speed", currentSpeed);
 		//Debug.Log (currentSpeed);
 	}
+
+	public void UpdateClass (int newClass) {
+		anim.SetInteger ("Class", newClass);
+	}
 }
