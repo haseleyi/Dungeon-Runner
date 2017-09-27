@@ -12,9 +12,8 @@ public class ScrollingBackground : MonoBehaviour {
 		body = GetComponent<Rigidbody2D>();
 		body.velocity = new Vector2 (-scrollSpeed, 0);
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void FixedUpdate () {
 		
 	}
 }

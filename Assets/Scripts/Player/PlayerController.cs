@@ -13,12 +13,14 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody2D body;
 	PlayerClass currentClass;
 	public static PlayerController instance;
+	AnimatorController animController;
 
 	void Start () {
 		instance = this;
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
+		animController = AnimatorController.instance;
 
 		// For testing purposes (in the actual code, this should be PlayerClass)
 		currentClass = GetComponent<Ranger> ();
@@ -26,8 +28,11 @@ public class PlayerController : MonoBehaviour {
 
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
 	void Update () {
-		MoveLeftRight ();
-		SwitchLanes ();
+		animController.UpdateSpeed (body.velocity.x);
+		if (GameManager.gameState != GameManager.GameState.Paused) {
+			MoveLeftRight ();
+			SwitchLanes ();
+		}
 		if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Space)) {
 			currentClass.Ability1();
 		}
@@ -40,19 +45,20 @@ public class PlayerController : MonoBehaviour {
 		return transform.position;
 	}
 
-	public void MoveLeftRight () {
+	void MoveLeftRight () {
 		Vector2 moveVel = body.velocity;
 		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
 		body.velocity = moveVel;
 	}
 
 	void SwitchLanes () {
-		if ((Input.GetKeyDown("w") || Input.GetKeyDown(KeyCode.UpArrow)) && lane < LaneManager.instance.laneLocations.Count - 1) {
-			lane += 1;
-		} else if ((Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow)) && lane > 0) {
-			lane -= 1;
+		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) 
+			&& lane < LaneManager.instance.laneLocations.Count - 1) {
+			lane++;
+		} else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) 
+			&& lane > 0) {
+			lane--;
 		}
-
 		transform.position = new Vector2(transform.position.x, LaneManager.instance.laneLocations [lane]);
 	}
 
@@ -74,32 +80,36 @@ public class PlayerController : MonoBehaviour {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Warrior> ();
-			StartCoroutine("ClassTimerCoroutine");
+			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
 		} else if (other.gameObject.tag == "Ranger") {
 			Destroy (other.gameObject);
-			StopCoroutine("ClassTimerCoroutine");
+			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Ranger> ();
-			StartCoroutine("ClassTimerCoroutine");
+			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
 		} else if (other.gameObject.tag == "Mage") {
 			Destroy (other.gameObject);
-			StopCoroutine("ClassTimerCoroutine");
+			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Mage> ();
-			StartCoroutine("ClassTimerCoroutine");
+			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
 		} else if (other.gameObject.tag == "Thief") {
 			Destroy (other.gameObject);
-			StopCoroutine("ClassTimerCoroutine");
+			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Thief> ();
-			StartCoroutine("ClassTimerCoroutine");
+			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
 		} else if (other.gameObject.tag == "Cleric") {
-			Destroy(other.gameObject);
-			StopCoroutine("ClassTimerCoroutine");
+			Destroy (other.gameObject);
+			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Cleric> ();
-			StartCoroutine("ClassTimerCoroutine");
+			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
+		} else if (other.gameObject.tag == "Arrow") {
+			if (other.gameObject.GetComponent<Arrow> ().speed < 0) {
+				Die ();
+			}
 		}
 	}
 

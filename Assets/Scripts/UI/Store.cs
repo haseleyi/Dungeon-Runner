@@ -31,7 +31,7 @@ public class Store : MonoBehaviour {
 			if (GameManager.gameState == GameManager.GameState.Running) {
 				Pause ();
 			}
-			else if (GameManager.gameState == GameManager.GameState.Paused) {
+			else if (GameManager.gameState == GameManager.GameState.Paused && !DeathReport.instance.displayed) {
 				UnPause ();
 			}
 		}

@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class RepeatingBackground : MonoBehaviour {
 
-	//private BoxCollider2D backgroundCollider;
 	private SpriteRenderer sprite;
 	private float backgroundHorizontalLength;
 
-	// Use this for initialization
-	void Start () {
-		//backgroundCollider = GetComponent<BoxCollider2D> ();
+	void Awake () {
 		sprite = GetComponent<SpriteRenderer> ();
 		backgroundHorizontalLength = sprite.size.x;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (transform.position.x < -backgroundHorizontalLength) {
 			RepositionBackground ();
 		}

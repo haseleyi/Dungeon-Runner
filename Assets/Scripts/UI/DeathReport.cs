@@ -8,9 +8,11 @@ public class DeathReport : MonoBehaviour {
 	public GameObject deathReportCanvas;
 	public static DeathReport instance;
 	public Text totalScore, timeSurvived, coinsCollected, gruntsDefeated, archersDefeated, tanksDefeated;
+	public bool displayed;
 
 	void Start () {
 		deathReportCanvas.SetActive (false);
+		displayed = false;
 		instance = this;
 	}
 	
@@ -23,5 +25,6 @@ public class DeathReport : MonoBehaviour {
 		tanksDefeated.text = "Tanks defeated: " + ScoreManager.instance.tanksDefeated.ToString ();
 		coinsCollected.text = "Coins collected: " + ScoreManager.instance.coinsCollected.ToString ();
 		timeSurvived.text = "Time survived: " + Time.timeSinceLevelLoad.ToString();
+		displayed = true;
 	}
 }

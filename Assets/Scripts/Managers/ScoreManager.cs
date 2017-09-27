@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour {
 
 	public Text coinsText, totalScore, scoreIncrement;
+	public GameObject storeAlert;
 	public static ScoreManager instance;
 	public int coinValue;
 	public int upgradePrice;
@@ -19,7 +20,7 @@ public class ScoreManager : MonoBehaviour {
 
 	void Start () {
 		instance = this;
-		coins = 0;
+//		coins = 0;
 		coinsCollected = 0;
 		gruntsDefeated = 0;
 		archersDefeated = 0;
@@ -31,13 +32,18 @@ public class ScoreManager : MonoBehaviour {
 
 	void Update() {
 		totalScore.text = "Score: " + score.ToString ();
+		coinsText.text = coins.ToString();
+		if (coins >= 10) {
+			storeAlert.SetActive (true);
+		} else {
+			storeAlert.SetActive (false);
+		}
 	}
 
 	public void AddCoins (int numCoins) {
 		coins += numCoins;
 		coinsCollected += numCoins;
 		IncrementScore(numCoins * coinValue);
-		coinsText.text = coins.ToString();
 	}
 
 	IEnumerator SurvivalCoroutine() {
