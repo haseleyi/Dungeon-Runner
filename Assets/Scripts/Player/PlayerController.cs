@@ -28,11 +28,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
 	void Update () {
-<<<<<<< HEAD
-		// animController.UpdateSpeed (body.velocity.x);
-=======
 		AnimatorController.instance.UpdateSpeed (body.velocity.x);
->>>>>>> 50a5cd75656d04533c05387fc8b9da9656aa70fa
 		if (GameManager.gameState != GameManager.GameState.Paused) {
 			MoveLeftRight ();
 			SwitchLanes ();
