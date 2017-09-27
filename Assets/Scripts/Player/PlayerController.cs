@@ -80,32 +80,36 @@ public class PlayerController : MonoBehaviour {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Warrior> ();
-			StartCoroutine("ClassTimerCoroutine");
+			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
 		} else if (other.gameObject.tag == "Ranger") {
 			Destroy (other.gameObject);
-			StopCoroutine("ClassTimerCoroutine");
+			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Ranger> ();
-			StartCoroutine("ClassTimerCoroutine");
+			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
 		} else if (other.gameObject.tag == "Mage") {
 			Destroy (other.gameObject);
-			StopCoroutine("ClassTimerCoroutine");
+			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Mage> ();
-			StartCoroutine("ClassTimerCoroutine");
+			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
 		} else if (other.gameObject.tag == "Thief") {
 			Destroy (other.gameObject);
-			StopCoroutine("ClassTimerCoroutine");
+			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Thief> ();
-			StartCoroutine("ClassTimerCoroutine");
+			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
 		} else if (other.gameObject.tag == "Cleric") {
-			Destroy(other.gameObject);
-			StopCoroutine("ClassTimerCoroutine");
+			Destroy (other.gameObject);
+			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Cleric> ();
-			StartCoroutine("ClassTimerCoroutine");
+			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
+		} else if (other.gameObject.tag == "Arrow") {
+			if (other.gameObject.GetComponent<Arrow> ().speed < 0) {
+				Die ();
+			}
 		}
 	}
 

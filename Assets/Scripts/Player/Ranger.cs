@@ -18,16 +18,16 @@ public class Ranger : PlayerClass {
 		// Do attack stuff
 		if (canAbility1) {
 			arrowPrefab.GetComponent<Arrow> ().speed = 10;
-			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
-			firePosition.y ++;
-			Instantiate(arrowPrefab, firePosition, Quaternion.AngleAxis(90, Vector3.back));
+			// Upgraded arrows have a piercing effect
+			arrowPrefab.GetComponent<Arrow> ().upgraded = upgraded;
+			Vector2 firePosition = PlayerController.instance.GetPlayerPosition ();
+			firePosition.y++;
+			Instantiate (arrowPrefab, firePosition, Quaternion.AngleAxis (90, Vector3.back));
 
 			// Disallow attacking for the duration of the cooldown
 			canAbility1 = false;
-			StartCoroutine(Cooldown1Coroutine ());
+			StartCoroutine (Cooldown1Coroutine ());
 		}
-
-
 	}
 
 	override public void Ability2 () {

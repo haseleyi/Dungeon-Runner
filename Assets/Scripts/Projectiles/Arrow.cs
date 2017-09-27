@@ -6,6 +6,7 @@ public class Arrow : MonoBehaviour {
 
 	public float speed;
 	public float gravity;
+	public bool upgraded;
 
 	Rigidbody2D body;
 	float startY;
@@ -25,7 +26,7 @@ public class Arrow : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D (Collision2D other) {
-		if (other.gameObject.tag == "Enemy") {
+		if (other.gameObject.tag == "Enemy" && !upgraded) {
 			Destroy (gameObject);
 		}
 	}
