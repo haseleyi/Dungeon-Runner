@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour {
 			currentClass = gameObject.GetComponent<Mage> ();
 			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
+			AnimatorController.instance.UpdateClass (1);
 		} else if (other.gameObject.tag == "Thief") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
