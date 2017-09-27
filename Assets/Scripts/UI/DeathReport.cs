@@ -24,7 +24,7 @@ public class DeathReport : MonoBehaviour {
 		archersDefeated.text = "Archers defeated: " + ScoreManager.instance.archersDefeated.ToString ();
 		tanksDefeated.text = "Tanks defeated: " + ScoreManager.instance.tanksDefeated.ToString ();
 		coinsCollected.text = "Coins collected: " + ScoreManager.instance.coinsCollected.ToString ();
-		timeSurvived.text = "Time survived: " + System.Math.Round(Time.timeSinceLevelLoad, 2).ToString();
+		timeSurvived.text = "Time survived (s): " + System.Math.Round(Time.timeSinceLevelLoad, 0).ToString();
 		displayed = true;
 	}
 }

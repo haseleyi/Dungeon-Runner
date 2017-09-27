@@ -1252,6 +1252,21 @@ Prefab:
       propertyPath: m_MatchWidthOrHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224127413380567458, guid: a4260312ae8a42847ab2d3a8697981fb,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 224127413380567458, guid: a4260312ae8a42847ab2d3a8697981fb,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -6.091
+      objectReference: {fileID: 0}
+    - target: {fileID: 224127413380567458, guid: a4260312ae8a42847ab2d3a8697981fb,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 12.182
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4260312ae8a42847ab2d3a8697981fb, type: 2}
   m_IsPrefabParent: 0
@@ -2740,7 +2755,7 @@ Prefab:
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: chanceOfTank
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
@@ -2750,7 +2765,7 @@ Prefab:
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: spawnEvery
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6572a4422b88fd438712f78090137d0, type: 2}
