@@ -10,8 +10,7 @@ public class AnimatorController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		instance = this;
-		//anim = this.gameObject.GetComponent<Animator> ();
-		anim = GetComponent<Animator> ();
+		anim = this.gameObject.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +20,6 @@ public class AnimatorController : MonoBehaviour {
 
 	public void UpdateSpeed (float currentSpeed) {
 		anim.SetFloat ("Speed", currentSpeed);
-		Debug.Log (currentSpeed);
+		//Debug.Log (currentSpeed);
 	}
 }
