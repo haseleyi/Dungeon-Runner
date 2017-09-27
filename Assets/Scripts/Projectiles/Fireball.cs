@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fireball : MonoBehaviour {
 
 	public float speed;
+	public bool upgraded;
 
 	Rigidbody2D body;
 
