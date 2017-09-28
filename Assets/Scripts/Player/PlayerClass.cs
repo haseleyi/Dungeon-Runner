@@ -13,6 +13,8 @@ public class PlayerClass : MonoBehaviour {
 	public bool upgraded;
 	public bool isInvulnerable = false;
 
+	[SerializeField] CooldownBar cooldownBar;
+
 	void Start () {
 		title = "No class";
 	}
@@ -25,6 +27,7 @@ public class PlayerClass : MonoBehaviour {
 
 
 	protected IEnumerator Cooldown1Coroutine () {
+		cooldownBar.MyMythod ();
 		yield return new WaitForSeconds (cooldown1);
 		canAbility1 = true;
 	}
