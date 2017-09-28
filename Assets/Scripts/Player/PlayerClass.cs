@@ -27,7 +27,7 @@ public class PlayerClass : MonoBehaviour {
 
 
 	protected IEnumerator Cooldown1Coroutine () {
-		cooldownBar.MyMythod ();
+		cooldownBar.Cooldown (cooldown1);
 		yield return new WaitForSeconds (cooldown1);
 		canAbility1 = true;
 	}

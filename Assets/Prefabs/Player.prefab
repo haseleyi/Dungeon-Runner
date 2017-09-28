@@ -30,7 +30,7 @@ GameObject:
   - component: {fileID: 114456860479252330}
   - component: {fileID: 114282049478068654}
   - component: {fileID: 114774343089525474}
-  - component: {fileID: 95843583851859878}
+  - component: {fileID: 95786385958111524}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -45,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355071296779978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2277722, y: -2, z: 0}
+  m_LocalPosition: {x: -6.5, y: -1.24, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 6.368923}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24, y: 0.46}
   m_EdgeRadius: 0
---- !u!95 &95843583851859878
+--- !u!95 &95786385958111524
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
