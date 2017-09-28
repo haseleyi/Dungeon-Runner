@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
-  classDuration: 20
+  classDuration: 10
   startLane: 2
   xInitial: -6.5
 --- !u!212 &212054565423487978
