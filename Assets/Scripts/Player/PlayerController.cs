@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
 
 		// For testing purposes (in the actual code, this should be PlayerClass)
-		currentClass = GetComponent<Warrior> ();
+		currentClass = GetComponent<Ranger> ();
 
 	}
 

@@ -24,10 +24,4 @@ public class Arrow : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
-
-	void OnCollisionEnter2D (Collision2D other) {
-		if (other.gameObject.tag == "Enemy" && !upgraded) {
-			Destroy (gameObject);
-		}
-	}
 }
