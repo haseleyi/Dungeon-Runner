@@ -142,12 +142,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstSpawn: 0
   spawnEvery: 1.25
-  chanceOfEnemy: 0
+  chanceOfTank: 0
+  chanceOfArcher: 4
   gruntPrefab: {fileID: 1838446811938436, guid: 6f361baaa06534ac0983a511cc01c920,
     type: 2}
-  archerPrefab: {fileID: 0}
+  archerPrefab: {fileID: 1860139235684168, guid: 3398bdc5888f03345bd76fa163c6098a,
+    type: 2}
   tankPrefab: {fileID: 0}
-  suicidePrefab: {fileID: 0}
   firePrefab: {fileID: 0}
   trapPrefab: {fileID: 0}
 --- !u!114 &114231882897667952
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstSpawn: 0
-  spawnEvery: 1
+  spawnEvery: 2
   chanceOfChest: 0
   coinPrefab: {fileID: 1760512160067478, guid: db70bc32a6e9946309dbbc594cff6078, type: 2}
   chestPrefab: {fileID: 0}

@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour {
 
 		// For testing purposes (in the actual code, this should be PlayerClass)
 		currentClass = GetComponent<PlayerClass> ();
-
 	}
 
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching

@@ -26,9 +26,12 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		if (other.gameObject.tag == "Arrow") {
+		if (other.gameObject.tag == "Arrow" && other.gameObject.GetComponent<Arrow> ().speed > 0) {
 			health -= 1;
-			Destroy (other.gameObject);
+
+			if (!other.gameObject.GetComponent<Arrow> ().upgraded) {
+				Destroy (other.gameObject);
+			}
 		} else if (other.gameObject.tag == "Fireball") {
 			health -= 2;
 			Destroy (other.gameObject);
