@@ -83,6 +83,12 @@ public class PlayerController : MonoBehaviour {
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Warrior> ();
 			StartCoroutine ("ClassTimerCoroutine");
+			// Update sprite
+			if (gameObject.GetComponent<Warrior> ().upgraded) {
+				AnimatorController.instance.UpdateClass (5);
+			} else {
+				AnimatorController.instance.UpdateClass (4);
+			}
 		} else if (other.gameObject.tag == "Ranger") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
