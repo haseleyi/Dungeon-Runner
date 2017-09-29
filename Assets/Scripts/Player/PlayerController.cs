@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed = 3;
-	public float classDuration = 10;
+	public float classDuration;
 	public int startLane = 2;
 	public float xInitial = -8;
 
