@@ -51,7 +51,11 @@ public class LaneManager : MonoBehaviour {
 				laneIndex = random.Next (laneLocations.Count);
 			}
 			if (laneIsOpen[laneIndex]) {
-				return laneLocations[laneIndex];
+				if (tank && laneIsOpen[laneIndex + 1]) {
+					return laneLocations [laneIndex];
+				} else if (!tank) {
+					return laneLocations[laneIndex];
+				}
 			}
 		}
 	}
