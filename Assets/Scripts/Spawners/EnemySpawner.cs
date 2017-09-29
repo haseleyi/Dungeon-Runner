@@ -4,48 +4,58 @@ using UnityEngine;
 
 public class EnemySpawner : Spawner {
 
-	public float firstSpawn;
-	public float spawnEvery;
-	public float chanceOfTank;
-	public float chanceOfArcher;
-
-	public GameObject gruntPrefab;
-	public GameObject archerPrefab;
+	List<GameObject> prefabs;
 	public GameObject tankPrefab;
-
+	public GameObject archerPrefab;
+	public GameObject gruntPrefab;
 	public GameObject firePrefab;
-	public GameObject trapPrefab;
+	public GameObject boulderPrefab;
+
+	// Time at which each level begins
+	[SerializeField] List<float> levelStarts = new List<float>();
+
+	// Seconds between spawns for each level
+	[SerializeField] List<float> spawnEvery = new List<float>();
+
+	// Example: { .1, .2, .4, .1, .2 } 
+	// Means: During this level, each spawn has a 10% chance of being a tank, a 20% chance of being an archer, etc.
+	// Probabilities in a given level must sum to one
+	[SerializeField] List<float> level0TankArcherGruntFireBoulder = new List<float>();
+	[SerializeField] List<float> level1TankArcherGruntFireBoulder = new List<float>();
+	[SerializeField] List<float> level2TankArcherGruntFireBoulder = new List<float>();
+	List<List<float>> levels;
 
 	void Start () {
+		prefabs = new List<GameObject> { tankPrefab, archerPrefab, gruntPrefab, firePrefab, boulderPrefab };
+		levels = new List<List<float>> {
+			level0TankArcherGruntFireBoulder,
+			level1TankArcherGruntFireBoulder,
+			level2TankArcherGruntFireBoulder
+		};
 		StartCoroutine(SpawnCoroutine());
 	}
 
-	IEnumerator SpawnCoroutine() {
-		yield return new WaitForSeconds (firstSpawn);
-//		if (random.NextDouble() < .5) {
-//			SpawnPrefab(firePrefab);
-//		} else {
-//			SpawnPrefab(trapPrefab);
-//		}
-		SpawnPrefab (gruntPrefab);
-		while (true) {
-			yield return new WaitForSeconds (spawnEvery);
-			double rand = random.NextDouble ();
-			if (rand < chanceOfTank) {
-				SpawnTank (tankPrefab);
-			} else if (rand < chanceOfArcher) {
-				SpawnPrefab (archerPrefab);
-			} else {
-				SpawnPrefab (gruntPrefab);
-			}
-		}
+	void Update() {
+		print (Time.time);
 	}
 
-	void SpawnTank(GameObject prefab) {
-		if (LaneManager.instance.TwoAdjacentLanesFree()) {
-			float location = LaneManager.instance.GetFreeLane (true);
-			Instantiate (prefab, new Vector2 (17, location), Quaternion.identity);
-			StartCoroutine (LaneManager.instance.DisableSpawningCoroutine(location, true));
+	IEnumerator SpawnCoroutine() {
+		for (int level = 0; level < levels.Count; level++) {
+			while (level == levels.Count - 1 || Time.timeSinceLevelLoad < levelStarts[level + 1]) {
+
+				yield return new WaitForSeconds (spawnEvery [level]);
+				float r = Random.value;
+				float probabilitySum = 0;
+
+				for (int prefabIndex = 0; prefabIndex < prefabs.Count; prefabIndex++) {
+					float prefabChance = levels[level][prefabIndex];
+					if (probabilitySum < r && r < probabilitySum + prefabChance) {
+						SpawnPrefab (prefabs [prefabIndex]);
+					} else {
+						probabilitySum += prefabChance;
+					}
+				}
+			}
 		}
 	}
 }

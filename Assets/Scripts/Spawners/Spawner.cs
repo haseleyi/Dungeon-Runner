@@ -22,4 +22,12 @@ public class Spawner : MonoBehaviour {
 			StartCoroutine (LaneManager.instance.DisableSpawningCoroutine(location, false));
 		}
 	}
+
+	protected void SpawnTank(GameObject prefab) {
+		if (LaneManager.instance.TwoAdjacentLanesFree()) {
+			float location = LaneManager.instance.GetFreeLane (true);
+			Instantiate (prefab, new Vector2 (17, location), Quaternion.identity);
+			StartCoroutine (LaneManager.instance.DisableSpawningCoroutine(location, true));
+		}
+	}
 }
