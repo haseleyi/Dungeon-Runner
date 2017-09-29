@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour {
 
 		// For testing purposes (in the actual code, this should be PlayerClass)
 		currentClass = GetComponent<PlayerClass> ();
+		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
+		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
 	}
 
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
@@ -81,45 +83,43 @@ public class PlayerController : MonoBehaviour {
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Warrior> ();
 			StartCoroutine ("ClassTimerCoroutine");
-			// Update sprite
 		} else if (other.gameObject.tag == "Ranger") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Ranger> ();
 			StartCoroutine ("ClassTimerCoroutine");
-			// Update sprite
 			AnimatorController.instance.UpdateClass (2);
 		} else if (other.gameObject.tag == "Mage") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Mage> ();
 			StartCoroutine ("ClassTimerCoroutine");
-			// Update sprite
 			AnimatorController.instance.UpdateClass (1);
 		} else if (other.gameObject.tag == "Thief") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Thief> ();
 			StartCoroutine ("ClassTimerCoroutine");
-			// Update sprite
 			AnimatorController.instance.UpdateClass (3);
 		} else if (other.gameObject.tag == "Cleric") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Cleric> ();
 			StartCoroutine ("ClassTimerCoroutine");
-			// Update sprite
 		}
 	}
 
 	IEnumerator ClassTimerCoroutine () {
+		HudManager.instance.cooldownBarBack.gameObject.SetActive (true);
+		HudManager.instance.cooldownBarFront.gameObject.SetActive (true);
 		yield return new WaitForSeconds (classDuration);
 		currentClass = gameObject.GetComponent<PlayerClass> ();
 		AnimatorController.instance.UpdateClass (0);
+		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
+		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
 	}
 
 	void Die () {
-		// Display death screen
 		DeathReport.instance.LoadDeathReport();
 	}
 }

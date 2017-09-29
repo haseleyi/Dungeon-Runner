@@ -13,12 +13,6 @@ public class PlayerClass : MonoBehaviour {
 	public bool upgraded;
 	public bool isInvulnerable = false;
 
-	[SerializeField] CooldownBar cooldownBar;
-
-	void Start () {
-		title = "No class";
-	}
-
 	public virtual void Ability1 () {
 	}
 
@@ -27,7 +21,7 @@ public class PlayerClass : MonoBehaviour {
 
 
 	protected IEnumerator Cooldown1Coroutine () {
-		cooldownBar.Cooldown (cooldown1);
+		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar>().Cooldown(cooldown1);
 		yield return new WaitForSeconds (cooldown1);
 		canAbility1 = true;
 	}

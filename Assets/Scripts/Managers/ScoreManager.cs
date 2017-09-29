@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour {
 
-	public Text coinsText, totalScore, scoreIncrement;
-	public GameObject storeAlert;
 	public static ScoreManager instance;
 	public int coinValue;
 	public int upgradePrice;
@@ -27,16 +25,16 @@ public class ScoreManager : MonoBehaviour {
 		tanksDefeated = 0;
 		score = 0;
 		StartCoroutine (SurvivalCoroutine ());
-		coinsText.text = coins.ToString ();
+		HudManager.instance.coinsText.text = coins.ToString ();
 	}
 
 	void Update() {
-		totalScore.text = "Score: " + score.ToString ();
-		coinsText.text = coins.ToString();
+		HudManager.instance.scoreText.text = "Score: " + score.ToString ();
+		HudManager.instance.coinsText.text = coins.ToString();
 		if (coins >= 10) {
-			storeAlert.SetActive (true);
+			HudManager.instance.storeAlertText.gameObject.SetActive (true);
 		} else {
-			storeAlert.SetActive (false);
+			HudManager.instance.storeAlertText.gameObject.SetActive (false);
 		}
 	}
 
@@ -56,7 +54,7 @@ public class ScoreManager : MonoBehaviour {
 	public bool PurchaseSuccess() {
 		if (coins >= upgradePrice) {
 			coins -= upgradePrice;
-			coinsText.text = coins.ToString();
+			HudManager.instance.coinsText.text = coins.ToString();
 			return true;
 		}
 		return false;
@@ -69,8 +67,8 @@ public class ScoreManager : MonoBehaviour {
 
 	public IEnumerator ScoreIncrementCoroutine(int value) {
 		score += value;
-		scoreIncrement.text = "+ " + value.ToString ();
+		HudManager.instance.scoreIncrementText.text = "+ " + value.ToString ();
 		yield return new WaitForSeconds (2);
-		scoreIncrement.text = "";
+		HudManager.instance.scoreIncrementText.text = "";
 	}
 }
