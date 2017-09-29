@@ -41,7 +41,7 @@ public class Mage : PlayerClass {
 	}
 
 	IEnumerator SecondShotCoroutine() {
-		yield return new WaitForSeconds (.1f);
+		yield return new WaitForSeconds (.2f);
 		Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 		firePosition.y += .5f;
 		Instantiate(fireballPrefab, firePosition, Quaternion.identity);

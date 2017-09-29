@@ -35,10 +35,6 @@ public class EnemySpawner : Spawner {
 		StartCoroutine(SpawnCoroutine());
 	}
 
-	void Update() {
-		print (Time.time);
-	}
-
 	IEnumerator SpawnCoroutine() {
 		for (int level = 0; level < levels.Count; level++) {
 			while (level == levels.Count - 1 || Time.timeSinceLevelLoad < levelStarts[level + 1]) {

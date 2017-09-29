@@ -2984,12 +2984,12 @@ Prefab:
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: level1TankArcherGruntFireBoulder.Array.size
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: level2TankArcherGruntFireBoulder.Array.size
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
@@ -3078,7 +3078,7 @@ Prefab:
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: level0TankArcherGruntFireBoulder.Array.data[0]
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
@@ -3088,17 +3088,17 @@ Prefab:
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: level0TankArcherGruntFireBoulder.Array.data[2]
-      value: 0.4
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: level0TankArcherGruntFireBoulder.Array.data[3]
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: level0TankArcherGruntFireBoulder.Array.data[4]
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
@@ -3134,6 +3134,31 @@ Prefab:
         type: 2}
       propertyPath: spawnEvery.Array.data[2]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: level1TankArcherGruntFireBoulder.Array.data[1]
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: level1TankArcherGruntFireBoulder.Array.data[2]
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: level2TankArcherGruntFireBoulder.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114701220909675102, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: firstSpawn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114701220909675102, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: spawnEvery
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6572a4422b88fd438712f78090137d0, type: 2}
