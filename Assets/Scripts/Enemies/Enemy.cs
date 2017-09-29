@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour {
 		body.velocity = new Vector2 (-1 * (baseSpeed + runSpeed), 0);
 	}
 	
-	protected virtual void FixedUpdate () {
+	protected void Update () {
 		if (transform.position.x < LaneManager.instance.xThreshold) {
 			Destroy (gameObject);
 		}
@@ -28,7 +28,6 @@ public class Enemy : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "Arrow" && other.gameObject.GetComponent<Arrow> ().speed > 0) {
 			health -= 1;
-
 			if (!other.gameObject.GetComponent<Arrow> ().upgraded) {
 				Destroy (other.gameObject);
 			}

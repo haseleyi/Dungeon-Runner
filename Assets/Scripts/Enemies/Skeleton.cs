@@ -11,10 +11,10 @@ public class Skeleton : Enemy {
 
 	void Start() {
 		arrowPrefab.gameObject.GetComponent<Arrow> ().speed = -10;
-		StartCoroutine (ArrowCooldown (Random.Range (0, 3)));
+		StartCoroutine (ArrowCooldownCoroutine (Random.Range (0, 3)));
 	}
 
-	protected override void FixedUpdate () {
+	void FixedUpdate () {
 		if (canFire) {
 			Vector2 firePosition = transform.position;
 			firePosition.y ++;
@@ -22,7 +22,7 @@ public class Skeleton : Enemy {
 
 			// Disallow attacking for the duration of the cooldown
 			canFire = false;
-			StartCoroutine(ArrowCooldown (arrowCooldown));
+			StartCoroutine(ArrowCooldownCoroutine (arrowCooldown));
 		}
 	}
 
@@ -32,7 +32,7 @@ public class Skeleton : Enemy {
 		ScoreManager.instance.archersDefeated++;
 	}
 
-	IEnumerator ArrowCooldown (float cooldown) {
+	IEnumerator ArrowCooldownCoroutine (float cooldown) {
 		yield return new WaitForSeconds (cooldown);
 		canFire = true;
 	}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed = 3;
-	public float classDuration = 10;
+	public float classDuration;
 	public int startLane = 2;
 	public float xInitial = -8;
 
@@ -88,6 +88,7 @@ public class PlayerController : MonoBehaviour {
 			currentClass = gameObject.GetComponent<Ranger> ();
 			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
+			AnimatorController.instance.UpdateClass (2);
 		} else if (other.gameObject.tag == "Mage") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
@@ -113,6 +114,7 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator ClassTimerCoroutine () {
 		yield return new WaitForSeconds (classDuration);
 		currentClass = gameObject.GetComponent<PlayerClass> ();
+		AnimatorController.instance.UpdateClass (0);
 	}
 
 	void Die () {
