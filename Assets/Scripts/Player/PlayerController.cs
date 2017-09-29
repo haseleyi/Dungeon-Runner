@@ -88,6 +88,7 @@ public class PlayerController : MonoBehaviour {
 			currentClass = gameObject.GetComponent<Ranger> ();
 			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
+			AnimatorController.instance.UpdateClass (2);
 		} else if (other.gameObject.tag == "Mage") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
@@ -113,6 +114,7 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator ClassTimerCoroutine () {
 		yield return new WaitForSeconds (classDuration);
 		currentClass = gameObject.GetComponent<PlayerClass> ();
+		AnimatorController.instance.UpdateClass (0);
 	}
 
 	void Die () {
