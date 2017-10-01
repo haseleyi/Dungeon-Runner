@@ -3069,10 +3069,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d51dd80bcb24bc69881af9e404453e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsText: {fileID: 14871104}
-  totalScore: {fileID: 1485601755}
-  scoreIncrement: {fileID: 1170069108}
-  storeAlert: {fileID: 0}
   coinValue: 100
   upgradePrice: 10
   coins: 0
@@ -4099,7 +4095,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
 --- !u!114 &1553489140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4116,7 +4111,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
   fireballPrefab: {fileID: 1704647337455410, guid: 3f21c06c9b0326a448b69a60786aed9c,
     type: 2}
 --- !u!114 &1553489141
@@ -4135,7 +4129,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
   arrowPrefab: {fileID: 1510499517304894, guid: d53dfcdf55eb37542909be85eff81b9e,
     type: 2}
 --- !u!114 &1553489142
@@ -4154,7 +4147,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
 --- !u!114 &1553489143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4171,7 +4163,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
   shieldDuration: 0.5
 --- !u!114 &1553489144
 MonoBehaviour:
@@ -4189,7 +4180,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
 --- !u!50 &1553489145
 Rigidbody2D:
   serializedVersion: 4

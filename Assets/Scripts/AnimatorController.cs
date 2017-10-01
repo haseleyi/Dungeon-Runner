@@ -26,4 +26,8 @@ public class AnimatorController : MonoBehaviour {
 	public void UpdateClass (int newClass) {
 		anim.SetInteger ("Class", newClass);
 	}
+
+	public void UseAbility () {
+		anim.SetTrigger ("Ability");
+	}
 }

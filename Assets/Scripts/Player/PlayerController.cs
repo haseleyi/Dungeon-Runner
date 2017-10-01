@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour {
 			SwitchLanes ();
 		}
 		if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Space)) {
+			AnimatorController.instance.UseAbility ();
 			currentClass.Ability1();
 		}
 		if (Input.GetKeyDown (KeyCode.K)) {
