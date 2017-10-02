@@ -23,11 +23,10 @@ public class Thief : PlayerClass {
 			if (hit != null && hit.collider.gameObject.tag == "Enemy") {
 				hit.collider.gameObject.GetComponent<Enemy> ().Damage (4);
 			}
+			// Disallow attacking for the duration of the cooldown
+			canAbility1 = false;
+			StartCoroutine(Cooldown1Coroutine ());
 		}
-
-		// Disallow attacking for the duration of the cooldown
-		canAbility1 = false;
-		StartCoroutine(Cooldown1Coroutine ());
 	}
 
 	override public void Ability2 () {
