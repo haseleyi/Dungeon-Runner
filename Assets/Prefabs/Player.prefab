@@ -28,7 +28,6 @@ GameObject:
   - component: {fileID: 114578914491473226}
   - component: {fileID: 114799408831770246}
   - component: {fileID: 114456860479252330}
-  - component: {fileID: 114282049478068654}
   - component: {fileID: 114774343089525474}
   - component: {fileID: 95786385958111524}
   m_Layer: 0
@@ -129,21 +128,6 @@ MonoBehaviour:
   upgraded: 0
   isInvulnerable: 0
   shieldDuration: 0.5
---- !u!114 &114282049478068654
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1355071296779978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb8662636113163479e65cda51199797, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown1: 1
-  cooldown2: 2
-  upgraded: 0
-  isInvulnerable: 0
 --- !u!114 &114456860479252330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3765be52dbb53d4cbaa45a0af562f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 500
+  speed: 1000
   classDuration: 10
   startLane: 2
   xInitial: -6.5

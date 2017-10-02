@@ -11,13 +11,14 @@ public class Skeleton : Enemy {
 
 	void Start() {
 		arrowPrefab.gameObject.GetComponent<Arrow> ().speed = -10;
-		StartCoroutine (ArrowCooldownCoroutine (Random.Range (0, 3)));
+		arrowPrefab.gameObject.GetComponent<Arrow> ().upgraded = false;
+		StartCoroutine (ArrowCooldownCoroutine (Random.Range (4, 8)));
 	}
 
 	void FixedUpdate () {
 		if (canFire) {
 			Vector2 firePosition = transform.position;
-			firePosition.y ++;
+			firePosition.y += 1.5f;
 			Instantiate(arrowPrefab, firePosition, Quaternion.AngleAxis(90, Vector3.forward));
 
 			// Disallow attacking for the duration of the cooldown

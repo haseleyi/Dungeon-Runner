@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody2D body;
 	PlayerClass currentClass;
 	public static PlayerController instance;
-	AnimatorController animController;
 
 	void Start () {
 		instance = this;
@@ -21,7 +20,6 @@ public class PlayerController : MonoBehaviour {
 		body = GetComponent<Rigidbody2D> ();
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
 
-		// For testing purposes (in the actual code, this should be PlayerClass)
 		currentClass = GetComponent<PlayerClass> ();
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
@@ -35,7 +33,6 @@ public class PlayerController : MonoBehaviour {
 			SwitchLanes ();
 		}
 		if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Space)) {
-			AnimatorController.instance.UseAbility ();
 			currentClass.Ability1();
 		}
 		if (Input.GetKeyDown (KeyCode.K)) {
@@ -50,15 +47,22 @@ public class PlayerController : MonoBehaviour {
 	void MoveLeftRight () {
 		Vector2 moveVel = body.velocity;
 		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
+		if (moveVel.x > 0 && transform.position.x >= 8.4f) {
+			moveVel.x = 0;
+		}
+
+		if (moveVel.x < -2) {
+			moveVel.x = -2;
+		}
+
 		body.velocity = moveVel;
-		//Debug.Log (body.velocity.x);
 	}
 
 	void SwitchLanes () {
-		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) 
+		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
 			&& lane < LaneManager.instance.laneLocations.Count - 1) {
 			lane++;
-		} else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) 
+		} else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
 			&& lane > 0) {
 			lane--;
 		}
@@ -108,11 +112,6 @@ public class PlayerController : MonoBehaviour {
 			currentClass = gameObject.GetComponent<Thief> ();
 			StartCoroutine ("ClassTimerCoroutine");
 			AnimatorController.instance.UpdateClass (3);
-		} else if (other.gameObject.tag == "Cleric") {
-			Destroy (other.gameObject);
-			StopCoroutine ("ClassTimerCoroutine");
-			currentClass = gameObject.GetComponent<Cleric> ();
-			StartCoroutine ("ClassTimerCoroutine");
 		}
 	}
 

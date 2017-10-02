@@ -11,7 +11,6 @@ public class ClassSpawner : Spawner {
 	public GameObject magePrefab;
 	public GameObject rangerPrefab;
 	public GameObject thiefPrefab;
-	public GameObject clericPrefab;
 
 	void Start() {
 		StartCoroutine (SpawnCoroutine());
