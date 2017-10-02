@@ -37,20 +37,6 @@ public class Store : MonoBehaviour {
 		}
 	}
 
-	public void UpgradeCleric() {
-		if (!PlayerController.instance.GetComponent<Cleric> ().upgraded && ScoreManager.instance.PurchaseSuccess()) {
-			PlayerController.instance.GetComponent<Cleric> ().upgraded = true;
-			upgradeSound.Play ();
-			Button[] buttons = GameObject.FindObjectsOfType<Button> ();
-			foreach (Button button in buttons) {
-				if (button.tag == "ClericButton") {
-					button.interactable = false;
-					break;
-				}
-			}
-		}
-	}
-
 	public void UpgradeMage() {
 		if (!PlayerController.instance.GetComponent<Mage> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
 			PlayerController.instance.GetComponent<Mage> ().upgraded = true;
