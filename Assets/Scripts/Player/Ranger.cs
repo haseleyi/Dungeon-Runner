@@ -17,6 +17,7 @@ public class Ranger : PlayerClass {
 	override public void Ability1 () {
 		// Do attack stuff
 		if (canAbility1) {
+			AnimatorController.instance.UseAbility ();
 			arrowPrefab.GetComponent<Arrow> ().speed = 10;
 			// Upgraded arrows have a piercing effect
 			arrowPrefab.GetComponent<Arrow> ().upgraded = upgraded;
