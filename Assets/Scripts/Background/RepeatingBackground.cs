@@ -9,17 +9,34 @@ public class RepeatingBackground : MonoBehaviour {
 
 	void Awake () {
 		sprite = GetComponent<SpriteRenderer> ();
-		backgroundHorizontalLength = sprite.size.x;
+		backgroundHorizontalLength = 17.89f;
+		print (backgroundHorizontalLength);
 	}
 	
 	void FixedUpdate () {
-		if (transform.position.x < -backgroundHorizontalLength) {
+		if (transform.position.x < -(backgroundHorizontalLength)) {
 			RepositionBackground ();
 		}
+		/*
+		else if (transform.position.x < backgroundHorizontalLength) {
+			RepositionBackground();
+			print (transform.position.x);
+			print (backgroundHorizontalLength);
+		}
+*/
 	}
 
 	private void RepositionBackground() {
-		Vector2 backgroundOffSet = new Vector2(backgroundHorizontalLength * 2f, 0);
-		transform.position = (Vector2) transform.position + backgroundOffSet;
+		Vector2 backgroundOffSet = new Vector2(backgroundHorizontalLength, 0);
+		transform.position = (Vector2)transform.position+ backgroundOffSet*2f;
 	}
+
+	/*
+	private void RepositionBackground2() {
+		Vector2 backgroundOffSet = new Vector2(backgroundHorizontalLength, 0);
+		transform.position = (Vector2)transform.position - backgroundOffSet;
+	}
+	*/
+	
+
 }
