@@ -48,8 +48,15 @@ public class PlayerController : MonoBehaviour {
 	void MoveLeftRight () {
 		Vector2 moveVel = body.velocity;
 		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
+		if (moveVel.x > 0 && transform.position.x >= 8.4f) {
+			moveVel.x = 0;
+		}
+
+		if (moveVel.x < -2) {
+			moveVel.x = -2;
+		}
+
 		body.velocity = moveVel;
-		//Debug.Log (body.velocity.x);
 	}
 
 	void SwitchLanes () {
