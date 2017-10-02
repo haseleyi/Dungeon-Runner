@@ -15,7 +15,7 @@ public class Arrow : MonoBehaviour {
 	void Start() {
 		body = GetComponent<Rigidbody2D> ();
 		startY = transform.position.y;
-		
+
 		if (upgraded) {
 			GetComponent<SpriteRenderer> ().sprite = upgradedArrow;
 		}
@@ -25,7 +25,7 @@ public class Arrow : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		body.velocity = new Vector2 (speed, -gravity);
-		if (transform.position.x > -1 * LaneManager.instance.xThreshold || (startY - transform.position.y) > 0.5f) {
+		if (transform.position.x > -1 * LaneManager.instance.xThreshold || (startY - transform.position.y) > 1.5f) {
 			Destroy (gameObject);
 		}
 	}
