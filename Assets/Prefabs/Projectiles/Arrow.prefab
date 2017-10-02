@@ -101,7 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -10
   gravity: 1
-  upgraded: 0
+  upgraded: 1
+  upgradedArrow: {fileID: 21300000, guid: e2b87197b55c3194daed8e229982614f, type: 3}
 --- !u!212 &212331267981393382
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -142,3 +143,5 @@ SpriteRenderer:
   m_Size: {x: 0.28, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61672960826987302}
   - component: {fileID: 114824969157201648}
   - component: {fileID: 50520081120380532}
-  - component: {fileID: 114398547028288212}
+  - component: {fileID: 114847173144041384}
   - component: {fileID: 114182379956285842}
   - component: {fileID: 114578914491473226}
   - component: {fileID: 114799408831770246}
@@ -128,7 +128,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
   shieldDuration: 0.5
 --- !u!114 &114282049478068654
 MonoBehaviour:
@@ -145,23 +144,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
---- !u!114 &114398547028288212
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1355071296779978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38678788a2ef62e4c839c057acc66567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown1: 1
-  cooldown2: 2
-  upgraded: 0
-  isInvulnerable: 0
-  cooldownBar: {fileID: 0}
 --- !u!114 &114456860479252330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,7 +159,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
   fireballPrefab: {fileID: 1704647337455410, guid: 3f21c06c9b0326a448b69a60786aed9c,
     type: 2}
 --- !u!114 &114578914491473226
@@ -195,7 +176,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
 --- !u!114 &114774343089525474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -222,7 +202,6 @@ MonoBehaviour:
   cooldown2: 2
   upgraded: 0
   isInvulnerable: 0
-  cooldownBar: {fileID: 0}
   arrowPrefab: {fileID: 1510499517304894, guid: d53dfcdf55eb37542909be85eff81b9e,
     type: 2}
 --- !u!114 &114824969157201648
@@ -236,10 +215,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3765be52dbb53d4cbaa45a0af562f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 250
+  speed: 500
   classDuration: 10
   startLane: 2
   xInitial: -6.5
+--- !u!114 &114847173144041384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355071296779978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38678788a2ef62e4c839c057acc66567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown1: 1
+  cooldown2: 2
+  upgraded: 0
+  isInvulnerable: 0
 --- !u!212 &212054565423487978
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -271,7 +265,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300174, guid: eb1e70fd01ec14617abebf05c30e4738, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -280,3 +274,5 @@ SpriteRenderer:
   m_Size: {x: 0.15, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
