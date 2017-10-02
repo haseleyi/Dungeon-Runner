@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour {
 		body = GetComponent<Rigidbody2D> ();
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
 
-		// For testing purposes (in the actual code, this should be PlayerClass)
 		currentClass = GetComponent<PlayerClass> ();
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
