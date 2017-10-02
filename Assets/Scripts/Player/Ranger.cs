@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ranger : PlayerClass {
-	
+
 	public GameObject arrowPrefab;
 	public override string title {get; protected set;}
 
@@ -21,7 +21,7 @@ public class Ranger : PlayerClass {
 			// Upgraded arrows have a piercing effect
 			arrowPrefab.GetComponent<Arrow> ().upgraded = upgraded;
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition ();
-			firePosition.y++;
+			firePosition.y += 1.5f;
 			Instantiate (arrowPrefab, firePosition, Quaternion.AngleAxis (90, Vector3.back));
 
 			// Disallow attacking for the duration of the cooldown

@@ -53,10 +53,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void SwitchLanes () {
-		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) 
+		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
 			&& lane < LaneManager.instance.laneLocations.Count - 1) {
 			lane++;
-		} else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) 
+		} else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
 			&& lane > 0) {
 			lane--;
 		}
@@ -106,11 +106,6 @@ public class PlayerController : MonoBehaviour {
 			currentClass = gameObject.GetComponent<Thief> ();
 			StartCoroutine ("ClassTimerCoroutine");
 			AnimatorController.instance.UpdateClass (3);
-		} else if (other.gameObject.tag == "Cleric") {
-			Destroy (other.gameObject);
-			StopCoroutine ("ClassTimerCoroutine");
-			currentClass = gameObject.GetComponent<Cleric> ();
-			StartCoroutine ("ClassTimerCoroutine");
 		}
 	}
 
