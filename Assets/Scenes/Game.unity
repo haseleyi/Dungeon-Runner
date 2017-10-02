@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 9
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 8
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1781,7 +1781,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b8136bcb47a2ba04792032a64cfd10ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 53d61d0559df2fc4cb989bb33f622a0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1789,8 +1789,6 @@ SpriteRenderer:
   m_Size: {x: 13.6, y: 4.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!4 &1193128115
 Transform:
   m_ObjectHideFlags: 0
@@ -1798,8 +1796,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1193128111}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7000759, y: -0.50424963, z: 0}
-  m_LocalScale: {x: 1.3100373, y: 1.9946785, z: 1}
+  m_LocalPosition: {x: 1.9, y: -0.9, z: 0}
+  m_LocalScale: {x: 1.8193308, y: 1.5485193, z: 1}
   m_Children: []
   m_Father: {fileID: 684702267}
   m_RootOrder: 0
@@ -3041,7 +3039,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b8136bcb47a2ba04792032a64cfd10ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 53d61d0559df2fc4cb989bb33f622a0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3049,8 +3047,6 @@ SpriteRenderer:
   m_Size: {x: 13.6, y: 4.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!4 &1857271205
 Transform:
   m_ObjectHideFlags: 0
@@ -3058,8 +3054,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1857271201}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.390076, y: -0.50424963, z: 0}
-  m_LocalScale: {x: 1.3100373, y: 1.9946785, z: 1}
+  m_LocalPosition: {x: 20.112, y: -0.9, z: 0}
+  m_LocalScale: {x: 1.819331, y: 1.548519, z: 1}
   m_Children: []
   m_Father: {fileID: 684702267}
   m_RootOrder: 1
