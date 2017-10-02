@@ -52,6 +52,10 @@ public class PlayerController : MonoBehaviour {
 			moveVel.x = 0;
 		}
 
+		if (moveVel.x < -2) {
+			moveVel.x = -2;
+		}
+
 		body.velocity = moveVel;
 	}
 
