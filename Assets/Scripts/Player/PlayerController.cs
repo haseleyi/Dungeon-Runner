@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 
 	int lane;
 	Rigidbody2D body;
-	PlayerClass currentClass;
+	public PlayerClass currentClass;
 	public static PlayerController instance;
 
 	void Start () {

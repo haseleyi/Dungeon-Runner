@@ -89,7 +89,9 @@ public class Store : MonoBehaviour {
 					break;
 				}
 			}
-			AnimatorController.instance.UpdateClass (5);
+			if (PlayerController.instance.currentClass.title == "Warrior") {
+				AnimatorController.instance.UpdateClass (5);
+			}
 		}
 	}
 
