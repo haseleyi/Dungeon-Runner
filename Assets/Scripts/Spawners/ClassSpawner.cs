@@ -19,11 +19,11 @@ public class ClassSpawner : Spawner {
 	IEnumerator SpawnCoroutine() {
 		yield return new WaitForSeconds (firstSpawn);
 //		SpawnRandomPrefab(warriorPrefab, magePrefab, rangerPrefab, thiefPrefab, clericPrefab);
-		SpawnPrefab (rangerPrefab);
+		SpawnRandomPrefab (magePrefab, rangerPrefab);
 		while (true) {
 			yield return new WaitForSeconds (spawnEvery);
 //			SpawnRandomPrefab(warriorPrefab, magePrefab, rangerPrefab, thiefPrefab, clericPrefab);
-			SpawnPrefab (magePrefab);
+			SpawnRandomPrefab (magePrefab, rangerPrefab);
 		}
 	}
 }
