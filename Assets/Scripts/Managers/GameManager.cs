@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
 		gameState = GameState.Running;
 	}
 
-	public IEnumerator MainMenuCoroutine() {
+	IEnumerator MainMenuCoroutine() {
 		PlayUISound ();
 		Time.timeScale = .01f;
 		yield return new WaitForSeconds (.001f);
@@ -54,6 +54,19 @@ public class GameManager : MonoBehaviour {
 		gameState = GameState.Running;
 		gameState = GameState.MainMenu;
 		SceneManager.LoadScene ("MainMenu");
+	}
+
+	IEnumerator PlayAgainCoroutine() {
+		PlayUISound ();
+		Time.timeScale = .01f;
+		yield return new WaitForSeconds (.001f);
+		Time.timeScale = 1;
+		gameState = GameState.Running;
+		SceneManager.LoadScene ("Game");
+	}
+
+	public void PlayAgain() {
+		StartCoroutine(PlayAgainCoroutine());
 	}
 
 	public void EndRun() {
