@@ -15,7 +15,6 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class GameManager : MonoBehaviour {
 
-	public AudioSource uiSound, startSound;
 	public static GameManager instance;
 
 	public enum GameState
@@ -29,13 +28,10 @@ public class GameManager : MonoBehaviour {
 
 	void Awake() {
 		instance = this;
-		AudioSource[] sounds = GetComponents<AudioSource> ();
-		uiSound = sounds [0];
-		startSound = sounds [1];
 	}
 
 	public void PlayUISound() {
-		uiSound.Play ();
+		SoundManager.instance.uiInteraction.Play ();
 	}
 
 	public void Pause() {

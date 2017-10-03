@@ -18,12 +18,10 @@ public class Store : MonoBehaviour {
 
 	public string mainMenuScene = "MainMenu";
 	public GameObject pauseMenuCanvas;
-	AudioSource upgradeSound;
 
 	void Start() {
 		GameManager.gameState = GameManager.GameState.Running;
 		pauseMenuCanvas.SetActive (false);
-		upgradeSound = GetComponent<AudioSource> ();
 	}
 
 	void Update() {
@@ -40,7 +38,7 @@ public class Store : MonoBehaviour {
 	public void UpgradeMage() {
 		if (!PlayerController.instance.GetComponent<Mage> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
 			PlayerController.instance.GetComponent<Mage> ().upgraded = true;
-			upgradeSound.Play ();
+			SoundManager.instance.swordClash.Play ();
 			Button[] buttons = GameObject.FindObjectsOfType<Button> ();
 			foreach (Button button in buttons) {
 				if (button.tag == "MageButton") {
@@ -54,7 +52,7 @@ public class Store : MonoBehaviour {
 	public void UpgradeRanger() {
 		if (!PlayerController.instance.GetComponent<Ranger> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
 			PlayerController.instance.GetComponent<Ranger> ().upgraded = true;
-			upgradeSound.Play ();
+			SoundManager.instance.swordClash.Play ();
 			Button[] buttons = GameObject.FindObjectsOfType<Button> ();
 			foreach (Button button in buttons) {
 				if (button.tag == "RangerButton") {
@@ -68,7 +66,7 @@ public class Store : MonoBehaviour {
 	public void UpgradeThief() {
 		if (!PlayerController.instance.GetComponent<Thief> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
 			PlayerController.instance.GetComponent<Thief> ().upgraded = true;
-			upgradeSound.Play ();
+			SoundManager.instance.swordClash.Play ();
 			Button[] buttons = GameObject.FindObjectsOfType<Button> ();
 			foreach (Button button in buttons) {
 				if (button.tag == "ThiefButton") {
@@ -82,7 +80,7 @@ public class Store : MonoBehaviour {
 	public void UpgradeWarrior() {
 		if (!PlayerController.instance.GetComponent<Warrior> ().upgraded && ScoreManager.instance.PurchaseSuccess ()) {
 			PlayerController.instance.GetComponent<Warrior> ().upgraded = true;
-			upgradeSound.Play ();
+			SoundManager.instance.swordClash.Play ();
 			Button[] buttons = GameObject.FindObjectsOfType<Button> ();
 			foreach (Button button in buttons) {
 				if (button.tag == "WarriorButton") {

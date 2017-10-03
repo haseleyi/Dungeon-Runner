@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	IEnumerator GameStartCoroutine() {
-		GameManager.instance.startSound.Play ();
+		SoundManager.instance.swordClash.Play ();
 		yield return new WaitForSeconds (1);
 		GameManager.gameState = GameManager.GameState.Running;
 		GameManager.instance.LoadScene (startLevelName);
