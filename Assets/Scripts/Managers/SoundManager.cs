@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-	public AudioSource fireball, uiInteraction, swordClash, arrow, coin, swipe, drums;
+	public AudioSource fireball, uiInteraction, swordClash, arrow, coin, swipe, drums,
+		enemyDeath1, enemyDeath2, enemyDeath3;
 
 	public static SoundManager instance;
 
@@ -19,5 +20,8 @@ public class SoundManager : MonoBehaviour {
 		coin = sounds [4];
 		swipe = sounds [5];
 		drums = sounds [6];
+		enemyDeath1 = sounds [7];
+		enemyDeath2 = sounds [8];
+		enemyDeath3 = sounds [9];
 	}
 }

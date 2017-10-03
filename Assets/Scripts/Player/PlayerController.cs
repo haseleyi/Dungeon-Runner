@@ -81,6 +81,7 @@ public class PlayerController : MonoBehaviour {
 			ScoreManager.instance.AddCoins (3 * coinMultiplier, true);
 		} else if (other.gameObject.tag == "Warrior") {
 			Destroy (other.gameObject);
+			coinMultiplier = 1;
 			SoundManager.instance.drums.Play ();
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Warrior> ();
@@ -93,6 +94,7 @@ public class PlayerController : MonoBehaviour {
 			}
 		} else if (other.gameObject.tag == "Ranger") {
 			Destroy (other.gameObject);
+			coinMultiplier = 1;
 			SoundManager.instance.drums.Play ();
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Ranger> ();
@@ -100,6 +102,7 @@ public class PlayerController : MonoBehaviour {
 			AnimatorController.instance.UpdateClass (2);
 		} else if (other.gameObject.tag == "Mage") {
 			Destroy (other.gameObject);
+			coinMultiplier = 1;
 			SoundManager.instance.drums.Play ();
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Mage> ();

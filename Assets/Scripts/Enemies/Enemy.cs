@@ -42,6 +42,14 @@ public class Enemy : MonoBehaviour {
 	protected virtual void Die() {
 		ScoreManager.instance.IncrementScore(pointValue);
 		Destroy (gameObject);
+		float r = Random.value;
+		if (r <= .33) {
+			SoundManager.instance.enemyDeath1.Play ();
+		} else if (r <= .66) {
+			SoundManager.instance.enemyDeath2.Play ();
+		} else {
+			SoundManager.instance.enemyDeath3.Play ();
+		}
 	}
 
 	public void Damage (int dam) {
