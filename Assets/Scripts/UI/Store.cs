@@ -74,6 +74,7 @@ public class Store : MonoBehaviour {
 					break;
 				}
 			}
+			PlayerController.instance.coinMultiplier = 4;
 		}
 	}
 
