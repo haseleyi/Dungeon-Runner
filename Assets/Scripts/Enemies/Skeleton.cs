@@ -12,7 +12,7 @@ public class Skeleton : Enemy {
 	void Start() {
 		arrowPrefab.gameObject.GetComponent<Arrow> ().speed = -10;
 		arrowPrefab.gameObject.GetComponent<Arrow> ().upgraded = false;
-		StartCoroutine (ArrowCooldownCoroutine (Random.Range (4, 8)));
+		StartCoroutine (ArrowCooldownCoroutine (Random.Range (1, 3)));
 	}
 
 	void FixedUpdate () {

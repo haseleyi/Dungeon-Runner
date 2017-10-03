@@ -104,7 +104,7 @@ MonoBehaviour:
   defeatable: 1
   health: 2
   pointValue: 900
-  arrowCooldown: 1
+  arrowCooldown: 5
   arrowPrefab: {fileID: 1510499517304894, guid: d53dfcdf55eb37542909be85eff81b9e,
     type: 2}
 --- !u!212 &212997962253049752
