@@ -18,6 +18,7 @@ public class Warrior : PlayerClass {
 	override public void Ability1 () {
 		// Do attack stuff
 		if (canAbility1) {
+			AnimatorController.instance.UseAbility ();
 			print ("attack!");
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			firePosition.x += 0.5f;

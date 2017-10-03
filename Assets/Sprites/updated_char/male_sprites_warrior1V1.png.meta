@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 37f61bae4649d49efa739affb34d5fb8
-timeCreated: 1506691277
+timeCreated: 1507036781
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -1025,9 +1025,9 @@ TextureImporter:
       name: male_sprites_warrior1V1_54
       rect:
         serializedVersion: 2
-        x: 69
+        x: 70
         y: 834
-        width: 41
+        width: 53
         height: 48
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1055,7 +1055,7 @@ TextureImporter:
         serializedVersion: 2
         x: 133
         y: 834
-        width: 41
+        width: 53
         height: 48
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1083,7 +1083,7 @@ TextureImporter:
         serializedVersion: 2
         x: 194
         y: 834
-        width: 44
+        width: 54
         height: 48
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1153,7 +1153,7 @@ TextureImporter:
         serializedVersion: 2
         x: 450
         y: 834
-        width: 44
+        width: 54
         height: 48
       alignment: 7
       pivot: {x: 0.5, y: 0}

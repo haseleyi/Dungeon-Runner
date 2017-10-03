@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 	public float classDuration;
 	public int startLane = 2;
 	public float xInitial = -8;
+	public int coinMultiplier = 1;
 
 	int lane;
 	Rigidbody2D body;
@@ -75,15 +76,11 @@ public class PlayerController : MonoBehaviour {
 		} else if (other.gameObject.tag == "Coin") {
 			Destroy (other.gameObject);
 			SoundManager.instance.coin.Play ();
-			if (currentClass.title == "Thief") {
-				if (currentClass.upgraded) {
-					ScoreManager.instance.AddCoins (4);
-				} else {
-					ScoreManager.instance.AddCoins (2);
-				}
-			} else {
-				ScoreManager.instance.AddCoins (1);
-			}
+			ScoreManager.instance.AddCoins(coinMultiplier);
+		} else if (other.gameObject.tag == "Chest") {
+			Destroy (other.gameObject);
+			SoundManager.instance.coin.Play ();
+			ScoreManager.instance.AddCoins(3 * coinMultiplier);
 		} else if (other.gameObject.tag == "Warrior") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
@@ -111,6 +108,11 @@ public class PlayerController : MonoBehaviour {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Thief> ();
+			if (currentClass.upgraded) {
+				coinMultiplier = 4;
+			} else {
+				coinMultiplier = 2;
+			}
 			StartCoroutine ("ClassTimerCoroutine");
 			AnimatorController.instance.UpdateClass (3);
 		}
@@ -124,6 +126,7 @@ public class PlayerController : MonoBehaviour {
 		AnimatorController.instance.UpdateClass (0);
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
+		coinMultiplier = 1;
 	}
 
 	void Die () {

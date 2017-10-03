@@ -16,6 +16,8 @@ public class Thief : PlayerClass {
 	override public void Ability1 () {
 		// Do attack stuff
 		if (canAbility1) {
+			Debug.Log ("attacked");
+			AnimatorController.instance.UseAbility ();
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector2.right, 1);
 			firePosition.x += 0.5f;
