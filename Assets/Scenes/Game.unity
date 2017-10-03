@@ -1432,6 +1432,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224064831197001974, guid: a4260312ae8a42847ab2d3a8697981fb,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -27.49997
+      objectReference: {fileID: 0}
+    - target: {fileID: 224064831197001974, guid: a4260312ae8a42847ab2d3a8697981fb,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 43.039993
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4260312ae8a42847ab2d3a8697981fb, type: 2}
   m_IsPrefabParent: 0
@@ -3425,22 +3435,22 @@ Prefab:
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: level0TankArcherGruntFireBoulder.Array.data[1]
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: level0TankArcherGruntFireBoulder.Array.data[2]
-      value: 0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: level0TankArcherGruntFireBoulder.Array.data[3]
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: level0TankArcherGruntFireBoulder.Array.data[4]
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
@@ -3465,7 +3475,7 @@ Prefab:
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: spawnEvery.Array.data[0]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
@@ -3500,7 +3510,7 @@ Prefab:
     - target: {fileID: 114701220909675102, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: spawnEvery
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114231882897667952, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
@@ -3511,7 +3521,33 @@ Prefab:
     - target: {fileID: 114231882897667952, guid: c6572a4422b88fd438712f78090137d0,
         type: 2}
       propertyPath: chanceOfChest
-      value: 0.25
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580617115536472, guid: c6572a4422b88fd438712f78090137d0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: firePrefab
+      value: 
+      objectReference: {fileID: 1099100429906412, guid: f8bae7b26c003fd448ac8c6ed65adda9,
+        type: 2}
+    - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: boulderPrefab
+      value: 
+      objectReference: {fileID: 1694491066885718, guid: 2a00b957394e64706975ba9617459201,
+        type: 2}
+    - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: levelStarts.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114231882897667952, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: spawnEvery
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6572a4422b88fd438712f78090137d0, type: 2}
@@ -3559,6 +3595,36 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859616743909120, guid: 0030d805463e043479b212db7bc36898, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50520081120380532, guid: 0030d805463e043479b212db7bc36898,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50520081120380532, guid: 0030d805463e043479b212db7bc36898,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50520081120380532, guid: 0030d805463e043479b212db7bc36898,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 50520081120380532, guid: 0030d805463e043479b212db7bc36898,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50520081120380532, guid: 0030d805463e043479b212db7bc36898,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50520081120380532, guid: 0030d805463e043479b212db7bc36898,
+        type: 2}
+      propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

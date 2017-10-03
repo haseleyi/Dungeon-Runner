@@ -7,12 +7,9 @@ public class Obstacle : MonoBehaviour {
 	public float baseSpeed = 2;
 	public bool defeatable;
 	public float pointValue;
-	protected Rigidbody2D body;
 
-	// Use this for initialization
-	void Start () {
-		body = GetComponent<Rigidbody2D> ();
-		body.velocity = new Vector2 (-1 * (baseSpeed), 0);
+	void Update () {
+		transform.position = new Vector2(transform.position.x - baseSpeed * Time.deltaTime, transform.position.y);
 	}
 	
 	// Update is called once per frame
