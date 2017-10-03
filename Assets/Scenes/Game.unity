@@ -3179,12 +3179,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1907339537 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114505205446055396, guid: a4260312ae8a42847ab2d3a8697981fb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1042505744}
-  m_Script: {fileID: 11500000, guid: afa4882542470834c95c90d06914767b, type: 3}
 --- !u!1 &1919048116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3547,46 +3541,6 @@ Prefab:
     - target: {fileID: 4859616743909120, guid: 0030d805463e043479b212db7bc36898, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114799408831770246, guid: 0030d805463e043479b212db7bc36898,
-        type: 2}
-      propertyPath: cooldownBar
-      value: 
-      objectReference: {fileID: 1907339537}
-    - target: {fileID: 114578914491473226, guid: 0030d805463e043479b212db7bc36898,
-        type: 2}
-      propertyPath: cooldownBar
-      value: 
-      objectReference: {fileID: 1907339537}
-    - target: {fileID: 114456860479252330, guid: 0030d805463e043479b212db7bc36898,
-        type: 2}
-      propertyPath: cooldownBar
-      value: 
-      objectReference: {fileID: 1907339537}
-    - target: {fileID: 114398547028288212, guid: 0030d805463e043479b212db7bc36898,
-        type: 2}
-      propertyPath: cooldownBar
-      value: 
-      objectReference: {fileID: 1907339537}
-    - target: {fileID: 114282049478068654, guid: 0030d805463e043479b212db7bc36898,
-        type: 2}
-      propertyPath: cooldownBar
-      value: 
-      objectReference: {fileID: 1907339537}
-    - target: {fileID: 114182379956285842, guid: 0030d805463e043479b212db7bc36898,
-        type: 2}
-      propertyPath: cooldownBar
-      value: 
-      objectReference: {fileID: 1907339537}
-    - target: {fileID: 212054565423487978, guid: 0030d805463e043479b212db7bc36898,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114824969157201648, guid: 0030d805463e043479b212db7bc36898,
-        type: 2}
-      propertyPath: speed
-      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0030d805463e043479b212db7bc36898, type: 2}
