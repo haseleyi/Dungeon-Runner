@@ -19,6 +19,8 @@ TagManager:
   - RangerButton
   - ThiefButton
   - WarriorButton
+  - Boulder
+  - Chest
   layers:
   - Default
   - TransparentFX
