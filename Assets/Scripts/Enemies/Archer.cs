@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skeleton : Enemy {
+public class Archer : Enemy {
 
 	public float arrowCooldown;
 	public GameObject arrowPrefab;
