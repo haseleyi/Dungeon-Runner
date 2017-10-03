@@ -20,7 +20,6 @@ public class Warrior : PlayerClass {
 		if (canAbility1) {
 			SoundManager.instance.swipe.Play ();
 			AnimatorController.instance.UseAbility ();
-			print ("attack!");
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			firePosition.x += 0.5f;
 			firePosition.y += 0.5f;

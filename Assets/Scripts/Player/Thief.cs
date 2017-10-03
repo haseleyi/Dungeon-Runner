@@ -16,7 +16,6 @@ public class Thief : PlayerClass {
 	override public void Ability1 () {
 		// Do attack stuff
 		if (canAbility1) {
-			Debug.Log ("attacked");
 			StartCoroutine (SwipeSoundCoroutine ());
 			AnimatorController.instance.UseAbility ();
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();

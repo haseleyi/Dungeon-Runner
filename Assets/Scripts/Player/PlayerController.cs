@@ -81,6 +81,7 @@ public class PlayerController : MonoBehaviour {
 			ScoreManager.instance.AddCoins (3 * coinMultiplier, true);
 		} else if (other.gameObject.tag == "Warrior") {
 			Destroy (other.gameObject);
+			SoundManager.instance.drums.Play ();
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Warrior> ();
 			StartCoroutine ("ClassTimerCoroutine");
@@ -92,18 +93,21 @@ public class PlayerController : MonoBehaviour {
 			}
 		} else if (other.gameObject.tag == "Ranger") {
 			Destroy (other.gameObject);
+			SoundManager.instance.drums.Play ();
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Ranger> ();
 			StartCoroutine ("ClassTimerCoroutine");
 			AnimatorController.instance.UpdateClass (2);
 		} else if (other.gameObject.tag == "Mage") {
 			Destroy (other.gameObject);
+			SoundManager.instance.drums.Play ();
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Mage> ();
 			StartCoroutine ("ClassTimerCoroutine");
 			AnimatorController.instance.UpdateClass (1);
 		} else if (other.gameObject.tag == "Thief") {
 			Destroy (other.gameObject);
+			SoundManager.instance.drums.Play ();
 			StopCoroutine ("ClassTimerCoroutine");
 			currentClass = gameObject.GetComponent<Thief> ();
 			if (currentClass.upgraded) {
