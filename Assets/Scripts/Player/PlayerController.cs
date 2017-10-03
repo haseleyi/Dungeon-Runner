@@ -51,11 +51,9 @@ public class PlayerController : MonoBehaviour {
 		if (moveVel.x > 0 && transform.position.x >= 8.4f) {
 			moveVel.x = 0;
 		}
-
 		if (moveVel.x < -2) {
 			moveVel.x = -2;
 		}
-
 		body.velocity = moveVel;
 	}
 
@@ -70,6 +68,14 @@ public class PlayerController : MonoBehaviour {
 		transform.position = new Vector2(transform.position.x, LaneManager.instance.laneLocations [lane]);
 	}
 
+	void NewClass(Collision2D other) {
+		Destroy (other.gameObject);
+		coinMultiplier = 1;
+		SoundManager.instance.drums.Play ();
+		StopCoroutine ("ClassTimerCoroutine");
+		StartCoroutine ("ClassTimerCoroutine");
+	}
+
 	void OnCollisionEnter2D (Collision2D other) {
 		if ((other.gameObject.tag == "Enemy" || other.gameObject.tag == "Arrow" && other.gameObject.GetComponent<Arrow> ().speed < 0) && !currentClass.isInvulnerable) {
 				Die ();
@@ -80,12 +86,8 @@ public class PlayerController : MonoBehaviour {
 			Destroy (other.gameObject);
 			ScoreManager.instance.AddCoins (3 * coinMultiplier, true);
 		} else if (other.gameObject.tag == "Warrior") {
-			Destroy (other.gameObject);
-			coinMultiplier = 1;
-			SoundManager.instance.drums.Play ();
-			StopCoroutine ("ClassTimerCoroutine");
+			NewClass (other);
 			currentClass = gameObject.GetComponent<Warrior> ();
-			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
 			if (gameObject.GetComponent<Warrior> ().upgraded) {
 				AnimatorController.instance.UpdateClass (5);
@@ -93,32 +95,21 @@ public class PlayerController : MonoBehaviour {
 				AnimatorController.instance.UpdateClass (4);
 			}
 		} else if (other.gameObject.tag == "Ranger") {
-			Destroy (other.gameObject);
-			coinMultiplier = 1;
-			SoundManager.instance.drums.Play ();
-			StopCoroutine ("ClassTimerCoroutine");
+			NewClass (other);
 			currentClass = gameObject.GetComponent<Ranger> ();
-			StartCoroutine ("ClassTimerCoroutine");
 			AnimatorController.instance.UpdateClass (2);
 		} else if (other.gameObject.tag == "Mage") {
-			Destroy (other.gameObject);
-			coinMultiplier = 1;
-			SoundManager.instance.drums.Play ();
-			StopCoroutine ("ClassTimerCoroutine");
+			NewClass (other);
 			currentClass = gameObject.GetComponent<Mage> ();
-			StartCoroutine ("ClassTimerCoroutine");
 			AnimatorController.instance.UpdateClass (1);
 		} else if (other.gameObject.tag == "Thief") {
-			Destroy (other.gameObject);
-			SoundManager.instance.drums.Play ();
-			StopCoroutine ("ClassTimerCoroutine");
+			NewClass (other);
 			currentClass = gameObject.GetComponent<Thief> ();
 			if (currentClass.upgraded) {
 				coinMultiplier = 4;
 			} else {
 				coinMultiplier = 2;
 			}
-			StartCoroutine ("ClassTimerCoroutine");
 			AnimatorController.instance.UpdateClass (3);
 		}
 	}

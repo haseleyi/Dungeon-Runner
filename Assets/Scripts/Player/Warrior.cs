@@ -27,7 +27,13 @@ public class Warrior : PlayerClass {
 			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector3.right, 2);
 
 			if (hit.collider != null && hit.collider.gameObject.tag == "Enemy") {
-				hit.collider.GetComponent<Enemy> ().Damage (4);
+				if (upgraded) {
+					hit.collider.GetComponent<Enemy> ().Damage (8);
+				} else {
+					hit.collider.GetComponent<Enemy> ().Damage (4);
+				}
+			} else if (hit.collider != null && hit.collider.gameObject.tag == "Boulder") {
+				Destroy (hit.collider.gameObject);
 			}
 
 			// Disallow attacking for the duration of the cooldown
