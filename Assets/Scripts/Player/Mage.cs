@@ -17,13 +17,14 @@ public class Mage : PlayerClass {
 	override public void Ability1 () {
 		// Do attack stuff
 		if (canAbility1) {
+			SoundManager.instance.fireball.Play ();
 			AnimatorController.instance.UseAbility ();
-			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
-			firePosition.y += .5f;
-			Instantiate(fireballPrefab, firePosition, Quaternion.identity);
 			if (upgraded) {
-				StartCoroutine (SecondShotCoroutine ());
+				Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
+				firePosition.y += .5f;
+				Instantiate(fireballPrefab, firePosition, Quaternion.identity);
 			}
+			StartCoroutine (ShotCoroutine ());
 
 			// Disallow attacking for the duration of the cooldown
 			canAbility1 = false;
@@ -41,7 +42,7 @@ public class Mage : PlayerClass {
 		}
 	}
 
-	IEnumerator SecondShotCoroutine() {
+	IEnumerator ShotCoroutine() {
 		yield return new WaitForSeconds (.2f);
 		Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 		firePosition.y += .5f;
