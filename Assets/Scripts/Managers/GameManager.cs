@@ -50,6 +50,16 @@ public class GameManager : MonoBehaviour {
 		gameState = GameState.Running;
 	}
 
+	public IEnumerator MainMenuCoroutine() {
+		PlayUISound ();
+		Time.timeScale = .01f;
+		yield return new WaitForSeconds (.001f);
+		Time.timeScale = 1;
+		gameState = GameState.Running;
+		gameState = GameState.MainMenu;
+		SceneManager.LoadScene ("MainMenu");
+	}
+
 	public void EndRun() {
 		Time.timeScale = 0;
 		gameState = GameState.Paused;
@@ -62,8 +72,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void MainMenu() {
-		Unpause ();
-		gameState = GameState.MainMenu;
-		SceneManager.LoadScene ("MainMenu");
+		StartCoroutine (MainMenuCoroutine());
 	}
 }

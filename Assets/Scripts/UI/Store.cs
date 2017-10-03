@@ -102,10 +102,4 @@ public class Store : MonoBehaviour {
 		pauseMenuCanvas.SetActive (false);
 		GameManager.instance.Unpause ();
 	}
-
-	public void GoToMainMenu() {
-		GameManager.instance.Unpause ();
-		GameManager.gameState = GameManager.GameState.MainMenu;
-		GameManager.instance.LoadScene (mainMenuScene);
-	}
 }
