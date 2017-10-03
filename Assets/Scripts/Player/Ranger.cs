@@ -18,17 +18,23 @@ public class Ranger : PlayerClass {
 		// Do attack stuff
 		if (canAbility1) {
 			AnimatorController.instance.UseAbility ();
-			arrowPrefab.GetComponent<Arrow> ().speed = 10;
-			// Upgraded arrows have a piercing effect
-			arrowPrefab.GetComponent<Arrow> ().upgraded = upgraded;
-			Vector2 firePosition = PlayerController.instance.GetPlayerPosition ();
-			firePosition.y += 1.5f;
-			Instantiate (arrowPrefab, firePosition, Quaternion.AngleAxis (90, Vector3.back));
+			StartCoroutine (ShotCoroutine ());
 
 			// Disallow attacking for the duration of the cooldown
 			canAbility1 = false;
 			StartCoroutine (Cooldown1Coroutine ());
 		}
+	}
+
+	IEnumerator ShotCoroutine() {
+		yield return new WaitForSeconds (.3f);
+		SoundManager.instance.arrow.Play ();
+		arrowPrefab.GetComponent<Arrow> ().speed = 10;
+		// Upgraded arrows have a piercing effect
+		arrowPrefab.GetComponent<Arrow> ().upgraded = upgraded;
+		Vector2 firePosition = PlayerController.instance.GetPlayerPosition ();
+		firePosition.y += 1.5f;
+		Instantiate (arrowPrefab, firePosition, Quaternion.AngleAxis (90, Vector3.back));
 	}
 
 	override public void Ability2 () {
