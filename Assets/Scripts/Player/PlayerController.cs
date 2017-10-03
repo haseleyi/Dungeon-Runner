@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour {
 				Die ();
 		} else if (other.gameObject.tag == "Coin") {
 			Destroy (other.gameObject);
+			SoundManager.instance.coin.Play ();
 			if (currentClass.title == "Thief") {
 				if (currentClass.upgraded) {
 					ScoreManager.instance.AddCoins (4);
