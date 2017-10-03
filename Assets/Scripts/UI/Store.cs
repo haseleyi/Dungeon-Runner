@@ -89,6 +89,7 @@ public class Store : MonoBehaviour {
 					break;
 				}
 			}
+			AnimatorController.instance.UpdateClass (5);
 		}
 	}
 
