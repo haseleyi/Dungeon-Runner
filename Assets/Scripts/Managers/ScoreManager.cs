@@ -38,24 +38,23 @@ public class ScoreManager : MonoBehaviour {
 		}
 	}
 
-	public void AddCoins (int numCoins) {
-		coins += numCoins;
-		coinsCollected += numCoins;
-		IncrementScore(coinValue);
+	public void AddCoins (int numCoins, bool chest) {
+		if (chest) {
+			IncrementScore(3 * coinValue);
+		} else {
+			IncrementScore(coinValue);
+		}
+		StartCoroutine (AddCoinsCoroutine (numCoins));
 	}
 
-	public void AddChest() {
-		StartCoroutine (AddChestCoroutine ());
-	}
+	IEnumerator AddCoinsCoroutine(int numCoins) {
+		for (int i = 0; i < numCoins; i++) {
+			coins++;
+			coinsCollected++;
+			SoundManager.instance.coin.Play ();
+			yield return new WaitForSeconds (.15f);
 
-	IEnumerator AddChestCoroutine() {
-		ScoreManager.instance.coinsCollected += 3 * PlayerController.instance.coinMultiplier;
-		ScoreManager.instance.IncrementScore (3 * coinValue);
-		ScoreManager.instance.coins += PlayerController.instance.coinMultiplier;
-		yield return new WaitForSeconds (.15f);
-		ScoreManager.instance.coins += PlayerController.instance.coinMultiplier;
-		yield return new WaitForSeconds (.15f);
-		ScoreManager.instance.coins += PlayerController.instance.coinMultiplier;
+		}
 	}
 
 	IEnumerator SurvivalCoroutine() {

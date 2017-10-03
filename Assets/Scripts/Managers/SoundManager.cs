@@ -18,16 +18,4 @@ public class SoundManager : MonoBehaviour {
 		arrow = sounds [3];
 		coin = sounds [4];
 	}
-
-	public void ChestSounds() {
-		StartCoroutine (ChestSoundsCoroutine ());
-	}
-
-	IEnumerator ChestSoundsCoroutine() {
-		coin.Play ();
-		yield return new WaitForSeconds (.15f);
-		coin.Play ();
-		yield return new WaitForSeconds (.15f);
-		coin.Play ();
-	}
 }
