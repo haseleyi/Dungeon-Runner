@@ -79,8 +79,8 @@ public class PlayerController : MonoBehaviour {
 			ScoreManager.instance.AddCoins(coinMultiplier);
 		} else if (other.gameObject.tag == "Chest") {
 			Destroy (other.gameObject);
-			SoundManager.instance.coin.Play ();
-			ScoreManager.instance.AddCoins(3 * coinMultiplier);
+			SoundManager.instance.ChestSounds();
+			ScoreManager.instance.AddChest ();
 		} else if (other.gameObject.tag == "Warrior") {
 			Destroy (other.gameObject);
 			StopCoroutine ("ClassTimerCoroutine");

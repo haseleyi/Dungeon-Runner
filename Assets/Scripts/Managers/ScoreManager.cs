@@ -44,6 +44,20 @@ public class ScoreManager : MonoBehaviour {
 		IncrementScore(numCoins * coinValue);
 	}
 
+	public void AddChest() {
+		StartCoroutine (AddChestCoroutine ());
+	}
+
+	IEnumerator AddChestCoroutine() {
+		ScoreManager.instance.coinsCollected += 3 * PlayerController.instance.coinMultiplier;
+		ScoreManager.instance.IncrementScore (300);
+		ScoreManager.instance.coins += PlayerController.instance.coinMultiplier;
+		yield return new WaitForSeconds (.15f);
+		ScoreManager.instance.coins += PlayerController.instance.coinMultiplier;
+		yield return new WaitForSeconds (.15f);
+		ScoreManager.instance.coins += PlayerController.instance.coinMultiplier;
+	}
+
 	IEnumerator SurvivalCoroutine() {
 		while (true) {
 			yield return new WaitForSeconds (.1f);
