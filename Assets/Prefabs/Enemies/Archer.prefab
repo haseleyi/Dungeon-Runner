@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50546109876605136}
   - component: {fileID: 212997962253049752}
   m_Layer: 0
-  m_Name: Skeleton
+  m_Name: Archer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860139235684168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1622226, y: -2.9365668, z: 0}
+  m_LocalPosition: {x: -3.607592, y: -1.0041101, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,7 +86,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.22, y: 0.44}
+  m_Size: {x: 0.17, y: 0.44}
   m_EdgeRadius: 0
 --- !u!114 &114043065681851490
 MonoBehaviour:
@@ -104,7 +104,7 @@ MonoBehaviour:
   defeatable: 1
   health: 2
   pointValue: 900
-  arrowCooldown: 1
+  arrowCooldown: 5
   arrowPrefab: {fileID: 1510499517304894, guid: d53dfcdf55eb37542909be85eff81b9e,
     type: 2}
 --- !u!212 &212997962253049752

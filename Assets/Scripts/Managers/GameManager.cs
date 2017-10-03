@@ -15,7 +15,6 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class GameManager : MonoBehaviour {
 
-	public AudioSource uiSound, startSound;
 	public static GameManager instance;
 
 	public enum GameState
@@ -29,13 +28,10 @@ public class GameManager : MonoBehaviour {
 
 	void Awake() {
 		instance = this;
-		AudioSource[] sounds = GetComponents<AudioSource> ();
-		uiSound = sounds [0];
-		startSound = sounds [1];
 	}
 
 	public void PlayUISound() {
-		uiSound.Play ();
+		SoundManager.instance.uiInteraction.Play ();
 	}
 
 	public void Pause() {
@@ -50,6 +46,29 @@ public class GameManager : MonoBehaviour {
 		gameState = GameState.Running;
 	}
 
+	IEnumerator MainMenuCoroutine() {
+		PlayUISound ();
+		Time.timeScale = .01f;
+		yield return new WaitForSeconds (.001f);
+		Time.timeScale = 1;
+		gameState = GameState.Running;
+		gameState = GameState.MainMenu;
+		SceneManager.LoadScene ("MainMenu");
+	}
+
+	IEnumerator PlayAgainCoroutine() {
+		PlayUISound ();
+		Time.timeScale = .01f;
+		yield return new WaitForSeconds (.001f);
+		Time.timeScale = 1;
+		gameState = GameState.Running;
+		SceneManager.LoadScene ("Game");
+	}
+
+	public void PlayAgain() {
+		StartCoroutine(PlayAgainCoroutine());
+	}
+
 	public void EndRun() {
 		Time.timeScale = 0;
 		gameState = GameState.Paused;
@@ -62,8 +81,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void MainMenu() {
-		Unpause ();
-		gameState = GameState.MainMenu;
-		SceneManager.LoadScene ("MainMenu");
+		StartCoroutine (MainMenuCoroutine());
 	}
 }

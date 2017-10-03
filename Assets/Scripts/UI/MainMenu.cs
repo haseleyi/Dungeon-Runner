@@ -13,8 +13,6 @@ using UnityEngine;
 /// </summary>
 public class MainMenu : MonoBehaviour {
 
-	public string startLevelName;
-
 	void Start() {
 		GameManager.gameState = GameManager.GameState.MainMenu;
 	}
@@ -24,9 +22,9 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	IEnumerator GameStartCoroutine() {
-		GameManager.instance.startSound.Play ();
+		SoundManager.instance.swordClash.Play ();
 		yield return new WaitForSeconds (1);
 		GameManager.gameState = GameManager.GameState.Running;
-		GameManager.instance.LoadScene (startLevelName);
+		GameManager.instance.LoadScene ("Game");
 	}
 }
