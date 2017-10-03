@@ -17,6 +17,7 @@ public class Thief : PlayerClass {
 		// Do attack stuff
 		if (canAbility1) {
 			Debug.Log ("attacked");
+			StartCoroutine (SwipeSoundCoroutine ());
 			AnimatorController.instance.UseAbility ();
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector2.right, 1);
@@ -29,6 +30,11 @@ public class Thief : PlayerClass {
 			canAbility1 = false;
 			StartCoroutine(Cooldown1Coroutine ());
 		}
+	}
+
+	IEnumerator SwipeSoundCoroutine() {
+		yield return new WaitForSeconds (.1f);
+		SoundManager.instance.swipe.Play ();
 	}
 
 	override public void Ability2 () {

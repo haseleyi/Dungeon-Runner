@@ -18,6 +18,7 @@ public class Warrior : PlayerClass {
 	override public void Ability1 () {
 		// Do attack stuff
 		if (canAbility1) {
+			SoundManager.instance.swipe.Play ();
 			AnimatorController.instance.UseAbility ();
 			print ("attack!");
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
@@ -29,11 +30,11 @@ public class Warrior : PlayerClass {
 			if (hit.collider != null && hit.collider.gameObject.tag == "Enemy") {
 				hit.collider.GetComponent<Enemy> ().Damage (4);
 			}
-		}
 
-		// Disallow attacking for the duration of the cooldown
-		canAbility1 = false;
-		StartCoroutine(Cooldown1Coroutine ());
+			// Disallow attacking for the duration of the cooldown
+			canAbility1 = false;
+			StartCoroutine(Cooldown1Coroutine ());
+		}
 	}
 
 	override public void Ability2 () {
