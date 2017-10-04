@@ -124,6 +124,7 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds (classDuration);
 		currentClass = gameObject.GetComponent<PlayerClass> ();
 		AnimatorController.instance.UpdateClass (0);
+		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar> ().Reset ();
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
 		coinMultiplier = 1;

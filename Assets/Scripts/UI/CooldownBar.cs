@@ -28,4 +28,8 @@ public class CooldownBar : MonoBehaviour {
 			yield return null;
 		}
 	}
+
+	public void Reset() {
+		bar.transform.localScale = new Vector3 (1, 1, 0);
+	}
 }
