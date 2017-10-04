@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour {
 	public int health;
 	public int pointValue;
 	protected Rigidbody2D body;
+	public GameObject bloodPrefab;
 
 	void Awake () {
 		body = GetComponent<Rigidbody2D> ();
@@ -41,6 +42,15 @@ public class Enemy : MonoBehaviour {
 
 	protected virtual void Die() {
 		ScoreManager.instance.IncrementScore(pointValue);
+		float r = Random.value;
+		if (r <= .33) {
+			SoundManager.instance.enemyDeath1.Play ();
+		} else if (r <= .66) {
+			SoundManager.instance.enemyDeath2.Play ();
+		} else {
+			SoundManager.instance.enemyDeath3.Play ();
+		}
+		Instantiate (bloodPrefab, gameObject.transform.position, Quaternion.identity);
 		Destroy (gameObject);
 	}
 

@@ -47,9 +47,8 @@ public class EnemySpawner : Spawner {
 					float prefabChance = levels[level][prefabIndex];
 					if (probabilitySum < r && r < probabilitySum + prefabChance) {
 						SpawnPrefab (prefabs [prefabIndex]);
-					} else {
-						probabilitySum += prefabChance;
 					}
+					probabilitySum += prefabChance;
 				}
 			}
 		}

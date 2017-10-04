@@ -7,6 +7,7 @@ public class Arrow : MonoBehaviour {
 	public float speed;
 	public float gravity;
 	public bool upgraded;
+	public bool fromEnemyArcher;
 	public Sprite upgradedArrow;
 
 	Rigidbody2D body;
@@ -20,7 +21,6 @@ public class Arrow : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().sprite = upgradedArrow;
 		}
 	}
-
 
 	// Update is called once per frame
 	void FixedUpdate () {

@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 83c20e9421ad3f14086da450352b5612
 timeCreated: 1507122514
+=======
+guid: 2606d713847d94edfae84adea854ad59
+timeCreated: 1507036322
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -150,6 +155,11 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+<<<<<<< HEAD
+=======
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -165,10 +175,20 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+<<<<<<< HEAD
     filterMode: -1
     aniso: -1
     mipBias: -1
     wrapMode: 1
+=======
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -215,10 +235,18 @@ TextureImporter:
         y: 1250
         width: 46
         height: 42
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_1
@@ -228,10 +256,18 @@ TextureImporter:
         y: 1248
         width: 51
         height: 44
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_2
@@ -241,10 +277,18 @@ TextureImporter:
         y: 1248
         width: 40
         height: 44
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_3
@@ -254,10 +298,18 @@ TextureImporter:
         y: 1248
         width: 25
         height: 44
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_4
@@ -267,10 +319,18 @@ TextureImporter:
         y: 1248
         width: 24
         height: 44
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_5
@@ -280,10 +340,18 @@ TextureImporter:
         y: 1248
         width: 23
         height: 44
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_6
@@ -293,10 +361,18 @@ TextureImporter:
         y: 1248
         width: 24
         height: 44
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_7
@@ -306,10 +382,18 @@ TextureImporter:
         y: 1248
         width: 25
         height: 44
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_8
@@ -319,10 +403,18 @@ TextureImporter:
         y: 1185
         width: 42
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_9
@@ -332,10 +424,18 @@ TextureImporter:
         y: 1185
         width: 54
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_10
@@ -345,10 +445,18 @@ TextureImporter:
         y: 1185
         width: 54
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_11
@@ -358,10 +466,18 @@ TextureImporter:
         y: 1184
         width: 54
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_12
@@ -371,10 +487,18 @@ TextureImporter:
         y: 1184
         width: 54
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_13
@@ -384,10 +508,18 @@ TextureImporter:
         y: 1184
         width: 54
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_14
@@ -397,10 +529,18 @@ TextureImporter:
         y: 1184
         width: 54
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_15
@@ -410,10 +550,18 @@ TextureImporter:
         y: 1184
         width: 54
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_16
@@ -423,10 +571,18 @@ TextureImporter:
         y: 1120
         width: 46
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_17
@@ -436,10 +592,18 @@ TextureImporter:
         y: 1121
         width: 51
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_18
@@ -449,10 +613,18 @@ TextureImporter:
         y: 1121
         width: 40
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_19
@@ -462,10 +634,18 @@ TextureImporter:
         y: 1121
         width: 27
         height: 61
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_20
@@ -475,10 +655,18 @@ TextureImporter:
         y: 1121
         width: 26
         height: 58
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_21
@@ -488,10 +676,18 @@ TextureImporter:
         y: 1120
         width: 25
         height: 54
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_22
@@ -501,10 +697,18 @@ TextureImporter:
         y: 1121
         width: 27
         height: 58
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_23
@@ -514,10 +718,18 @@ TextureImporter:
         y: 1121
         width: 27
         height: 61
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_24
@@ -527,10 +739,18 @@ TextureImporter:
         y: 1057
         width: 49
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_25
@@ -540,10 +760,18 @@ TextureImporter:
         y: 1057
         width: 60
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_26
@@ -553,10 +781,18 @@ TextureImporter:
         y: 1057
         width: 61
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_27
@@ -566,10 +802,18 @@ TextureImporter:
         y: 1056
         width: 63
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_28
@@ -579,10 +823,18 @@ TextureImporter:
         y: 1056
         width: 61
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_29
@@ -592,10 +844,18 @@ TextureImporter:
         y: 1056
         width: 61
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_30
@@ -605,10 +865,18 @@ TextureImporter:
         y: 1057
         width: 62
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_31
@@ -618,10 +886,18 @@ TextureImporter:
         y: 1057
         width: 67
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_32
@@ -631,10 +907,18 @@ TextureImporter:
         y: 995
         width: 35
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_33
@@ -644,10 +928,18 @@ TextureImporter:
         y: 995
         width: 37
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_34
@@ -657,10 +949,18 @@ TextureImporter:
         y: 994
         width: 37
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_35
@@ -670,10 +970,18 @@ TextureImporter:
         y: 993
         width: 36
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_36
@@ -683,10 +991,18 @@ TextureImporter:
         y: 994
         width: 36
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_37
@@ -696,10 +1012,18 @@ TextureImporter:
         y: 995
         width: 36
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_38
@@ -709,10 +1033,18 @@ TextureImporter:
         y: 994
         width: 36
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_39
@@ -722,10 +1054,18 @@ TextureImporter:
         y: 993
         width: 35
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_40
@@ -735,10 +1075,18 @@ TextureImporter:
         y: 994
         width: 36
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_41
@@ -748,10 +1096,18 @@ TextureImporter:
         y: 929
         width: 29
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_42
@@ -761,10 +1117,18 @@ TextureImporter:
         y: 930
         width: 32
         height: 47
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_43
@@ -774,10 +1138,18 @@ TextureImporter:
         y: 931
         width: 30
         height: 47
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_44
@@ -787,10 +1159,18 @@ TextureImporter:
         y: 931
         width: 30
         height: 47
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_45
@@ -800,10 +1180,18 @@ TextureImporter:
         y: 930
         width: 31
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_46
@@ -813,10 +1201,18 @@ TextureImporter:
         y: 930
         width: 33
         height: 47
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_47
@@ -826,10 +1222,18 @@ TextureImporter:
         y: 930
         width: 32
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_48
@@ -839,10 +1243,18 @@ TextureImporter:
         y: 930
         width: 31
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_49
@@ -852,10 +1264,18 @@ TextureImporter:
         y: 930
         width: 30
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_50
@@ -865,10 +1285,18 @@ TextureImporter:
         y: 864
         width: 35
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_51
@@ -878,10 +1306,18 @@ TextureImporter:
         y: 864
         width: 35
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_52
@@ -891,10 +1327,18 @@ TextureImporter:
         y: 865
         width: 35
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_53
@@ -904,10 +1348,18 @@ TextureImporter:
         y: 865
         width: 35
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_54
@@ -917,10 +1369,18 @@ TextureImporter:
         y: 864
         width: 36
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_55
@@ -930,10 +1390,18 @@ TextureImporter:
         y: 864
         width: 35
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_56
@@ -943,10 +1411,18 @@ TextureImporter:
         y: 865
         width: 35
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_57
@@ -956,10 +1432,18 @@ TextureImporter:
         y: 865
         width: 34
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_58
@@ -969,10 +1453,18 @@ TextureImporter:
         y: 864
         width: 35
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_59
@@ -982,10 +1474,18 @@ TextureImporter:
         y: 801
         width: 29
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_60
@@ -995,10 +1495,18 @@ TextureImporter:
         y: 802
         width: 32
         height: 47
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_61
@@ -1008,10 +1516,18 @@ TextureImporter:
         y: 803
         width: 30
         height: 47
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_62
@@ -1021,10 +1537,18 @@ TextureImporter:
         y: 803
         width: 30
         height: 47
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_63
@@ -1034,10 +1558,18 @@ TextureImporter:
         y: 802
         width: 31
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_64
@@ -1047,10 +1579,18 @@ TextureImporter:
         y: 802
         width: 33
         height: 47
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_65
@@ -1060,10 +1600,18 @@ TextureImporter:
         y: 802
         width: 32
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_66
@@ -1073,10 +1621,18 @@ TextureImporter:
         y: 802
         width: 31
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_67
@@ -1086,10 +1642,18 @@ TextureImporter:
         y: 802
         width: 30
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_68
@@ -1099,10 +1663,18 @@ TextureImporter:
         y: 738
         width: 30
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_69
@@ -1112,10 +1684,18 @@ TextureImporter:
         y: 737
         width: 29
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_70
@@ -1125,10 +1705,18 @@ TextureImporter:
         y: 737
         width: 28
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_71
@@ -1138,10 +1726,18 @@ TextureImporter:
         y: 737
         width: 29
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_72
@@ -1151,10 +1747,18 @@ TextureImporter:
         y: 737
         width: 36
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_73
@@ -1164,10 +1768,18 @@ TextureImporter:
         y: 737
         width: 39
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_74
@@ -1177,10 +1789,18 @@ TextureImporter:
         y: 673
         width: 31
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_75
@@ -1190,10 +1810,18 @@ TextureImporter:
         y: 672
         width: 31
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_76
@@ -1203,10 +1831,18 @@ TextureImporter:
         y: 672
         width: 25
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_77
@@ -1216,10 +1852,18 @@ TextureImporter:
         y: 672
         width: 38
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_78
@@ -1229,10 +1873,18 @@ TextureImporter:
         y: 672
         width: 44
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_79
@@ -1242,10 +1894,18 @@ TextureImporter:
         y: 672
         width: 43
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_80
@@ -1255,10 +1915,18 @@ TextureImporter:
         y: 608
         width: 30
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_81
@@ -1268,10 +1936,18 @@ TextureImporter:
         y: 608
         width: 28
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_82
@@ -1281,10 +1957,18 @@ TextureImporter:
         y: 608
         width: 28
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_83
@@ -1294,10 +1978,18 @@ TextureImporter:
         y: 609
         width: 27
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_84
@@ -1307,10 +1999,18 @@ TextureImporter:
         y: 609
         width: 35
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_85
@@ -1320,10 +2020,18 @@ TextureImporter:
         y: 609
         width: 44
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_86
@@ -1333,10 +2041,18 @@ TextureImporter:
         y: 545
         width: 31
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_87
@@ -1346,10 +2062,18 @@ TextureImporter:
         y: 544
         width: 31
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_88
@@ -1359,10 +2083,18 @@ TextureImporter:
         y: 544
         width: 25
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_89
@@ -1372,10 +2104,18 @@ TextureImporter:
         y: 544
         width: 38
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_90
@@ -1385,10 +2125,18 @@ TextureImporter:
         y: 544
         width: 44
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_91
@@ -1398,10 +2146,18 @@ TextureImporter:
         y: 544
         width: 43
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_92
@@ -1411,10 +2167,18 @@ TextureImporter:
         y: 482
         width: 39
         height: 48
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_93
@@ -1424,10 +2188,18 @@ TextureImporter:
         y: 480
         width: 39
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_94
@@ -1437,10 +2209,18 @@ TextureImporter:
         y: 480
         width: 36
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_95
@@ -1450,10 +2230,18 @@ TextureImporter:
         y: 480
         width: 22
         height: 52
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_96
@@ -1463,10 +2251,18 @@ TextureImporter:
         y: 480
         width: 27
         height: 55
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_97
@@ -1476,10 +2272,18 @@ TextureImporter:
         y: 480
         width: 25
         height: 58
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_98
@@ -1489,10 +2293,18 @@ TextureImporter:
         y: 480
         width: 26
         height: 59
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_99
@@ -1502,10 +2314,18 @@ TextureImporter:
         y: 480
         width: 27
         height: 60
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_100
@@ -1515,10 +2335,18 @@ TextureImporter:
         y: 480
         width: 28
         height: 57
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_101
@@ -1528,10 +2356,18 @@ TextureImporter:
         y: 480
         width: 19
         height: 60
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_102
@@ -1541,10 +2377,18 @@ TextureImporter:
         y: 417
         width: 39
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_103
@@ -1554,10 +2398,18 @@ TextureImporter:
         y: 417
         width: 37
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_104
@@ -1567,10 +2419,18 @@ TextureImporter:
         y: 417
         width: 39
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_105
@@ -1580,10 +2440,18 @@ TextureImporter:
         y: 416
         width: 39
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_106
@@ -1593,10 +2461,18 @@ TextureImporter:
         y: 416
         width: 43
         height: 52
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_107
@@ -1606,10 +2482,18 @@ TextureImporter:
         y: 416
         width: 44
         height: 55
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_108
@@ -1619,10 +2503,18 @@ TextureImporter:
         y: 416
         width: 45
         height: 57
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_109
@@ -1632,10 +2524,18 @@ TextureImporter:
         y: 416
         width: 45
         height: 55
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_110
@@ -1645,10 +2545,18 @@ TextureImporter:
         y: 416
         width: 44
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_111
@@ -1658,10 +2566,18 @@ TextureImporter:
         y: 416
         width: 26
         height: 53
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_112
@@ -1671,10 +2587,18 @@ TextureImporter:
         y: 352
         width: 39
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_113
@@ -1684,10 +2608,18 @@ TextureImporter:
         y: 353
         width: 34
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_114
@@ -1697,10 +2629,18 @@ TextureImporter:
         y: 354
         width: 36
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_115
@@ -1710,10 +2650,18 @@ TextureImporter:
         y: 352
         width: 24
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_116
@@ -1723,10 +2671,18 @@ TextureImporter:
         y: 352
         width: 23
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_117
@@ -1736,10 +2692,18 @@ TextureImporter:
         y: 352
         width: 23
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_118
@@ -1749,10 +2713,18 @@ TextureImporter:
         y: 352
         width: 23
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_119
@@ -1762,10 +2734,18 @@ TextureImporter:
         y: 352
         width: 24
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_120
@@ -1775,10 +2755,18 @@ TextureImporter:
         y: 352
         width: 24
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_121
@@ -1788,10 +2776,18 @@ TextureImporter:
         y: 352
         width: 20
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_122
@@ -1801,10 +2797,18 @@ TextureImporter:
         y: 289
         width: 44
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_123
@@ -1814,10 +2818,18 @@ TextureImporter:
         y: 289
         width: 37
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_124
@@ -1827,10 +2839,18 @@ TextureImporter:
         y: 289
         width: 39
         height: 49
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_125
@@ -1840,10 +2860,18 @@ TextureImporter:
         y: 288
         width: 39
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_126
@@ -1853,10 +2881,18 @@ TextureImporter:
         y: 288
         width: 43
         height: 52
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_127
@@ -1866,10 +2902,18 @@ TextureImporter:
         y: 288
         width: 44
         height: 55
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_128
@@ -1879,10 +2923,18 @@ TextureImporter:
         y: 288
         width: 45
         height: 57
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_129
@@ -1892,10 +2944,18 @@ TextureImporter:
         y: 288
         width: 45
         height: 55
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_130
@@ -1905,10 +2965,18 @@ TextureImporter:
         y: 288
         width: 44
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_131
@@ -1918,10 +2986,18 @@ TextureImporter:
         y: 288
         width: 23
         height: 53
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_132
@@ -1931,10 +3007,18 @@ TextureImporter:
         y: 224
         width: 30
         height: 51
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_133
@@ -1944,10 +3028,18 @@ TextureImporter:
         y: 224
         width: 31
         height: 50
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_134
@@ -1957,10 +3049,18 @@ TextureImporter:
         y: 224
         width: 30
         height: 43
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_135
@@ -1970,10 +3070,18 @@ TextureImporter:
         y: 227
         width: 30
         height: 36
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_136
@@ -1983,10 +3091,18 @@ TextureImporter:
         y: 227
         width: 31
         height: 30
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
       tessellationDetail: 0
     - serializedVersion: 2
       name: male_sprites_warriorV3_137
@@ -1996,12 +3112,23 @@ TextureImporter:
         y: 225
         width: 34
         height: 35
+<<<<<<< HEAD
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []
+=======
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+>>>>>>> ae8d8eb107d07e4237de4361604628e84fd7d45a
   spritePackingTag: 
   userData: 
   assetBundleName: 

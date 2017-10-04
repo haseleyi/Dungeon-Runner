@@ -8,10 +8,11 @@ public class PlayerController : MonoBehaviour {
 	public float classDuration;
 	public int startLane = 2;
 	public float xInitial = -8;
+	public int coinMultiplier = 1;
 
 	int lane;
 	Rigidbody2D body;
-	PlayerClass currentClass;
+	public PlayerClass currentClass;
 	public static PlayerController instance;
 
 	void Start () {
@@ -32,11 +33,11 @@ public class PlayerController : MonoBehaviour {
 			MoveLeftRight ();
 			SwitchLanes ();
 		}
-		if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Space)) {
+		if (Input.GetKeyDown(KeyCode.J) 
+			|| Input.GetKeyDown(KeyCode.K)
+			|| Input.GetKeyDown(KeyCode.L)
+			|| Input.GetKeyDown(KeyCode.Space)) {
 			currentClass.Ability1();
-		}
-		if (Input.GetKeyDown (KeyCode.K)) {
-			currentClass.Ability2 ();
 		}
 	}
 
@@ -50,11 +51,9 @@ public class PlayerController : MonoBehaviour {
 		if (moveVel.x > 0 && transform.position.x >= 8.4f) {
 			moveVel.x = 0;
 		}
-
 		if (moveVel.x < -2) {
 			moveVel.x = -2;
 		}
-
 		body.velocity = moveVel;
 	}
 
@@ -69,25 +68,30 @@ public class PlayerController : MonoBehaviour {
 		transform.position = new Vector2(transform.position.x, LaneManager.instance.laneLocations [lane]);
 	}
 
+	void NewClass(Collision2D other) {
+		Destroy (other.gameObject);
+		coinMultiplier = 1;
+		SoundManager.instance.drums.Play ();
+		StopCoroutine ("ClassTimerCoroutine");
+		StartCoroutine ("ClassTimerCoroutine");
+	}
+
 	void OnCollisionEnter2D (Collision2D other) {
-		if ((other.gameObject.tag == "Enemy" || other.gameObject.tag == "Arrow" && other.gameObject.GetComponent<Arrow> ().speed < 0) && !currentClass.isInvulnerable) {
+		if (other.gameObject.tag == "Enemy" || (other.gameObject.tag == "EnemyArrow" && other.gameObject.GetComponent<Arrow> ().speed < 0)) {
+			if (currentClass.isInvulnerable) {
+				Destroy (other.gameObject);
+			} else {
 				Die ();
+			}
 		} else if (other.gameObject.tag == "Coin") {
 			Destroy (other.gameObject);
-			if (currentClass.title == "Thief") {
-				if (currentClass.upgraded) {
-					ScoreManager.instance.AddCoins (4);
-				} else {
-					ScoreManager.instance.AddCoins (2);
-				}
-			} else {
-				ScoreManager.instance.AddCoins (1);
-			}
-		} else if (other.gameObject.tag == "Warrior") {
+			ScoreManager.instance.AddCoins(coinMultiplier, false);
+		} else if (other.gameObject.tag == "Chest") {
 			Destroy (other.gameObject);
-			StopCoroutine ("ClassTimerCoroutine");
+			ScoreManager.instance.AddCoins (3 * coinMultiplier, true);
+		} else if (other.gameObject.tag == "Warrior") {
+			NewClass (other);
 			currentClass = gameObject.GetComponent<Warrior> ();
-			StartCoroutine ("ClassTimerCoroutine");
 			// Update sprite
 			if (gameObject.GetComponent<Warrior> ().upgraded) {
 				AnimatorController.instance.UpdateClass (5);
@@ -95,22 +99,21 @@ public class PlayerController : MonoBehaviour {
 				AnimatorController.instance.UpdateClass (4);
 			}
 		} else if (other.gameObject.tag == "Ranger") {
-			Destroy (other.gameObject);
-			StopCoroutine ("ClassTimerCoroutine");
+			NewClass (other);
 			currentClass = gameObject.GetComponent<Ranger> ();
-			StartCoroutine ("ClassTimerCoroutine");
 			AnimatorController.instance.UpdateClass (2);
 		} else if (other.gameObject.tag == "Mage") {
-			Destroy (other.gameObject);
-			StopCoroutine ("ClassTimerCoroutine");
+			NewClass (other);
 			currentClass = gameObject.GetComponent<Mage> ();
-			StartCoroutine ("ClassTimerCoroutine");
 			AnimatorController.instance.UpdateClass (1);
 		} else if (other.gameObject.tag == "Thief") {
-			Destroy (other.gameObject);
-			StopCoroutine ("ClassTimerCoroutine");
+			NewClass (other);
 			currentClass = gameObject.GetComponent<Thief> ();
-			StartCoroutine ("ClassTimerCoroutine");
+			if (currentClass.upgraded) {
+				coinMultiplier = 4;
+			} else {
+				coinMultiplier = 2;
+			}
 			AnimatorController.instance.UpdateClass (3);
 		}
 	}
@@ -123,6 +126,7 @@ public class PlayerController : MonoBehaviour {
 		AnimatorController.instance.UpdateClass (0);
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
+		coinMultiplier = 1;
 	}
 
 	void Die () {

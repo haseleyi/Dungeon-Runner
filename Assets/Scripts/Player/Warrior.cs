@@ -5,20 +5,19 @@ using UnityEngine;
 public class Warrior : PlayerClass {
 
 	public override string title {get; protected set;}
-	public float shieldDuration = 0.5f;
+	public float shieldDuration;
 
 	void Start() {
 		title = "Warrior";
 		canAbility1 = true;
-		canAbility2 = true;
-		upgraded = false;
 	}
 		
 
 	override public void Ability1 () {
 		// Do attack stuff
 		if (canAbility1) {
-			print ("attack!");
+			SoundManager.instance.swipe.Play ();
+			AnimatorController.instance.UseAbility ();
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			firePosition.x += 0.5f;
 			firePosition.y += 0.5f;
@@ -26,32 +25,28 @@ public class Warrior : PlayerClass {
 			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector3.right, 2);
 
 			if (hit.collider != null && hit.collider.gameObject.tag == "Enemy") {
-				hit.collider.GetComponent<Enemy> ().Damage (4);
+				if (upgraded) {
+					hit.collider.GetComponent<Enemy> ().Damage (8);
+				} else {
+					hit.collider.GetComponent<Enemy> ().Damage (4);
+				}
+			} else if (hit.collider != null && hit.collider.gameObject.tag == "Boulder") {
+				Destroy (hit.collider.gameObject);
 			}
+
+			if (upgraded) {
+				StartCoroutine(ShieldCoroutine());
+			}
+
+			// Disallow attacking for the duration of the cooldown
+			canAbility1 = false;
+			StartCoroutine(Cooldown1Coroutine ());
 		}
-
-		// Disallow attacking for the duration of the cooldown
-		canAbility1 = false;
-		StartCoroutine(Cooldown1Coroutine ());
-	}
-
-	override public void Ability2 () {
-		// Do ability stuff
-		if (upgraded && canAbility2) {
-			isInvulnerable = true;
-			canAbility2 = false;
-			print ("shield!");
-			StartCoroutine (ShieldCoroutine ());
-		}
-
-		// Disallow attacking for the duration of the cooldown
-		canAbility2 = false;
-		StartCoroutine(Cooldown2Coroutine ());
 	}
 
 	IEnumerator ShieldCoroutine (){
+		isInvulnerable = true;
 		yield return new WaitForSeconds (shieldDuration);
 		isInvulnerable = false;
-		StartCoroutine (Cooldown2Coroutine ());
 	}
 }

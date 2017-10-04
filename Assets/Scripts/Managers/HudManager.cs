@@ -9,7 +9,7 @@ public class HudManager : MonoBehaviour {
 	public Image cooldownBarBack, cooldownBarFront;
 	public static HudManager instance;
 
-	void Start () {
+	void Awake () {
 		instance = this;
 	}
 }

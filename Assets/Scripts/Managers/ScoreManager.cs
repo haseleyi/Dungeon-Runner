@@ -38,10 +38,23 @@ public class ScoreManager : MonoBehaviour {
 		}
 	}
 
-	public void AddCoins (int numCoins) {
-		coins += numCoins;
-		coinsCollected += numCoins;
-		IncrementScore(numCoins * coinValue);
+	public void AddCoins (int numCoins, bool chest) {
+		if (chest) {
+			IncrementScore(3 * coinValue);
+		} else {
+			IncrementScore(coinValue);
+		}
+		StartCoroutine (AddCoinsCoroutine (numCoins));
+	}
+
+	IEnumerator AddCoinsCoroutine(int numCoins) {
+		for (int i = 0; i < numCoins; i++) {
+			coins++;
+			coinsCollected++;
+			SoundManager.instance.coin.Play ();
+			yield return new WaitForSeconds (.15f);
+
+		}
 	}
 
 	IEnumerator SurvivalCoroutine() {

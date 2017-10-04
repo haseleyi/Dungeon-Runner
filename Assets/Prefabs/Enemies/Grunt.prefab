@@ -104,6 +104,8 @@ MonoBehaviour:
   defeatable: 1
   health: 3
   pointValue: 300
+  bloodPrefab: {fileID: 1478545123507958, guid: d1065ca344fb8d34798434582afe1ac3,
+    type: 2}
 --- !u!212 &212654875709343776
 SpriteRenderer:
   m_ObjectHideFlags: 1

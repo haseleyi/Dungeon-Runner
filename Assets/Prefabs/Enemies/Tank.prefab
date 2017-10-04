@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4861567926628172}
   - component: {fileID: 212910477769952944}
   - component: {fileID: 114070534946976794}
-  - component: {fileID: 61148247104087644}
   - component: {fileID: 50704059816802620}
+  - component: {fileID: 68729052260855712}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Enemy
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1358626537413162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.480895, y: -2.1470954, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 12}
+  m_LocalPosition: {x: 7.058, y: -0.5, z: 0}
+  m_LocalScale: {x: 4.8389554, y: 5.99, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61148247104087644
-BoxCollider2D:
+--- !u!68 &68729052260855712
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,19 +75,13 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.08}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.73, y: 0.55}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.12, y: 0.16}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.1436229, y: 0.016091723}
+  - {x: 0.043829314, y: -0.19255032}
+  - {x: -0.316282, y: 0.15640996}
+  - {x: -0.020012464, y: 0.16291848}
 --- !u!114 &114070534946976794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,6 +98,8 @@ MonoBehaviour:
   defeatable: 0
   health: 8
   pointValue: 2000
+  bloodPrefab: {fileID: 1478545123507958, guid: d1065ca344fb8d34798434582afe1ac3,
+    type: 2}
 --- !u!212 &212910477769952944
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -144,3 +140,5 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

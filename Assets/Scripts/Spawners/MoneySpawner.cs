@@ -20,7 +20,7 @@ public class MoneySpawner : Spawner {
 		SpawnPrefab(coinPrefab);
 		while (true) {
 			yield return new WaitForSeconds (spawnEvery);
-			if (random.NextDouble () < chanceOfChest) {
+			if (Random.value < chanceOfChest) {
 				SpawnPrefab (chestPrefab);
 			}
 			else {

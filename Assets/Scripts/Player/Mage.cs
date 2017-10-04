@@ -10,8 +10,6 @@ public class Mage : PlayerClass {
 	void Start() {
 		title = "Mage";
 		canAbility1 = true;
-		canAbility2 = true;
-		upgraded = false;
 	}
 
 	override public void Ability1 () {
@@ -29,16 +27,6 @@ public class Mage : PlayerClass {
 			// Disallow attacking for the duration of the cooldown
 			canAbility1 = false;
 			StartCoroutine(Cooldown1Coroutine ());
-		}
-	}
-
-	override public void Ability2 () {
-		// Do ability stuff
-		if (upgraded && canAbility2) {
-
-			// Disallow ability for the duration of the cooldown
-			canAbility2 = false;
-			StartCoroutine(Cooldown2Coroutine ());
 		}
 	}
 

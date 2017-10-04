@@ -140,17 +140,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c2cb310ba168f4da35dd3d1a0f00dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: 0
-  spawnEvery: 1.25
-  chanceOfTank: 0
-  chanceOfArcher: 4
-  gruntPrefab: {fileID: 1838446811938436, guid: 6f361baaa06534ac0983a511cc01c920,
-    type: 2}
+  tankPrefab: {fileID: 1358626537413162, guid: ba59a5725421f294c8c66586ee017e76, type: 2}
   archerPrefab: {fileID: 1860139235684168, guid: 3398bdc5888f03345bd76fa163c6098a,
     type: 2}
-  tankPrefab: {fileID: 0}
-  firePrefab: {fileID: 0}
-  trapPrefab: {fileID: 0}
+  gruntPrefab: {fileID: 1838446811938436, guid: 6f361baaa06534ac0983a511cc01c920,
+    type: 2}
+  firePrefab: {fileID: 1099100429906412, guid: f8bae7b26c003fd448ac8c6ed65adda9, type: 2}
+  boulderPrefab: {fileID: 1694491066885718, guid: 2a00b957394e64706975ba9617459201,
+    type: 2}
+  levelStarts:
+  - 0
+  - 20
+  - 40
+  spawnEvery:
+  - 3
+  - 2
+  - 1.5
+  level0TankArcherGruntFireBoulder:
+  - 0
+  - 0
+  - 0.2
+  - 0.4
+  - 0.4
+  level1TankArcherGruntFireBoulder:
+  - 0
+  - 0.2
+  - 0.4
+  - 0.2
+  - 0.2
+  level2TankArcherGruntFireBoulder:
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
 --- !u!114 &114231882897667952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,11 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f9e522aa4461b40b444e752993ed72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: 0
-  spawnEvery: 2
-  chanceOfChest: 0
+  firstSpawn: 0.75
+  spawnEvery: 7
+  chanceOfChest: 0.25
   coinPrefab: {fileID: 1760512160067478, guid: db70bc32a6e9946309dbbc594cff6078, type: 2}
-  chestPrefab: {fileID: 0}
+  chestPrefab: {fileID: 1862225601928186, guid: 87c820daf58fcbe4eb9dc4d40364ec26,
+    type: 2}
 --- !u!114 &114701220909675102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2704070350c614145b8b56df0c462da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: 1
+  firstSpawn: 0.5
   spawnEvery: 10
   warriorPrefab: {fileID: 1766764904526268, guid: 01a9469783829fa49b19c4dc8368680c,
     type: 2}
@@ -186,6 +210,4 @@ MonoBehaviour:
   rangerPrefab: {fileID: 1124765301030374, guid: a920b1f29d77ad84481335b979236c10,
     type: 2}
   thiefPrefab: {fileID: 1836193477149350, guid: 6dc8fba40c5d3d04a81f26122b061300,
-    type: 2}
-  clericPrefab: {fileID: 1734227262452770, guid: 0de5d9bb7607f6d4fa812a75d6c641b9,
     type: 2}

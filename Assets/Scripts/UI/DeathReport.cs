@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class DeathReport : MonoBehaviour {
 
-	public GameObject deathReportCanvas;
+	public GameObject deathReportCanvas, deathReportPanel;
 	public static DeathReport instance;
 	public Text totalScore, timeSurvived, coinsCollected, gruntsDefeated, archersDefeated, tanksDefeated;
 	public bool displayed;
+	[SerializeField] float inTime;
 
 	void Start () {
 		deathReportCanvas.SetActive (false);
@@ -24,7 +25,26 @@ public class DeathReport : MonoBehaviour {
 		archersDefeated.text = "Archers defeated: " + ScoreManager.instance.archersDefeated.ToString ();
 		tanksDefeated.text = "Tanks defeated: " + ScoreManager.instance.tanksDefeated.ToString ();
 		coinsCollected.text = "Coins collected: " + ScoreManager.instance.coinsCollected.ToString ();
-		timeSurvived.text = "Time survived (s): " + System.Math.Round(Time.timeSinceLevelLoad, 0).ToString();
+		int secondsSurvived = (int)System.Math.Round (Time.timeSinceLevelLoad, 0);
+		string minutesSurvived = (secondsSurvived / 60).ToString();
+		string extraSeconds = (secondsSurvived % 60).ToString();
+		if (extraSeconds.Length == 1) {
+			extraSeconds = "0" + extraSeconds;
+		}
+		timeSurvived.text = "Time survived: " + minutesSurvived + ":" + extraSeconds;
 		displayed = true;
+		SoundManager.instance.playerDeath.Play ();
+		StartCoroutine (DeathReportCoroutine ());
+	}
+
+	IEnumerator DeathReportCoroutine() {
+		float timer = 0;
+		while (timer < inTime) {
+			timer += Time.unscaledDeltaTime;
+			float normalizedTime = timer / inTime;
+			deathReportPanel.transform.localScale = new Vector3 (Easing.Circular.In (normalizedTime), 1, 1);
+			yield return null;
+		}
+		deathReportPanel.transform.localScale = new Vector3 (1, 1, 1);	
 	}
 }
