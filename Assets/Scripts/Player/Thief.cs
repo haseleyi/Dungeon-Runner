@@ -8,12 +8,12 @@ public class Thief : PlayerClass {
 
 	void Start() {
 		title = "Thief";
-		canAbility1 = true;
+		canAbility = true;
 	}
 
-	override public void Ability1 () {
+	override public void Ability () {
 		// Do attack stuff
-		if (canAbility1) {
+		if (canAbility) {
 			StartCoroutine (SwipeSoundCoroutine ());
 			AnimatorController.instance.UseAbility ();
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
@@ -24,7 +24,7 @@ public class Thief : PlayerClass {
 				hit.collider.gameObject.GetComponent<Enemy> ().Damage (4);
 			}
 			// Disallow attacking for the duration of the cooldown
-			canAbility1 = false;
+			canAbility = false;
 			StartCoroutine(Cooldown1Coroutine ());
 		}
 	}

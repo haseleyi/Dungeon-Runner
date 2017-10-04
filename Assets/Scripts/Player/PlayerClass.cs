@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PlayerClass : MonoBehaviour {
 
-	public float cooldown1 = 1;
+	public float cooldown = 1;
 	public virtual string title {get; protected set;}
 
-	protected bool canAbility1;
+	protected bool canAbility;
 	public bool upgraded;
 	public bool isInvulnerable = false;
 
-	public virtual void Ability1 () {
+	public virtual void Ability () {
 	}
 
 	protected IEnumerator Cooldown1Coroutine () {
-		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar>().Cooldown(cooldown1);
-		yield return new WaitForSeconds (cooldown1);
-		canAbility1 = true;
+		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar>().Cooldown(cooldown);
+		yield return new WaitForSeconds (cooldown);
+		canAbility = true;
 	}
 }

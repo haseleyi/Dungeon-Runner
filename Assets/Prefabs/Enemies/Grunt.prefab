@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1838446811938436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2890863, y: -2.0183446, z: 0}
+  m_LocalPosition: {x: 4.554216, y: -1.0452724, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 8.959645}
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   runSpeed: 0
   defeatable: 1
   health: 3
-  pointValue: 300
+  pointValue: 50
   bloodPrefab: {fileID: 1478545123507958, guid: d1065ca344fb8d34798434582afe1ac3,
     type: 2}
 --- !u!212 &212654875709343776

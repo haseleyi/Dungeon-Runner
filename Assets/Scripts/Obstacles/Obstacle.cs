@@ -6,7 +6,6 @@ public class Obstacle : MonoBehaviour {
 
 	public float baseSpeed = 2;
 	public bool defeatable;
-	public float pointValue;
 
 	void Update () {
 		transform.position = new Vector2(transform.position.x - baseSpeed * Time.deltaTime, transform.position.y);

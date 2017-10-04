@@ -9,12 +9,12 @@ public class Mage : PlayerClass {
 
 	void Start() {
 		title = "Mage";
-		canAbility1 = true;
+		canAbility = true;
 	}
 
-	override public void Ability1 () {
+	override public void Ability () {
 		// Do attack stuff
-		if (canAbility1) {
+		if (canAbility) {
 			SoundManager.instance.fireball.Play ();
 			AnimatorController.instance.UseAbility ();
 			if (upgraded) {
@@ -25,7 +25,7 @@ public class Mage : PlayerClass {
 			StartCoroutine (ShotCoroutine ());
 
 			// Disallow attacking for the duration of the cooldown
-			canAbility1 = false;
+			canAbility = false;
 			StartCoroutine(Cooldown1Coroutine ());
 		}
 	}

@@ -9,13 +9,13 @@ public class Warrior : PlayerClass {
 
 	void Start() {
 		title = "Warrior";
-		canAbility1 = true;
+		canAbility = true;
 	}
 		
 
-	override public void Ability1 () {
+	override public void Ability () {
 		// Do attack stuff
-		if (canAbility1) {
+		if (canAbility) {
 			SoundManager.instance.swipe.Play ();
 			AnimatorController.instance.UseAbility ();
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
@@ -39,7 +39,7 @@ public class Warrior : PlayerClass {
 			}
 
 			// Disallow attacking for the duration of the cooldown
-			canAbility1 = false;
+			canAbility = false;
 			StartCoroutine(Cooldown1Coroutine ());
 		}
 	}

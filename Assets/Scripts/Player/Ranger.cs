@@ -9,17 +9,20 @@ public class Ranger : PlayerClass {
 
 	void Start() {
 		title = "Ranger";
-		canAbility1 = true;
+		canAbility = true;
 	}
 
-	override public void Ability1 () {
+	override public void Ability () {
 		// Do attack stuff
-		if (canAbility1) {
+		if (canAbility) {
 			AnimatorController.instance.UseAbility ();
 			StartCoroutine (ShotCoroutine ());
 
 			// Disallow attacking for the duration of the cooldown
-			canAbility1 = false;
+			canAbility = false;
+			if (upgraded) {
+				cooldown -= .08f;
+			}
 			StartCoroutine (Cooldown1Coroutine ());
 		}
 	}
@@ -27,7 +30,9 @@ public class Ranger : PlayerClass {
 	IEnumerator ShotCoroutine() {
 		yield return new WaitForSeconds (.3f);
 		SoundManager.instance.arrow.Play ();
-		arrowPrefab.GetComponent<Arrow> ().speed = 10;
+		if (upgraded) {
+			arrowPrefab.GetComponent<Arrow> ().speed += 5;
+		}
 		// Upgraded arrows have a piercing effect
 		arrowPrefab.GetComponent<Arrow> ().upgraded = upgraded;
 		Vector2 firePosition = PlayerController.instance.GetPlayerPosition ();

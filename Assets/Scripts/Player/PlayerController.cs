@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
 			|| Input.GetKeyDown(KeyCode.K)
 			|| Input.GetKeyDown(KeyCode.L)
 			|| Input.GetKeyDown(KeyCode.Space)) {
-			currentClass.Ability1();
+			currentClass.Ability();
 		}
 	}
 
@@ -127,6 +127,8 @@ public class PlayerController : MonoBehaviour {
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
 		coinMultiplier = 1;
+		gameObject.GetComponent<Ranger> ().arrowPrefab.GetComponent<Arrow> ().speed = 10;
+		gameObject.GetComponent<Ranger> ().cooldown = 1;
 	}
 
 	void Die () {

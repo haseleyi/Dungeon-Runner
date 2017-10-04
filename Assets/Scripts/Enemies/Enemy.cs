@@ -35,8 +35,6 @@ public class Enemy : MonoBehaviour {
 		} else if (other.gameObject.tag == "Fireball") {
 			health -= 2;
 			Destroy (other.gameObject);
-		} else if (other.gameObject.tag == "Sword") {
-			health -= 4;
 		}
 	}
 
