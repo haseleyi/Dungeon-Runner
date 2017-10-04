@@ -8,6 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 /// <summary>
@@ -17,20 +18,21 @@ using UnityEngine.UI;
 public class Store : MonoBehaviour {
 
 	public string mainMenuScene = "MainMenu";
-	public GameObject pauseMenuCanvas;
+	public GameObject storeCanvas, storePanel;
+	[SerializeField] float inOutTime;
 
 	void Start() {
 		GameManager.gameState = GameManager.GameState.Running;
-		pauseMenuCanvas.SetActive (false);
+		storeCanvas.SetActive (false);
 	}
 
 	void Update() {
 		if (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) {
 			if (GameManager.gameState == GameManager.GameState.Running) {
-				Pause ();
+				StartCoroutine (PauseCoroutine ());
 			}
 			else if (GameManager.gameState == GameManager.GameState.Paused && !DeathReport.instance.displayed) {
-				UnPause ();
+				StartCoroutine (UnpauseCoroutine ());
 			}
 		}
 	}
@@ -95,13 +97,29 @@ public class Store : MonoBehaviour {
 		}
 	}
 
-	public void Pause() {
-		pauseMenuCanvas.SetActive (true);
+	IEnumerator PauseCoroutine() {
+		storeCanvas.SetActive (true);
 		GameManager.instance.Pause ();
+		float timer = 0;
+		while (timer < inOutTime) {
+			timer += Time.unscaledDeltaTime;
+			float normalizedTime = timer / inOutTime;
+			storePanel.transform.localScale = new Vector3 (Easing.Circular.In (normalizedTime), 1, 1);
+			yield return null;
+		}
+		storePanel.transform.localScale = new Vector3 (1, 1, 1);
 	}
 
-	public void UnPause() {
-		pauseMenuCanvas.SetActive (false);
+	IEnumerator UnpauseCoroutine() {
 		GameManager.instance.Unpause ();
+		float timer = 0;
+		while (timer < inOutTime) {
+			timer += Time.unscaledDeltaTime;
+			float normalizedTime = timer / inOutTime;
+			storePanel.transform.localScale = new Vector3 (Easing.Circular.In (1 - normalizedTime), 1, 1);
+			yield return null;
+		}
+		storePanel.transform.localScale = new Vector3 (0, 1, 1);
+		storeCanvas.SetActive (false);
 	}
 }
