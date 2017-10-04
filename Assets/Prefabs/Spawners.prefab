@@ -153,9 +153,9 @@ MonoBehaviour:
   - 20
   - 40
   spawnEvery:
-  - 3
+  - 2.5
+  - 2.25
   - 2
-  - 1.5
   level0TankArcherGruntFireBoulder:
   - 0
   - 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f9e522aa4461b40b444e752993ed72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: 0.75
+  firstSpawn: 6.2
   spawnEvery: 7
   chanceOfChest: 0.25
   coinPrefab: {fileID: 1760512160067478, guid: db70bc32a6e9946309dbbc594cff6078, type: 2}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2704070350c614145b8b56df0c462da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: 0.5
+  firstSpawn: 12.3
   spawnEvery: 10
   warriorPrefab: {fileID: 1766764904526268, guid: 01a9469783829fa49b19c4dc8368680c,
     type: 2}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawner : Spawner {
 
 	List<GameObject> prefabs;
+	const int tankIndex = 0;
 	public GameObject tankPrefab;
 	public GameObject archerPrefab;
 	public GameObject gruntPrefab;
@@ -38,6 +39,7 @@ public class EnemySpawner : Spawner {
 	IEnumerator SpawnCoroutine() {
 		for (int level = 0; level < levels.Count; level++) {
 			while (level == levels.Count - 1 || Time.timeSinceLevelLoad < levelStarts[level + 1]) {
+
 				// Spawn something every "spawnEvery" seconds, plus or minus .75 so things don't look too orderly
 				yield return new WaitForSeconds (spawnEvery [level] + (Random.value * 1.5f) - .75f);
 				float r = Random.value;
@@ -46,7 +48,11 @@ public class EnemySpawner : Spawner {
 				for (int prefabIndex = 0; prefabIndex < prefabs.Count; prefabIndex++) {
 					float prefabChance = levels[level][prefabIndex];
 					if (probabilitySum < r && r < probabilitySum + prefabChance) {
-						SpawnPrefab (prefabs [prefabIndex]);
+						if (prefabIndex == tankIndex) {
+							SpawnTank (prefabs [tankIndex]);
+						} else {
+							SpawnPrefab (prefabs [prefabIndex]);
+						}
 					}
 					probabilitySum += prefabChance;
 				}
