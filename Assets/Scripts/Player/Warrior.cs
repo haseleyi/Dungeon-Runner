@@ -24,7 +24,7 @@ public class Warrior : PlayerClass {
 			Debug.DrawLine (firePosition, new Vector3 (firePosition.x + 2, firePosition.y), Color.red, 2);
 			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector3.right, 2);
 
-			if (hit.collider != null && hit.collider.gameObject.tag == "Enemy") {
+			if (hit && hit.collider.gameObject.tag == "Enemy") {
 				if (upgraded) {
 					hit.collider.GetComponent<Enemy> ().Damage (8);
 				} else {

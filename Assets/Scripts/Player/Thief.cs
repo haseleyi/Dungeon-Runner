@@ -20,7 +20,7 @@ public class Thief : PlayerClass {
 			firePosition.x += 0.5f;
 			firePosition.y += 0.5f;
 			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector2.right, 1);
-			if (hit != null && hit.collider.gameObject.tag == "Enemy") {
+			if (hit && hit.collider.gameObject.tag == "Enemy") {
 				hit.collider.gameObject.GetComponent<Enemy> ().Damage (4);
 			}
 			// Disallow attacking for the duration of the cooldown
