@@ -25,7 +25,13 @@ public class DeathReport : MonoBehaviour {
 		archersDefeated.text = "Archers defeated: " + ScoreManager.instance.archersDefeated.ToString ();
 		tanksDefeated.text = "Tanks defeated: " + ScoreManager.instance.tanksDefeated.ToString ();
 		coinsCollected.text = "Coins collected: " + ScoreManager.instance.coinsCollected.ToString ();
-		timeSurvived.text = "Time survived (s): " + System.Math.Round(Time.timeSinceLevelLoad, 0).ToString();
+		int secondsSurvived = (int)System.Math.Round (Time.timeSinceLevelLoad, 0);
+		string minutesSurvived = (secondsSurvived / 60).ToString();
+		string extraSeconds = (secondsSurvived % 60).ToString();
+		if (extraSeconds.Length == 1) {
+			extraSeconds = "0" + extraSeconds;
+		}
+		timeSurvived.text = "Time survived: " + minutesSurvived + ":" + extraSeconds;
 		displayed = true;
 		SoundManager.instance.playerDeath.Play ();
 		StartCoroutine (DeathReportCoroutine ());

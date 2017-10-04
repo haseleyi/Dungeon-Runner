@@ -941,7 +941,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 564292340}
-        m_MethodName: UnPause
+        m_MethodName: Unpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3106,7 +3106,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 564292340}
-        m_MethodName: UnPause
+        m_MethodName: Unpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3240,7 +3240,7 @@ Prefab:
     - target: {fileID: 114014824451729696, guid: b060cde09e5f6d74d8cd7f00802506cb,
         type: 2}
       propertyPath: coins
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b060cde09e5f6d74d8cd7f00802506cb, type: 2}
@@ -3612,6 +3612,24 @@ Prefab:
     - target: {fileID: 4758122142014100, guid: c6572a4422b88fd438712f78090137d0, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114109855685225906, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114231882897667952, guid: c6572a4422b88fd438712f78090137d0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580617115536472, guid: c6572a4422b88fd438712f78090137d0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865157232329200, guid: c6572a4422b88fd438712f78090137d0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6572a4422b88fd438712f78090137d0, type: 2}

@@ -97,6 +97,10 @@ public class Store : MonoBehaviour {
 		}
 	}
 
+	public void Unpause() {
+		StartCoroutine (UnpauseCoroutine ());
+	}
+
 	IEnumerator PauseCoroutine() {
 		storeCanvas.SetActive (true);
 		GameManager.instance.Pause ();
