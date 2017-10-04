@@ -9,6 +9,7 @@ public class Tank : Enemy {
 		CameraController.ScreenShake (.15f, .3f);
 		ScoreManager.instance.IncrementScore(pointValue);
 		ScoreManager.instance.tanksDefeated++;
+		Instantiate (bloodPrefab, gameObject.transform.position, Quaternion.identity);
 		Destroy (gameObject);
 	}
 }
