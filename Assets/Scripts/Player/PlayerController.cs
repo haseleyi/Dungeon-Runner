@@ -133,6 +133,9 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Die () {
+		SoundManager.instance.track1.Stop ();
+		SoundManager.instance.track2.Stop ();
+		SoundManager.instance.track3.Stop ();
 		DeathReport.instance.LoadDeathReport();
 	}
 }
