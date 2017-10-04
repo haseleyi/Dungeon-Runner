@@ -765,7 +765,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuScene: MainMenu
-  pauseMenuCanvas: {fileID: 1380595396}
+  storeCanvas: {fileID: 1380595396}
+  storePanel: {fileID: 1613074384}
+  inOutTime: 0.1
 --- !u!4 &564292341
 Transform:
   m_ObjectHideFlags: 0
@@ -2361,9 +2363,28 @@ Prefab:
       propertyPath: m_Text
       value: 'Tanks Defeated:'
       objectReference: {fileID: 0}
+    - target: {fileID: 1497167791895124, guid: d2f0aff9372d7104382703e1511b560d, type: 2}
+      propertyPath: m_Name
+      value: DeathReportPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 114782700671157150, guid: d2f0aff9372d7104382703e1511b560d,
+        type: 2}
+      propertyPath: deathReportPanel
+      value: 
+      objectReference: {fileID: 1228692055}
+    - target: {fileID: 114782700671157150, guid: d2f0aff9372d7104382703e1511b560d,
+        type: 2}
+      propertyPath: inTime
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2f0aff9372d7104382703e1511b560d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1228692055 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1497167791895124, guid: d2f0aff9372d7104382703e1511b560d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1228692054}
 --- !u!1 &1240653830
 GameObject:
   m_ObjectHideFlags: 0

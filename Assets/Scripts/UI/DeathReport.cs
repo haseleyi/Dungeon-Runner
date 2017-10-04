@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class DeathReport : MonoBehaviour {
 
-	public GameObject deathReportCanvas;
+	public GameObject deathReportCanvas, deathReportPanel;
 	public static DeathReport instance;
 	public Text totalScore, timeSurvived, coinsCollected, gruntsDefeated, archersDefeated, tanksDefeated;
 	public bool displayed;
+	[SerializeField] float inTime;
 
 	void Start () {
 		deathReportCanvas.SetActive (false);
@@ -27,5 +28,17 @@ public class DeathReport : MonoBehaviour {
 		timeSurvived.text = "Time survived (s): " + System.Math.Round(Time.timeSinceLevelLoad, 0).ToString();
 		displayed = true;
 		SoundManager.instance.playerDeath.Play ();
+		StartCoroutine (DeathReportCoroutine ());
+	}
+
+	IEnumerator DeathReportCoroutine() {
+		float timer = 0;
+		while (timer < inTime) {
+			timer += Time.unscaledDeltaTime;
+			float normalizedTime = timer / inTime;
+			deathReportPanel.transform.localScale = new Vector3 (Easing.Circular.In (normalizedTime), 1, 1);
+			yield return null;
+		}
+		deathReportPanel.transform.localScale = new Vector3 (1, 1, 1);	
 	}
 }
