@@ -77,7 +77,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D (Collision2D other) {
-		if ((other.gameObject.tag == "Enemy" || other.gameObject.tag == "Arrow" && other.gameObject.GetComponent<Arrow> ().speed < 0) && !currentClass.isInvulnerable) {
+		if ((other.gameObject.tag == "Enemy" || other.gameObject.tag == "EnemyArrow" && other.gameObject.GetComponent<Arrow> ().speed < 0) 
+			&& !currentClass.isInvulnerable) {
 				Die ();
 		} else if (other.gameObject.tag == "Coin") {
 			Destroy (other.gameObject);

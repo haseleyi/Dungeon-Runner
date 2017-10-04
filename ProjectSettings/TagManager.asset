@@ -21,6 +21,7 @@ TagManager:
   - WarriorButton
   - Boulder
   - Chest
+  - EnemyArrow
   layers:
   - Default
   - TransparentFX
