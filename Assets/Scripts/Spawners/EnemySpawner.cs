@@ -38,8 +38,8 @@ public class EnemySpawner : Spawner {
 	IEnumerator SpawnCoroutine() {
 		for (int level = 0; level < levels.Count; level++) {
 			while (level == levels.Count - 1 || Time.timeSinceLevelLoad < levelStarts[level + 1]) {
-
-				yield return new WaitForSeconds (spawnEvery [level]);
+				// Spawn something every "spawnEvery" seconds, plus or minus .75 so things don't look too orderly
+				yield return new WaitForSeconds (spawnEvery [level] + (Random.value * 1.5f) - .75f);
 				float r = Random.value;
 				float probabilitySum = 0;
 
