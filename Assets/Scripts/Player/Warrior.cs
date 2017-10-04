@@ -11,7 +11,6 @@ public class Warrior : PlayerClass {
 		title = "Warrior";
 		canAbility1 = true;
 		canAbility2 = true;
-		upgraded = false;
 	}
 		
 

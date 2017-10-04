@@ -11,7 +11,6 @@ public class Ranger : PlayerClass {
 		title = "Ranger";
 		canAbility1 = true;
 		canAbility2 = true;
-		upgraded = false;
 	}
 
 	override public void Ability1 () {
