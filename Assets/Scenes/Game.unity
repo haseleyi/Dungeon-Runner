@@ -3255,7 +3255,7 @@ Prefab:
     - target: {fileID: 114014824451729696, guid: b060cde09e5f6d74d8cd7f00802506cb,
         type: 2}
       propertyPath: coins
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b060cde09e5f6d74d8cd7f00802506cb, type: 2}
@@ -3692,6 +3692,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859616743909120, guid: 0030d805463e043479b212db7bc36898, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114182379956285842, guid: 0030d805463e043479b212db7bc36898,
+        type: 2}
+      propertyPath: shieldDuration
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

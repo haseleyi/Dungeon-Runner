@@ -9,7 +9,6 @@ public class Thief : PlayerClass {
 	void Start() {
 		title = "Thief";
 		canAbility1 = true;
-		canAbility2 = true;
 	}
 
 	override public void Ability1 () {

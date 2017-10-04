@@ -33,11 +33,11 @@ public class PlayerController : MonoBehaviour {
 			MoveLeftRight ();
 			SwitchLanes ();
 		}
-		if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Space)) {
+		if (Input.GetKeyDown(KeyCode.J) 
+			|| Input.GetKeyDown(KeyCode.K)
+			|| Input.GetKeyDown(KeyCode.L)
+			|| Input.GetKeyDown(KeyCode.Space)) {
 			currentClass.Ability1();
-		}
-		if (Input.GetKeyDown (KeyCode.K)) {
-			currentClass.Ability2 ();
 		}
 	}
 
@@ -77,9 +77,12 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D (Collision2D other) {
-		if ((other.gameObject.tag == "Enemy" || other.gameObject.tag == "EnemyArrow" && other.gameObject.GetComponent<Arrow> ().speed < 0) 
-			&& !currentClass.isInvulnerable) {
+		if (other.gameObject.tag == "Enemy" || (other.gameObject.tag == "EnemyArrow" && other.gameObject.GetComponent<Arrow> ().speed < 0)) {
+			if (currentClass.isInvulnerable) {
+				Destroy (other.gameObject);
+			} else {
 				Die ();
+			}
 		} else if (other.gameObject.tag == "Coin") {
 			Destroy (other.gameObject);
 			ScoreManager.instance.AddCoins(coinMultiplier, false);

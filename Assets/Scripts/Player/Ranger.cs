@@ -10,7 +10,6 @@ public class Ranger : PlayerClass {
 	void Start() {
 		title = "Ranger";
 		canAbility1 = true;
-		canAbility2 = true;
 	}
 
 	override public void Ability1 () {

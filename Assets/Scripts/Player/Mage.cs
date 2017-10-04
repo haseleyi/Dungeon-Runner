@@ -10,7 +10,6 @@ public class Mage : PlayerClass {
 	void Start() {
 		title = "Mage";
 		canAbility1 = true;
-		canAbility2 = true;
 	}
 
 	override public void Ability1 () {

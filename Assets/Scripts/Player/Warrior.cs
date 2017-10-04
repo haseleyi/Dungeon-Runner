@@ -5,12 +5,11 @@ using UnityEngine;
 public class Warrior : PlayerClass {
 
 	public override string title {get; protected set;}
-	public float shieldDuration = 0.5f;
+	public float shieldDuration;
 
 	void Start() {
 		title = "Warrior";
 		canAbility1 = true;
-		canAbility2 = true;
 	}
 		
 
@@ -35,29 +34,19 @@ public class Warrior : PlayerClass {
 				Destroy (hit.collider.gameObject);
 			}
 
+			if (upgraded) {
+				StartCoroutine(ShieldCoroutine());
+			}
+
 			// Disallow attacking for the duration of the cooldown
 			canAbility1 = false;
 			StartCoroutine(Cooldown1Coroutine ());
 		}
 	}
 
-	override public void Ability2 () {
-		// Do ability stuff
-		if (upgraded && canAbility2) {
-			isInvulnerable = true;
-			canAbility2 = false;
-			print ("shield!");
-			StartCoroutine (ShieldCoroutine ());
-		}
-
-		// Disallow attacking for the duration of the cooldown
-		canAbility2 = false;
-		StartCoroutine(Cooldown2Coroutine ());
-	}
-
 	IEnumerator ShieldCoroutine (){
+		isInvulnerable = true;
 		yield return new WaitForSeconds (shieldDuration);
 		isInvulnerable = false;
-		StartCoroutine (Cooldown2Coroutine ());
 	}
 }
