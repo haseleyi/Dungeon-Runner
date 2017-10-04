@@ -19,7 +19,7 @@ public class Thief : PlayerClass {
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			firePosition.x += 0.5f;
 			firePosition.y += 0.5f;
-			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector2.right, 1);
+			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector2.right, 1.5f);
 			if (hit && hit.collider.gameObject.tag == "Enemy") {
 				hit.collider.gameObject.GetComponent<Enemy> ().Damage (4);
 			}
