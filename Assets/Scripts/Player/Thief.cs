@@ -17,9 +17,9 @@ public class Thief : PlayerClass {
 			StartCoroutine (SwipeSoundCoroutine ());
 			AnimatorController.instance.UseAbility ();
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
-			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector2.right, 1);
 			firePosition.x += 0.5f;
 			firePosition.y += 0.5f;
+			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector2.right, 1);
 			if (hit != null && hit.collider.gameObject.tag == "Enemy") {
 				hit.collider.gameObject.GetComponent<Enemy> ().Damage (4);
 			}
