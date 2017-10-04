@@ -26,5 +26,6 @@ public class DeathReport : MonoBehaviour {
 		coinsCollected.text = "Coins collected: " + ScoreManager.instance.coinsCollected.ToString ();
 		timeSurvived.text = "Time survived (s): " + System.Math.Round(Time.timeSinceLevelLoad, 0).ToString();
 		displayed = true;
+		SoundManager.instance.playerDeath.Play ();
 	}
 }
