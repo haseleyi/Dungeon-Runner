@@ -1521,6 +1521,11 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 43.039993
       objectReference: {fileID: 0}
+    - target: {fileID: 114517440783125514, guid: a4260312ae8a42847ab2d3a8697981fb,
+        type: 2}
+      propertyPath: m_Text
+      value: '"P" to visit store'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4260312ae8a42847ab2d3a8697981fb, type: 2}
   m_IsPrefabParent: 0
