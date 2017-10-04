@@ -35,14 +35,4 @@ public class Ranger : PlayerClass {
 		firePosition.y += 1.5f;
 		Instantiate (arrowPrefab, firePosition, Quaternion.AngleAxis (90, Vector3.back));
 	}
-
-	override public void Ability2 () {
-		// Do ability stuff
-		if (upgraded && canAbility2) {
-
-			// Disallow attacking for the duration of the cooldown
-			canAbility2 = false;
-			StartCoroutine(Cooldown2Coroutine ());
-		}
-	}
 }

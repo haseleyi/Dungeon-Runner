@@ -34,15 +34,4 @@ public class Thief : PlayerClass {
 		yield return new WaitForSeconds (.1f);
 		SoundManager.instance.swipe.Play ();
 	}
-
-	override public void Ability2 () {
-		// Do ability stuff
-		if (upgraded && canAbility2) {
-
-		}
-
-		// Disallow attacking for the duration of the cooldown
-		canAbility2 = false;
-		StartCoroutine(Cooldown2Coroutine ());
-	}
 }

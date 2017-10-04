@@ -41,7 +41,7 @@ public class Warrior : PlayerClass {
 		}
 	}
 
-	override public void Ability2 () {
+	public void Ability2 () {
 		// Do ability stuff
 		if (upgraded && canAbility2) {
 			isInvulnerable = true;
