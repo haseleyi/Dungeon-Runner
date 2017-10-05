@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 		body = GetComponent<Rigidbody2D> ();
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
 
-		currentClass = GetComponent<PlayerClass> ();
+		currentClass = GetComponent<NoClass> ();
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
 	}
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 			MoveLeftRight ();
 			SwitchLanes ();
 		}
-		if (Input.GetKeyDown(KeyCode.J) 
+		if (Input.GetKeyDown(KeyCode.J)
 			|| Input.GetKeyDown(KeyCode.K)
 			|| Input.GetKeyDown(KeyCode.L)
 			|| Input.GetKeyDown(KeyCode.Space)) {
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour {
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (true);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (true);
 		yield return new WaitForSeconds (classDuration);
-		currentClass = gameObject.GetComponent<PlayerClass> ();
+		currentClass = gameObject.GetComponent<NoClass> ();
 		AnimatorController.instance.UpdateClass (0);
 		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar> ().Reset ();
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
