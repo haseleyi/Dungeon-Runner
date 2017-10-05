@@ -11,7 +11,7 @@ public class Warrior : PlayerClass {
 		title = "Warrior";
 		canAbility = true;
 	}
-		
+
 
 	override public void Ability () {
 		// Do attack stuff
@@ -39,7 +39,7 @@ public class Warrior : PlayerClass {
 
 			// Disallow attacking for the duration of the cooldown
 			canAbility = false;
-			StartCoroutine(Cooldown1Coroutine ());
+			StartCoroutine(CooldownCoroutine ());
 		}
 	}
 

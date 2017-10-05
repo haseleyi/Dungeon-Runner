@@ -24,7 +24,7 @@ public class Mage : PlayerClass {
 			if (upgraded) {
 				cooldown = 3;
 			}
-			StartCoroutine(Cooldown1Coroutine ());
+			StartCoroutine(CooldownCoroutine ());
 		}
 	}
 

@@ -25,7 +25,7 @@ public class Thief : PlayerClass {
 			}
 			// Disallow attacking for the duration of the cooldown
 			canAbility = false;
-			StartCoroutine(Cooldown1Coroutine ());
+			StartCoroutine(CooldownCoroutine ());
 		}
 	}
 

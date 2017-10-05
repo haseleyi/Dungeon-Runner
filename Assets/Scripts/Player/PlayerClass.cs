@@ -14,7 +14,7 @@ public class PlayerClass : MonoBehaviour {
 	public virtual void Ability () {
 	}
 
-	protected IEnumerator Cooldown1Coroutine () {
+	protected IEnumerator CooldownCoroutine () {
 		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar>().Cooldown(cooldown);
 		yield return new WaitForSeconds (cooldown);
 		canAbility = true;

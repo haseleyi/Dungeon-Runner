@@ -23,7 +23,7 @@ public class Ranger : PlayerClass {
 			if (upgraded) {
 				cooldown -= .08f;
 			}
-			StartCoroutine (Cooldown1Coroutine ());
+			StartCoroutine (CooldownCoroutine ());
 		}
 	}
 
