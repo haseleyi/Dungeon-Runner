@@ -45,7 +45,7 @@ Transform:
   m_GameObject: {fileID: 1355071296779978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.5, y: -1.24, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 6.368923}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 6.368923}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -255,5 +255,3 @@ SpriteRenderer:
   m_Size: {x: 0.15, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0

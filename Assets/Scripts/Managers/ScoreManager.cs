@@ -18,7 +18,6 @@ public class ScoreManager : MonoBehaviour {
 
 	void Start () {
 		instance = this;
-//		coins = 0;
 		coinsCollected = 0;
 		gruntsDefeated = 0;
 		archersDefeated = 0;
@@ -31,7 +30,11 @@ public class ScoreManager : MonoBehaviour {
 	void Update() {
 		HudManager.instance.scoreText.text = "Score: " + score.ToString ();
 		HudManager.instance.coinsText.text = coins.ToString();
-		if (coins >= upgradePrice) {
+		if (coins >= upgradePrice &&
+			!(PlayerController.instance.GetComponent<Mage>().upgraded
+			&& PlayerController.instance.GetComponent<Ranger>().upgraded
+			&& PlayerController.instance.GetComponent<Thief>().upgraded
+			&& PlayerController.instance.GetComponent<Warrior>().upgraded)) {
 			HudManager.instance.storeAlertText.gameObject.SetActive (true);
 		} else {
 			HudManager.instance.storeAlertText.gameObject.SetActive (false);
