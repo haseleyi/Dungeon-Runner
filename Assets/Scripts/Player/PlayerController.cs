@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour {
 		lane = startLane;
 		body = GetComponent<Rigidbody2D> ();
 		transform.position = new Vector2 (xInitial, LaneManager.instance.laneLocations [lane]);
-
 		currentClass = GetComponent<NoClass> ();
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
@@ -60,12 +59,30 @@ public class PlayerController : MonoBehaviour {
 	void SwitchLanes () {
 		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
 			&& lane < LaneManager.instance.laneLocations.Count - 1) {
+			float nextLocation = LaneManager.instance.laneLocations [lane + 1];
+			StartCoroutine (LaneSwitchCoroutine (transform.position.y, nextLocation));
 			lane++;
 		} else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
 			&& lane > 0) {
+			float nextLocation = LaneManager.instance.laneLocations [lane - 1];
+			StartCoroutine (LaneSwitchCoroutine (transform.position.y, nextLocation));
 			lane--;
 		}
-		transform.position = new Vector2(transform.position.x, LaneManager.instance.laneLocations [lane]);
+	}
+
+	IEnumerator LaneSwitchCoroutine(float currentLocation, float nextLocation) {
+		float time = 0;
+		float distance = nextLocation - currentLocation;
+		while (time < .1f) {
+			time += Time.deltaTime;
+			// The floating point calculation here can sometimes miscalculate and send you a greater
+			// distance than you'd anticipate. Adding .02 to the time denominator prevents this overshooting.
+			float location = currentLocation + (time / .12f) * distance;
+			transform.position = new Vector2(transform.position.x, location);
+			yield return null;
+		}
+		// Corrects any miscalculations
+		transform.position = new Vector2(transform.position.x, nextLocation);
 	}
 
 	void NewClass(Collision2D other) {
