@@ -9,22 +9,21 @@ public class Warrior : PlayerClass {
 
 	void Start() {
 		title = "Warrior";
-		canAbility1 = true;
+		canAbility = true;
 	}
 		
 
-	override public void Ability1 () {
+	override public void Ability () {
 		// Do attack stuff
-		if (canAbility1) {
+		if (canAbility) {
 			SoundManager.instance.swipe.Play ();
 			AnimatorController.instance.UseAbility ();
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			firePosition.x += 0.5f;
 			firePosition.y += 0.5f;
-			Debug.DrawLine (firePosition, new Vector3 (firePosition.x + 2, firePosition.y), Color.red, 2);
-			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector3.right, 2);
+			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector3.right, 3);
 
-			if (hit.collider != null && hit.collider.gameObject.tag == "Enemy") {
+			if (hit && hit.collider.gameObject.tag == "Enemy") {
 				if (upgraded) {
 					hit.collider.GetComponent<Enemy> ().Damage (8);
 				} else {
@@ -39,7 +38,7 @@ public class Warrior : PlayerClass {
 			}
 
 			// Disallow attacking for the duration of the cooldown
-			canAbility1 = false;
+			canAbility = false;
 			StartCoroutine(Cooldown1Coroutine ());
 		}
 	}

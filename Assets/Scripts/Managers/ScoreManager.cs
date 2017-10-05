@@ -31,7 +31,7 @@ public class ScoreManager : MonoBehaviour {
 	void Update() {
 		HudManager.instance.scoreText.text = "Score: " + score.ToString ();
 		HudManager.instance.coinsText.text = coins.ToString();
-		if (coins >= 10) {
+		if (coins >= upgradePrice) {
 			HudManager.instance.storeAlertText.gameObject.SetActive (true);
 		} else {
 			HudManager.instance.storeAlertText.gameObject.SetActive (false);

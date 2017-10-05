@@ -8,7 +8,7 @@ public class Fireball : MonoBehaviour {
 	public bool upgraded;
 	
 	void FixedUpdate () {
-		GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+		GetComponent<Rigidbody2D>().velocity = new Vector2 (speed, 0);
 		if (transform.position.x > -1 * LaneManager.instance.xThreshold) {
 			Destroy (gameObject);
 		}

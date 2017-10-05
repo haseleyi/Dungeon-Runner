@@ -9,31 +9,40 @@ public class Mage : PlayerClass {
 
 	void Start() {
 		title = "Mage";
-		canAbility1 = true;
+		canAbility = true;
 	}
 
-	override public void Ability1 () {
+	override public void Ability () {
 		// Do attack stuff
-		if (canAbility1) {
+		if (canAbility) {
 			SoundManager.instance.fireball.Play ();
 			AnimatorController.instance.UseAbility ();
-			if (upgraded) {
-				Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
-				firePosition.y += .5f;
-				Instantiate(fireballPrefab, firePosition, Quaternion.identity);
-			}
 			StartCoroutine (ShotCoroutine ());
 
 			// Disallow attacking for the duration of the cooldown
-			canAbility1 = false;
+			canAbility = false;
+			if (upgraded) {
+				cooldown = 3;
+			}
 			StartCoroutine(Cooldown1Coroutine ());
 		}
 	}
 
-	IEnumerator ShotCoroutine() {
-		yield return new WaitForSeconds (.2f);
+	void Fire() {
 		Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 		firePosition.y += .5f;
 		Instantiate(fireballPrefab, firePosition, Quaternion.identity);
+	}
+
+	IEnumerator ShotCoroutine() {
+		if (upgraded) {
+			Fire ();
+		}
+		yield return new WaitForSeconds (.1f);
+		if (upgraded) {
+			Fire ();
+		}
+		yield return new WaitForSeconds (.1f);
+		Fire ();
 	}
 }

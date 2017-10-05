@@ -123,11 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0cdc08a372e5e479ee1e1a527b38c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown1: 1
-  cooldown2: 2
+  cooldown: 1
   upgraded: 0
   isInvulnerable: 0
-  shieldDuration: 0.5
+  shieldDuration: 1
 --- !u!114 &114456860479252330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,8 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cded660cce72f6f438f8bf6c3b3920b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown1: 1
-  cooldown2: 2
+  cooldown: 2
   upgraded: 0
   isInvulnerable: 0
   fireballPrefab: {fileID: 1704647337455410, guid: 3f21c06c9b0326a448b69a60786aed9c,
@@ -156,8 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166fbf187cef6d47a8536edb7ec2da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown1: 1
-  cooldown2: 2
+  cooldown: 1
   upgraded: 0
   isInvulnerable: 0
 --- !u!114 &114774343089525474
@@ -182,8 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9959ee5f3f410cc41a71a9f14b01d16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown1: 1
-  cooldown2: 2
+  cooldown: 1
   upgraded: 0
   isInvulnerable: 0
   arrowPrefab: {fileID: 1510499517304894, guid: d53dfcdf55eb37542909be85eff81b9e,
@@ -216,8 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38678788a2ef62e4c839c057acc66567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown1: 1
-  cooldown2: 2
+  cooldown: 1
   upgraded: 0
   isInvulnerable: 0
 --- !u!212 &212054565423487978

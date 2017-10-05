@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1358626537413162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.058, y: -0.5, z: 0}
+  m_LocalPosition: {x: 8.568404, y: -0.06543107, z: 0}
   m_LocalScale: {x: 4.8389554, y: 5.99, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,10 +78,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.1436229, y: 0.016091723}
-  - {x: 0.043829314, y: -0.19255032}
-  - {x: -0.316282, y: 0.15640996}
-  - {x: -0.020012464, y: 0.16291848}
+  - {x: 0.11593152, y: 0.2509778}
+  - {x: 0.060443874, y: 0.104972094}
+  - {x: -0.2581303, y: 0.42261428}
+  - {x: 0.07967638, y: 0.29937613}
 --- !u!114 &114070534946976794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,8 +96,8 @@ MonoBehaviour:
   baseSpeed: 2
   runSpeed: 0
   defeatable: 0
-  health: 8
-  pointValue: 2000
+  health: 7
+  pointValue: 250
   bloodPrefab: {fileID: 1478545123507958, guid: d1065ca344fb8d34798434582afe1ac3,
     type: 2}
 --- !u!212 &212910477769952944

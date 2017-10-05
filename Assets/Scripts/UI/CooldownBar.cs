@@ -22,10 +22,14 @@ public class CooldownBar : MonoBehaviour {
 		float index = 0;
 		while (index < cooldown) {
 			Vector3 scale = bar.transform.localScale;
-			scale.x = index;
+			scale.x = index / cooldown;
 			bar.transform.localScale = scale;
 			index += Time.deltaTime;
 			yield return null;
 		}
+	}
+
+	public void Reset() {
+		bar.transform.localScale = new Vector3 (1, 1, 0);
 	}
 }

@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
 			|| Input.GetKeyDown(KeyCode.K)
 			|| Input.GetKeyDown(KeyCode.L)
 			|| Input.GetKeyDown(KeyCode.Space)) {
-			currentClass.Ability1();
+			currentClass.Ability();
 		}
 	}
 
@@ -124,12 +124,18 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds (classDuration);
 		currentClass = gameObject.GetComponent<PlayerClass> ();
 		AnimatorController.instance.UpdateClass (0);
+		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar> ().Reset ();
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
 		coinMultiplier = 1;
+		gameObject.GetComponent<Ranger> ().arrowPrefab.GetComponent<Arrow> ().speed = 10;
+		gameObject.GetComponent<Ranger> ().cooldown = 1;
 	}
 
 	void Die () {
+		SoundManager.instance.track1.Stop ();
+		SoundManager.instance.track2.Stop ();
+		SoundManager.instance.track3.Stop ();
 		DeathReport.instance.LoadDeathReport();
 	}
 }

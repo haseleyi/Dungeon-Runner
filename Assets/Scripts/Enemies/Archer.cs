@@ -10,7 +10,6 @@ public class Archer : Enemy {
 	bool canFire = false;
 
 	void Start() {
-		arrowPrefab.gameObject.GetComponent<Arrow> ().speed = -10;
 		arrowPrefab.gameObject.GetComponent<Arrow> ().upgraded = false;
 		StartCoroutine (ArrowCooldownCoroutine (Random.Range (1, 3)));
 	}
