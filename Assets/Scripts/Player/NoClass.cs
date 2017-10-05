@@ -8,6 +8,7 @@ public class NoClass : PlayerClass {
 
 	void Start () {
 		title = "None";
+		isInvulnerable = false;
 	}
 
 	public override void Ability () {
