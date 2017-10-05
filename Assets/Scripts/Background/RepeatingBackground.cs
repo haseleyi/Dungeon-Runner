@@ -9,7 +9,7 @@ public class RepeatingBackground : MonoBehaviour {
 
 	void Awake () {
 		sprite = GetComponent<SpriteRenderer> ();
-		backgroundHorizontalLength = 17.89f;
+		backgroundHorizontalLength = 17.8f;
 	}
 	
 	void FixedUpdate () {
