@@ -21,8 +21,7 @@ public class Warrior : PlayerClass {
 			Vector2 firePosition = PlayerController.instance.GetPlayerPosition();
 			firePosition.x += 0.5f;
 			firePosition.y += 0.5f;
-			Debug.DrawLine (firePosition, new Vector3 (firePosition.x + 2, firePosition.y), Color.red, 2.5f);
-			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector3.right, 2.5f);
+			RaycastHit2D hit = Physics2D.Raycast (firePosition, Vector3.right, 3);
 
 			if (hit && hit.collider.gameObject.tag == "Enemy") {
 				if (upgraded) {

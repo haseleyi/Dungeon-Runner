@@ -24,6 +24,8 @@ public class EnemySpawner : Spawner {
 	[SerializeField] List<float> level0TankArcherGruntFireBoulder = new List<float>();
 	[SerializeField] List<float> level1TankArcherGruntFireBoulder = new List<float>();
 	[SerializeField] List<float> level2TankArcherGruntFireBoulder = new List<float>();
+	[SerializeField] List<float> level3TankArcherGruntFireBoulder = new List<float>();
+	[SerializeField] List<float> level4TankArcherGruntFireBoulder = new List<float>();
 	List<List<float>> levels;
 
 	void Start () {
@@ -31,7 +33,9 @@ public class EnemySpawner : Spawner {
 		levels = new List<List<float>> {
 			level0TankArcherGruntFireBoulder,
 			level1TankArcherGruntFireBoulder,
-			level2TankArcherGruntFireBoulder
+			level2TankArcherGruntFireBoulder,
+			level3TankArcherGruntFireBoulder,
+			level4TankArcherGruntFireBoulder
 		};
 		StartCoroutine(SpawnCoroutine());
 	}
