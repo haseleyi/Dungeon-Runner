@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour {
 	public int startLane = 2;
 	public float xInitial = -8;
 	public int coinMultiplier = 1;
-
+	bool switchingLanes = false;
 	int lane;
 	Rigidbody2D body;
 	public PlayerClass currentClass;
@@ -31,11 +31,16 @@ public class PlayerController : MonoBehaviour {
 		if (GameManager.gameState != GameManager.GameState.Paused) {
 			MoveLeftRight ();
 			SwitchLanes ();
+			// Work-around for a bug where the mage fireballs were pushing the player around
+			if (!switchingLanes) {
+				transform.position = new Vector2(transform.position.x, LaneManager.instance.laneLocations[lane]);
+			}
 		}
-		if (Input.GetKeyDown(KeyCode.J)
+		if ((Input.GetKeyDown(KeyCode.J)
 			|| Input.GetKeyDown(KeyCode.K)
 			|| Input.GetKeyDown(KeyCode.L)
-			|| Input.GetKeyDown(KeyCode.Space)) {
+			|| Input.GetKeyDown(KeyCode.Space))
+			&& GameManager.gameState != GameManager.GameState.Paused) {
 			currentClass.Ability();
 		}
 	}
@@ -71,6 +76,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	IEnumerator LaneSwitchCoroutine(float currentLocation, float nextLocation) {
+		switchingLanes = true;
 		float time = 0;
 		float distance = nextLocation - currentLocation;
 		while (time < .1f) {
@@ -83,6 +89,7 @@ public class PlayerController : MonoBehaviour {
 		}
 		// Corrects any miscalculations
 		transform.position = new Vector2(transform.position.x, nextLocation);
+		switchingLanes = false;
 	}
 
 	void NewClass(Collision2D other) {
