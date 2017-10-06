@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	bool switchingLanes = false;
 	int lane;
 	Rigidbody2D body;
+	float posXLimit;
 	public PlayerClass currentClass;
 	public static PlayerController instance;
 
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
 	void Update () {
 		AnimatorController.instance.UpdateSpeed (body.velocity.x);
+		posXLimit = Camera.main.ViewportToWorldPoint(new Vector3 (1, 0, 0)).x - 0.5f;
 		if (GameManager.gameState != GameManager.GameState.Paused) {
 			MoveLeftRight ();
 			SwitchLanes ();
@@ -52,7 +54,7 @@ public class PlayerController : MonoBehaviour {
 	void MoveLeftRight () {
 		Vector2 moveVel = body.velocity;
 		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
-		if (moveVel.x > 0 && transform.position.x >= 8.4f) {
+		if (moveVel.x > 0 && transform.position.x >= posXLimit ) {
 			moveVel.x = 0;
 		}
 		if (moveVel.x < -2) {
