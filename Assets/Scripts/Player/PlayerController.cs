@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour {
 
 	void NewClass(Collision2D other) {
 		Destroy (other.gameObject);
+		HudManager.instance.hourglass.gameObject.SetActive (false);
 		coinMultiplier = 1;
 		SoundManager.instance.drums.Play ();
 		StopCoroutine ("ClassTimerCoroutine");
@@ -145,7 +146,10 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator ClassTimerCoroutine () {
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (true);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (true);
-		yield return new WaitForSeconds (classDuration);
+		yield return new WaitForSeconds (classDuration - 2);
+		HudManager.instance.hourglass.gameObject.SetActive (true);
+		yield return new WaitForSeconds (2);
+		HudManager.instance.hourglass.gameObject.SetActive (false);
 		currentClass = gameObject.GetComponent<NoClass> ();
 		AnimatorController.instance.UpdateClass (0);
 		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar> ().Reset ();
