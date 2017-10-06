@@ -53,11 +53,11 @@ public class PlayerController : MonoBehaviour {
 
 	void MoveLeftRight () {
 		Vector2 moveVel = body.velocity;
-		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
+		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * .01f;
 		if (moveVel.x > 0 && transform.position.x >= posXLimit ) {
 			moveVel.x = 0;
 		}
-		if (moveVel.x < -2) {
+		if (moveVel.x < 0) {
 			moveVel.x = -2;
 		}
 		body.velocity = moveVel;
