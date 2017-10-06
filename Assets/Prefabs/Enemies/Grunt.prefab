@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 2
-  runSpeed: 0
+  runSpeed: 1
   defeatable: 1
   health: 3
   pointValue: 50
