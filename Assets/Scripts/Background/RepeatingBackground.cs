@@ -11,31 +11,20 @@ public class RepeatingBackground : MonoBehaviour {
 		sprite = GetComponent<SpriteRenderer> ();
 		backgroundHorizontalLength = 17.8f;
 	}
-	
+
 	void FixedUpdate () {
+		//checks if the background is completely left of the main camera.
 		if (transform.position.x < -(backgroundHorizontalLength)) {
 			RepositionBackground ();
 		}
-		/*
-		else if (transform.position.x < backgroundHorizontalLength) {
-			RepositionBackground();
-			print (transform.position.x);
-			print (backgroundHorizontalLength);
-		}
-*/
 	}
 
+	/// <summary>
+	/// Repositions the background to the right of the next background sprite.
+	/// </summary>
 	private void RepositionBackground() {
 		Vector2 backgroundOffSet = new Vector2(backgroundHorizontalLength, 0);
 		transform.position = (Vector2)transform.position+ backgroundOffSet*2f;
 	}
-
-	/*
-	private void RepositionBackground2() {
-		Vector2 backgroundOffSet = new Vector2(backgroundHorizontalLength, 0);
-		transform.position = (Vector2)transform.position - backgroundOffSet;
-	}
-	*/
-	
-
+		
 }
