@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	bool switchingLanes = false;
 	int lane;
 	Rigidbody2D body;
+	float posXLimit;
 	public PlayerClass currentClass;
 	public static PlayerController instance;
 
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
 	void Update () {
 		AnimatorController.instance.UpdateSpeed (body.velocity.x);
+		posXLimit = Camera.main.ViewportToWorldPoint(new Vector3 (1, 0, 0)).x - 0.5f;
 		if (GameManager.gameState != GameManager.GameState.Paused) {
 			MoveLeftRight ();
 			SwitchLanes ();
@@ -51,11 +53,11 @@ public class PlayerController : MonoBehaviour {
 
 	void MoveLeftRight () {
 		Vector2 moveVel = body.velocity;
-		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
-		if (moveVel.x > 0 && transform.position.x >= 8.4f) {
+		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * .01f;
+		if (moveVel.x > 0 && transform.position.x >= posXLimit ) {
 			moveVel.x = 0;
 		}
-		if (moveVel.x < -2) {
+		if (moveVel.x < 0) {
 			moveVel.x = -2;
 		}
 		body.velocity = moveVel;
@@ -94,6 +96,7 @@ public class PlayerController : MonoBehaviour {
 
 	void NewClass(Collision2D other) {
 		Destroy (other.gameObject);
+		HudManager.instance.hourglass.gameObject.SetActive (false);
 		coinMultiplier = 1;
 		SoundManager.instance.drums.Play ();
 		StopCoroutine ("ClassTimerCoroutine");
@@ -145,7 +148,10 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator ClassTimerCoroutine () {
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (true);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (true);
-		yield return new WaitForSeconds (classDuration);
+		yield return new WaitForSeconds (classDuration - 2);
+		HudManager.instance.hourglass.gameObject.SetActive (true);
+		yield return new WaitForSeconds (2);
+		HudManager.instance.hourglass.gameObject.SetActive (false);
 		currentClass = gameObject.GetComponent<NoClass> ();
 		AnimatorController.instance.UpdateClass (0);
 		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar> ().Reset ();
