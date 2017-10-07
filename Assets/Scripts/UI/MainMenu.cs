@@ -17,6 +17,18 @@ public class MainMenu : MonoBehaviour {
 		GameManager.gameState = GameManager.GameState.MainMenu;
 	}
 
+	public void Instructions() {
+		StartCoroutine (InstructionsCoroutine ());
+	}
+
+	IEnumerator InstructionsCoroutine() {
+		SoundManager.instance.uiInteraction.Play ();
+		Time.timeScale = .01f;
+		yield return new WaitForSeconds (.001f);
+		Time.timeScale = 1;
+		GameManager.instance.LoadScene ("Instructions");
+	}
+
 	public void StartGame() {
 		SoundManager.instance.swordClash.Play ();
 		GameManager.gameState = GameManager.GameState.Running;

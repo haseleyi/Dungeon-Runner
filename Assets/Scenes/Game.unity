@@ -298,11 +298,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4245157314576888, guid: 01a9469783829fa49b19c4dc8368680c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.9105742
+      value: 5.42
       objectReference: {fileID: 0}
     - target: {fileID: 4245157314576888, guid: 01a9469783829fa49b19c4dc8368680c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4245157314576888, guid: 01a9469783829fa49b19c4dc8368680c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2337,56 +2337,6 @@ Prefab:
       propertyPath: cooldownBarFront
       value: 
       objectReference: {fileID: 17312466}
-    - target: {fileID: 82442036230264724, guid: b060cde09e5f6d74d8cd7f00802506cb,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c0151fa0c4e789c43a294a5e0f6b7183, type: 3}
-    - target: {fileID: 82366984549315358, guid: b060cde09e5f6d74d8cd7f00802506cb,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114014824451729696, guid: b060cde09e5f6d74d8cd7f00802506cb,
-        type: 2}
-      propertyPath: coins
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82069564748580410, guid: b060cde09e5f6d74d8cd7f00802506cb,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82442036230264724, guid: b060cde09e5f6d74d8cd7f00802506cb,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114014824451729696, guid: b060cde09e5f6d74d8cd7f00802506cb,
-        type: 2}
-      propertyPath: upgradePrice
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114137993889935012, guid: b060cde09e5f6d74d8cd7f00802506cb,
-        type: 2}
-      propertyPath: laneLocations.Array.data[0]
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114137993889935012, guid: b060cde09e5f6d74d8cd7f00802506cb,
-        type: 2}
-      propertyPath: laneLocations.Array.data[1]
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114137993889935012, guid: b060cde09e5f6d74d8cd7f00802506cb,
-        type: 2}
-      propertyPath: laneLocations.Array.data[2]
-      value: -0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114137993889935012, guid: b060cde09e5f6d74d8cd7f00802506cb,
-        type: 2}
-      propertyPath: laneLocations.Array.data[3]
-      value: 1.6
-      objectReference: {fileID: 0}
     - target: {fileID: 114876632724600006, guid: b060cde09e5f6d74d8cd7f00802506cb,
         type: 2}
       propertyPath: hourglass

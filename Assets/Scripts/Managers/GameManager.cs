@@ -30,24 +30,20 @@ public class GameManager : MonoBehaviour {
 		instance = this;
 	}
 
-	public void PlayUISound() {
-		SoundManager.instance.uiInteraction.Play ();
-	}
-
 	public void Pause() {
-		PlayUISound ();
+		SoundManager.instance.uiInteraction.Play ();
 		Time.timeScale = 0;
 		gameState = GameState.Paused;
 	}
 
 	public void Unpause() {
-		PlayUISound ();
+		SoundManager.instance.uiInteraction.Play ();
 		Time.timeScale = 1;
 		gameState = GameState.Running;
 	}
 
 	IEnumerator MainMenuCoroutine() {
-		PlayUISound ();
+		SoundManager.instance.uiInteraction.Play ();
 		Time.timeScale = .01f;
 		yield return new WaitForSeconds (.001f);
 		Time.timeScale = 1;
@@ -57,7 +53,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	IEnumerator PlayAgainCoroutine() {
-		PlayUISound ();
+		SoundManager.instance.uiInteraction.Play ();
 		Time.timeScale = .01f;
 		yield return new WaitForSeconds (.001f);
 		Time.timeScale = 1;
