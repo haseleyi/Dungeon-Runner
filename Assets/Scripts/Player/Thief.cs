@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Thief player class: melees grunts and archers, picks up 2x coins, upgrade for 4x coins
+/// (coin multiplier implemented in PlayerController)
+/// </summary>
 public class Thief : PlayerClass {
 
 	public override string title {get; protected set;}
@@ -12,7 +16,6 @@ public class Thief : PlayerClass {
 	}
 
 	override public void Ability () {
-		// Do attack stuff
 		if (canAbility) {
 			StartCoroutine (SwipeSoundCoroutine ());
 			AnimatorController.instance.UseAbility ();
@@ -23,7 +26,6 @@ public class Thief : PlayerClass {
 			if (hit && hit.collider.gameObject.tag == "Enemy") {
 				hit.collider.gameObject.GetComponent<Enemy> ().Damage (4);
 			}
-			// Disallow attacking for the duration of the cooldown
 			canAbility = false;
 			StartCoroutine(CooldownCoroutine ());
 		}

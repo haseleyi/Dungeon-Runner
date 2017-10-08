@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Player class: mage
+/// Mage player class: shoots fireballs, shoots more with longer cooldown when upgraded
 /// </summary>
 public class Mage : PlayerClass {
 

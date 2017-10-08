@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class power-up: basically just horizontal movement
+/// </summary>
 public class Powerup : MonoBehaviour {
 
 	public float speed = 3;

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Ranger player class: shoots arrows, upgrade shoots piercing arrows and improves with each shot
+/// </summary>
 public class Ranger : PlayerClass {
 
 	public GameObject arrowPrefab;
@@ -13,12 +16,9 @@ public class Ranger : PlayerClass {
 	}
 
 	override public void Ability () {
-		// Do attack stuff
 		if (canAbility) {
 			AnimatorController.instance.UseAbility ();
 			StartCoroutine (ShotCoroutine ());
-
-			// Disallow attacking for the duration of the cooldown
 			canAbility = false;
 			if (upgraded) {
 				cooldown -= .08f;
@@ -33,7 +33,7 @@ public class Ranger : PlayerClass {
 		if (upgraded) {
 			arrowPrefab.GetComponent<Arrow> ().speed += 5;
 		}
-		// Upgraded arrows have a piercing effect
+		// Upgraded arrows have a piercing effect implemented in enemy colliders
 		arrowPrefab.GetComponent<Arrow> ().upgraded = upgraded;
 		Vector2 firePosition = PlayerController.instance.GetPlayerPosition ();
 		firePosition.y += 1.5f;

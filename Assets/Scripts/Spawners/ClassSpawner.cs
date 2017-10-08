@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawns class power-ups
+/// </summary>
 public class ClassSpawner : Spawner {
 
 	public float firstSpawn;

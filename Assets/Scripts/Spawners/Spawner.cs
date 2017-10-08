@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Spawner superclass: meth
+/// Spawner superclass: methods for spawning random, specific, and tank prefabs
 /// </summary>
 public class Spawner : MonoBehaviour {
 

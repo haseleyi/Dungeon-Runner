@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Cooldown bar for class abilities
+/// PlayerController enables this when a class power-up is active
+/// </summary>
 public class CooldownBar : MonoBehaviour {
 
 	Image bar;
@@ -18,6 +22,7 @@ public class CooldownBar : MonoBehaviour {
 		StartCoroutine (CooldownCoroutine (cooldown));
 	}
 
+	// Bar re-fills while ability cools down
 	IEnumerator CooldownCoroutine(float cooldown) {
 		float index = 0;
 		while (index < cooldown) {

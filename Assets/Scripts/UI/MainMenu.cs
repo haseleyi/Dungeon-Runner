@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Main menu script. Provides functionality to start and quit the game controlled by buttons from the Unity UI.
+/// Main menu script. Provides functionality to start the game controlled by buttons from the Unity UI.
 /// </summary>
 public class MainMenu : MonoBehaviour {
 
@@ -23,6 +23,7 @@ public class MainMenu : MonoBehaviour {
 
 	IEnumerator InstructionsCoroutine() {
 		SoundManager.instance.uiInteraction.Play ();
+		// Pauses time long enough for sound to play
 		Time.timeScale = .01f;
 		yield return new WaitForSeconds (.001f);
 		Time.timeScale = 1;

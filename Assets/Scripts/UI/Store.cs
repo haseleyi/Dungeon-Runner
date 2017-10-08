@@ -13,12 +13,16 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Pause menu script. Provides functionality to Pause and Unpause the game and Go Back to the Main Menu. Controlled by buttons from the Unity UI.
-/// Pressing ESC will also open and close the menu.
+/// Pressing ESC or P will open and close the menu.
+/// Menu contains store in which player purchases permanent class upgrades.
 /// </summary>
 public class Store : MonoBehaviour {
 
-	public string mainMenuScene = "MainMenu";
 	public GameObject storeCanvas, storePanel;
+
+	/// <summary>
+	/// Duration of store animation
+	/// </summary>
 	[SerializeField] float inOutTime;
 
 	void Start() {
@@ -103,6 +107,9 @@ public class Store : MonoBehaviour {
 		StartCoroutine (UnpauseCoroutine ());
 	}
 
+	/// <summary>
+	/// Store menu animation
+	/// </summary>
 	IEnumerator PauseCoroutine() {
 		storeCanvas.SetActive (true);
 		GameManager.instance.Pause ();
@@ -116,6 +123,9 @@ public class Store : MonoBehaviour {
 		storePanel.transform.localScale = new Vector3 (1, 1, 1);
 	}
 
+	/// <summary>
+	/// Reverse store menu animation
+	/// </summary>
 	IEnumerator UnpauseCoroutine() {
 		GameManager.instance.Unpause ();
 		float timer = 0;

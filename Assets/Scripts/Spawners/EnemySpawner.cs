@@ -7,7 +7,9 @@ using UnityEngine;
 /// </summary>
 public class EnemySpawner : Spawner {
 
-	// All the enemy and obstacle prefabs
+	/// <summary>
+	/// All the enemy and obstacle prefabs
+	/// </summary>
 	List<GameObject> prefabs;
 	const int tankIndex = 0;
 	public GameObject tankPrefab;
@@ -16,10 +18,14 @@ public class EnemySpawner : Spawner {
 	public GameObject firePrefab;
 	public GameObject boulderPrefab;
 
-	// Time at which each level begins
+	/// <summary>
+	/// Time at which each level begins
+	/// </summary>
 	[SerializeField] List<float> levelStarts = new List<float>();
 
-	// Seconds between spawns for each level
+	/// <summary>
+	/// Seconds between spawns for each level
+	/// </summary>
 	[SerializeField] List<float> spawnEvery = new List<float>();
 
 	// Example: { .1, .2, .4, .1, .2 } 
