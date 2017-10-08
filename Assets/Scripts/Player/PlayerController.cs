@@ -167,7 +167,6 @@ public class PlayerController : MonoBehaviour {
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (false);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (false);
 		coinMultiplier = 1;
-		gameObject.GetComponent<Ranger> ().arrowPrefab.GetComponent<Arrow> ().speed = 10;
 		gameObject.GetComponent<Ranger> ().cooldown = 1;
 	}
 

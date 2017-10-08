@@ -30,9 +30,6 @@ public class Ranger : PlayerClass {
 	IEnumerator ShotCoroutine() {
 		yield return new WaitForSeconds (.3f);
 		SoundManager.instance.arrow.Play ();
-		if (upgraded) {
-			arrowPrefab.GetComponent<Arrow> ().speed += 5;
-		}
 		// Upgraded arrows have a piercing effect implemented in enemy colliders
 		arrowPrefab.GetComponent<Arrow> ().upgraded = upgraded;
 		Vector2 firePosition = PlayerController.instance.GetPlayerPosition ();
