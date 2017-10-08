@@ -1738,8 +1738,8 @@ MonoBehaviour:
   - -2
   - -0.3
   - 1.6
-  laneIsOpen: 01010101
   spawnDelay: 1.5
+  laneIsOpen: 01010101
   xThreshold: -17
 --- !u!114 &114634707130297084
 MonoBehaviour:
