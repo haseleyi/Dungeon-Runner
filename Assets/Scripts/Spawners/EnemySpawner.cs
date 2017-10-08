@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawns enemies and obstacles using a probability-based leveling system that progresses over time
+/// </summary>
 public class EnemySpawner : Spawner {
 
+	// All the enemy and obstacle prefabs
 	List<GameObject> prefabs;
 	const int tankIndex = 0;
 	public GameObject tankPrefab;
@@ -20,7 +24,7 @@ public class EnemySpawner : Spawner {
 
 	// Example: { .1, .2, .4, .1, .2 } 
 	// Means: During this level, each spawn has a 10% chance of being a tank, a 20% chance of being an archer, etc.
-	// Probabilities in a given level must sum to one
+	// Probabilities in a given level should sum to one
 	[SerializeField] List<float> level0TankArcherGruntFireBoulder = new List<float>();
 	[SerializeField] List<float> level1TankArcherGruntFireBoulder = new List<float>();
 	[SerializeField] List<float> level2TankArcherGruntFireBoulder = new List<float>();
@@ -45,14 +49,20 @@ public class EnemySpawner : Spawner {
 	}
 
 	IEnumerator SpawnCoroutine() {
+
+		// For each level
 		for (int level = 0; level < levels.Count; level++) {
+
+			// For the duration of the level
 			while (level == levels.Count - 1 || Time.timeSinceLevelLoad < levelStarts[level + 1]) {
 
 				// Spawn something every "spawnEvery" seconds, plus or minus .75 so things don't look too orderly
 				yield return new WaitForSeconds (spawnEvery [level] + (Random.value * 1.5f) - .75f);
+
+				// Spawn a prefab from the level
+				// Chance of each spawn is determined by the level array
 				float r = Random.value;
 				float probabilitySum = 0;
-
 				for (int prefabIndex = 0; prefabIndex < prefabs.Count; prefabIndex++) {
 					float prefabChance = levels[level][prefabIndex];
 					if (probabilitySum < r && r < probabilitySum + prefabChance) {

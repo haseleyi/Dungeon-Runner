@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawner superclass: meth
+/// </summary>
 public class Spawner : MonoBehaviour {
 
 	protected System.Random random = new System.Random();

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawns coins and chests
+/// </summary>
 public class MoneySpawner : Spawner {
 
 	public float firstSpawn;

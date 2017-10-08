@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Handles player movement, collisions, and class status
+/// Handles player movement, collisions, class status, death
 /// </summary>
 public class PlayerController : MonoBehaviour {
 
@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 	// Using Update here instead of FixedUpdate because it makes for more responsive lane switching
 	void Update () {
 		AnimatorController.instance.UpdateSpeed (body.velocity.x);
+		// To limit player movement rightward
 		posXLimit = Camera.main.ViewportToWorldPoint(new Vector3 (1, 0, 0)).x - 0.5f;
 		if (GameManager.gameState != GameManager.GameState.Paused) {
 			MoveLeftRight ();
@@ -56,10 +57,12 @@ public class PlayerController : MonoBehaviour {
 
 	void MoveLeftRight () {
 		Vector2 moveVel = body.velocity;
-		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * .01f;
+		moveVel.x = Input.GetAxisRaw ("Horizontal") * speed * Time.deltaTime;
+		// Set x-velocity to 0 if you've gone too far right
 		if (moveVel.x > 0 && transform.position.x >= posXLimit ) {
 			moveVel.x = 0;
 		}
+		// Set x-velocity to "standing still" speed if you're hitting the left arrow
 		if (moveVel.x < 0) {
 			moveVel.x = -2;
 		}
@@ -92,7 +95,6 @@ public class PlayerController : MonoBehaviour {
 			transform.position = new Vector2(transform.position.x, location);
 			yield return null;
 		}
-		// Corrects any miscalculations
 		transform.position = new Vector2(transform.position.x, nextLocation);
 		switchingLanes = false;
 	}
@@ -118,7 +120,6 @@ public class PlayerController : MonoBehaviour {
 		} else if (other.gameObject.tag == "Warrior") {
 			NewClass (other);
 			currentClass = gameObject.GetComponent<Warrior> ();
-			// Update sprite
 			if (gameObject.GetComponent<Warrior> ().upgraded) {
 				AnimatorController.instance.UpdateClass (5);
 			} else {
@@ -145,8 +146,12 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	IEnumerator ClassTimerCoroutine () {
+
+		// Class begins
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (true);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (true);
+
+		// Flash an hourglass image when class is going to time out
 		yield return new WaitForSeconds (classDuration - 2);
 		for (int i = 0; i < 4; i++) {
 			HudManager.instance.hourglass.gameObject.SetActive (true);
@@ -154,6 +159,8 @@ public class PlayerController : MonoBehaviour {
 			HudManager.instance.hourglass.gameObject.SetActive (false);
 			yield return new WaitForSeconds (.25f);
 		}
+
+		// Class ends
 		currentClass = gameObject.GetComponent<NoClass> ();
 		AnimatorController.instance.UpdateClass (0);
 		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar> ().Reset ();
