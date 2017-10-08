@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Singleton that provides access to all sounds for other scripts
@@ -36,17 +37,19 @@ public class SoundManager : MonoBehaviour {
 		track2 = sounds [14];
 		track3 = sounds [15];
 
-		// Loops a random soundtrack
-		float r = Random.value;
-		if (r < .33) {
-			track1.Play ();
-			track1.loop = true;
-		} else if (r < .66) {
-			track2.Play ();
-			track2.loop = true;
-		} else {
-			track3.Play ();
-			track3.loop = true;
+		if (SceneManager.GetActiveScene().name == "Game") {
+			// Loops a random soundtrack
+			float r = Random.value;
+			if (r < .33) {
+				track1.Play ();
+				track1.loop = true;
+			} else if (r < .66) {
+				track2.Play ();
+				track2.loop = true;
+			} else {
+				track3.Play ();
+				track3.loop = true;
+			}	
 		}
 	}
 }
