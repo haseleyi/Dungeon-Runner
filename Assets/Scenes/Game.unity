@@ -759,7 +759,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a27d3cd4697b140ae4e7f9201b4494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuScene: MainMenu
   storeCanvas: {fileID: 1380595396}
   storePanel: {fileID: 1613074384}
   inOutTime: 0.1
