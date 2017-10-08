@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles player movement, collisions, and class status
+/// </summary>
 public class PlayerController : MonoBehaviour {
 
 	public float speed = 3;
@@ -105,11 +108,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D other) {
 		if (other.gameObject.tag == "Enemy" || (other.gameObject.tag == "EnemyArrow" && other.gameObject.GetComponent<Arrow> ().speed < 0)) {
-			if (currentClass.isInvulnerable) {
-				Destroy (other.gameObject);
-			} else {
-				Die ();
-			}
+			Die ();
 		} else if (other.gameObject.tag == "Coin") {
 			Destroy (other.gameObject);
 			ScoreManager.instance.AddCoins(coinMultiplier, false);
@@ -149,9 +148,12 @@ public class PlayerController : MonoBehaviour {
 		HudManager.instance.cooldownBarBack.gameObject.SetActive (true);
 		HudManager.instance.cooldownBarFront.gameObject.SetActive (true);
 		yield return new WaitForSeconds (classDuration - 2);
-		HudManager.instance.hourglass.gameObject.SetActive (true);
-		yield return new WaitForSeconds (2);
-		HudManager.instance.hourglass.gameObject.SetActive (false);
+		for (int i = 0; i < 4; i++) {
+			HudManager.instance.hourglass.gameObject.SetActive (true);
+			yield return new WaitForSeconds (.25f);
+			HudManager.instance.hourglass.gameObject.SetActive (false);
+			yield return new WaitForSeconds (.25f);
+		}
 		currentClass = gameObject.GetComponent<NoClass> ();
 		AnimatorController.instance.UpdateClass (0);
 		HudManager.instance.cooldownBarFront.GetComponent<CooldownBar> ().Reset ();

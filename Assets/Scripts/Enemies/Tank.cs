@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enemy type: Tank
+/// </summary>
 public class Tank : Enemy {
 
 	protected override void Die () {

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Player class: mage
+/// </summary>
 public class Mage : PlayerClass {
 
 	public GameObject fireballPrefab;
@@ -13,7 +16,6 @@ public class Mage : PlayerClass {
 	}
 
 	override public void Ability () {
-		// Do attack stuff
 		if (canAbility) {
 			SoundManager.instance.fireball.Play ();
 			AnimatorController.instance.UseAbility ();

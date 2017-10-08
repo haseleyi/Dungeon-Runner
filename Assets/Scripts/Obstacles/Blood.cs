@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Permanence juice for enemy death
+/// </summary>
 public class Blood : Obstacle {
 
 	[SerializeField] Sprite[] sprites;

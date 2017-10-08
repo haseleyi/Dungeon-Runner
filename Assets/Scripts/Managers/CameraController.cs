@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Coordinates screen shake on tank death
+/// </summary>
 public class CameraController : MonoBehaviour {
 
 	static float shakeTimer, shakeStrength;

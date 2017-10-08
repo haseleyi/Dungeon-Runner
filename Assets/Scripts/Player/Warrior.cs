@@ -5,13 +5,11 @@ using UnityEngine;
 public class Warrior : PlayerClass {
 
 	public override string title {get; protected set;}
-	public float shieldDuration;
 
 	void Start() {
 		title = "Warrior";
 		canAbility = true;
 	}
-
 
 	override public void Ability () {
 		// Do attack stuff
@@ -29,23 +27,13 @@ public class Warrior : PlayerClass {
 				} else {
 					hit.collider.GetComponent<Enemy> ().Damage (4);
 				}
-			} else if (hit.collider != null && hit.collider.gameObject.tag == "Boulder") {
+			} else if (hit && hit.collider.gameObject.tag == "Boulder") {
 				Destroy (hit.collider.gameObject);
-			}
-
-			if (upgraded) {
-				StartCoroutine(ShieldCoroutine());
 			}
 
 			// Disallow attacking for the duration of the cooldown
 			canAbility = false;
 			StartCoroutine(CooldownCoroutine ());
 		}
-	}
-
-	IEnumerator ShieldCoroutine (){
-		isInvulnerable = true;
-		yield return new WaitForSeconds (shieldDuration);
-		isInvulnerable = false;
 	}
 }

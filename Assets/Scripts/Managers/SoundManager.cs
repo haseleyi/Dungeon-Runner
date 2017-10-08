@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Singleton that provides access to all sounds for other scripts
+/// </summary>
 public class SoundManager : MonoBehaviour {
 
 	public AudioSource fireball, uiInteraction, swordClash, arrow, coin, swipe, drums,
@@ -33,6 +36,7 @@ public class SoundManager : MonoBehaviour {
 		track2 = sounds [14];
 		track3 = sounds [15];
 
+		// Loops a random soundtrack
 		float r = Random.value;
 		if (r < .33) {
 			track1.Play ();

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Superclass for player classes (e.g. mage, warrior): mostly just an ability cooldown they all use
+/// </summary>
 public class PlayerClass : MonoBehaviour {
 
 	public float cooldown = 1;
@@ -9,7 +12,6 @@ public class PlayerClass : MonoBehaviour {
 
 	protected bool canAbility;
 	public bool upgraded;
-	public bool isInvulnerable = false;
 
 	public virtual void Ability () {
 	}

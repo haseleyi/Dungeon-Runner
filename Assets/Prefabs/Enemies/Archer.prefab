@@ -103,9 +103,10 @@ MonoBehaviour:
   runSpeed: 0
   defeatable: 1
   health: 3
-  pointValue: 100
+  pointValue: 50
   bloodPrefab: {fileID: 1478545123507958, guid: d1065ca344fb8d34798434582afe1ac3,
     type: 2}
+  hurtTimer: 0.1
   arrowCooldown: 5
   arrowPrefab: {fileID: 1988508339493298, guid: 4735d385e57ebf44687d3f3d6089bb4f,
     type: 2}

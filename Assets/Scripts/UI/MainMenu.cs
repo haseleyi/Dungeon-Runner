@@ -30,8 +30,13 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void StartGame() {
+		StartCoroutine (StartGameCoroutine ());
+	}
+
+	IEnumerator StartGameCoroutine() {
 		SoundManager.instance.swordClash.Play ();
+		yield return new WaitForSeconds (.9f);
 		GameManager.gameState = GameManager.GameState.Running;
-		GameManager.instance.LoadScene ("Game");	
+		GameManager.instance.LoadScene ("Game");
 	}
 }

@@ -10,8 +10,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// In control of the game flow. Uses static fields to store information and static functions for outside communication.
-/// Use this to transition between levels, request the current game state and pause/unpause the game.
+/// In control of the game flow. Use this to transition between levels, request the current game state and pause/unpause the game.
 /// </summary>
 public class GameManager : MonoBehaviour {
 
@@ -41,9 +40,10 @@ public class GameManager : MonoBehaviour {
 		Time.timeScale = 1;
 		gameState = GameState.Running;
 	}
-
+		
 	IEnumerator MainMenuCoroutine() {
 		SoundManager.instance.uiInteraction.Play ();
+		// Pauses for sufficient time to play the UI interaction sound effect
 		Time.timeScale = .01f;
 		yield return new WaitForSeconds (.001f);
 		Time.timeScale = 1;
@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour {
 
 	IEnumerator PlayAgainCoroutine() {
 		SoundManager.instance.uiInteraction.Play ();
+		// Pauses for sufficient time to play the UI interaction sound effect
 		Time.timeScale = .01f;
 		yield return new WaitForSeconds (.001f);
 		Time.timeScale = 1;

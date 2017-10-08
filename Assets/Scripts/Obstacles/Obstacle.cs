@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Obstacle superclass: just base movement
+/// </summary>
 public class Obstacle : MonoBehaviour {
 
 	public float baseSpeed = 2;

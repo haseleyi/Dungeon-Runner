@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enemy type: Goblin grunt
+/// </summary>
 public class Grunt : Enemy {
 
 	protected override void Die () {

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enemy superclass: base movement, health, projectile damage, death, juice for hitting and killing enemies
+/// </summary>
 public class Enemy : MonoBehaviour {
 
 	public float baseSpeed = 2;
@@ -64,16 +67,18 @@ public class Enemy : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
-	public void Damage (int dam) {
-		health -= dam;
-
+	public void Damage (int damage) {
+		health -= damage;
 		if (hurtRoutine != null) {
 			StopCoroutine (hurtRoutine);
 		}
-		hurtRoutine = StartCoroutine (HurtRoutine ());
+		hurtRoutine = StartCoroutine (HurtCoroutine ());
 	}
 
-	IEnumerator HurtRoutine () {
+	/// <summary>
+	/// Enemy flashes red when damaged
+	/// </summary>
+	IEnumerator HurtCoroutine () {
 		float timer = 0;
 		bool blink = false;
 		while (timer < hurtTimer) {

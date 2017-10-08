@@ -76,7 +76,9 @@ public class Store : MonoBehaviour {
 					break;
 				}
 			}
-			PlayerController.instance.coinMultiplier = 4;
+			if (PlayerController.instance.currentClass.title == "Thief") {
+				PlayerController.instance.coinMultiplier = 4;
+			}
 		}
 	}
 

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enemy type: Skeleton archer
+/// </summary>
 public class Archer : Enemy {
 
 	public float arrowCooldown;
@@ -10,7 +13,6 @@ public class Archer : Enemy {
 	bool canFire = false;
 
 	void Start() {
-		arrowPrefab.gameObject.GetComponent<Arrow> ().upgraded = false;
 		StartCoroutine (ArrowCooldownCoroutine (Random.Range (1, 3)));
 	}
 
@@ -22,7 +24,7 @@ public class Archer : Enemy {
 
 			// Disallow attacking for the duration of the cooldown
 			canFire = false;
-			StartCoroutine(ArrowCooldownCoroutine (arrowCooldown));
+			StartCoroutine(ArrowCooldownCoroutine (5));
 		}
 	}
 
