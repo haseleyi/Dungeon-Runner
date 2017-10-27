@@ -1,0 +1,9 @@
+Dependencies: Just some good old internet - https://haseleyi.itch.io/dungeon-runner
+
+Dungeon Runner is an Endless Runner drawing inspiration from the classic Role Playing Game genre. The objective is simple: survive the dungeon for as long as possible while earning points for your total score.
+       	
+The protagonist’s natural state (when no keys are pressed) is such that he is running through a dungeon setting with deadly spikes following him, forcing him onward. Numerous obstacles and enemies spawn from the right side of the screen, and the player must either destroy or avoid them. The player gains points from surviving, from killing enemies, and from collecting coins. 
+
+What sets Dungeon Runner apart from other endless runners is its class system. The player may pick up temporary class power-ups that spawn at a regular basis. These items change the player’s class into a Mage, a Ranger, a Warrior, or a Thief.  Each class has special abilities and strengths: the mage and ranger have ranged attacks of different speeds and cooldowns, while the warrior and thief rely on melee attacks of different ranges and damage levels. Warriors can destroy boulders, and when playing thief, players pick up twice the number of coins. Players can spend coins to purchase an upgrade for each class in the pause menu, and these upgrades boost each class’s capabilities substantially. See the instructions page of the game for controls and hints regarding the class upgrades.
+
+Technical specs: 1,500 lines of C# over 35 scripts (see Assets > Scripts). If you're interested in digging into the code, start by checking out Player > PlayerController, Managers > LaneManager and ScoreManager, and Spawners > EnemySpawner.
