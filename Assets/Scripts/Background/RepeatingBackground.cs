@@ -11,7 +11,7 @@ public class RepeatingBackground : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		//checks if the background is completely left of the main camera.
+		// Checks if the background is completely left of the main camera.
 		if (transform.position.x < -(backgroundHorizontalLength)) {
 			RepositionBackground ();
 		}
